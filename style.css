@@ -43,6 +43,48 @@ section{
 	justify-content: center;
 }
 
+h1{
+	font-size:50px;
+	font-family: "Lato";
+	font-weight: 700;
+	color:#333;
+}
+
+p{
+	padding-left:0.2%;
+	font-size:16px;
+	font-family: "Rubik";
+	font-weight: 500;
+	color:#555;
+}
+
+
+.work-elements{
+	display:flex;
+	align-items: center;
+	padding:8px;
+	margin:35px 0px;
+}
+
+.flex-col{
+	flex-direction: column;
+}
+
+.flex{
+	display: flex;
+}
+
+.flex-align-center{
+	align-items: center;
+}
+
+.flex-justify-center{
+	justify-content: center;
+}
+
+
+
+
 .accent{
 	color:#ff8282;
 }
@@ -111,4 +153,9 @@ section{
 
 .icons-skills >i {
 	margin: 0 16px;
+}
+
+.image-icon{
+	height:100px;
+	width:100px;
 }
