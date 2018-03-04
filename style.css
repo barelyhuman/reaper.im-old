@@ -159,3 +159,10 @@ p{
 	height:100px;
 	width:100px;
 }
+
+
+.work-elements .element{
+
+	display: inline-block;
+    padding: 8px 16px;
+}
