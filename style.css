@@ -155,6 +155,10 @@ p{
 	margin: 0 16px;
 }
 
+.icons-skills >i:hover {
+	cursor:pointer;
+}
+
 .image-icon{
 	height:100px;
 	width:100px;
@@ -168,7 +172,7 @@ p{
 }
 
 .work-elements .element:hover{
-	cursor:pointer
+	cursor:pointer;
 }
 
 
