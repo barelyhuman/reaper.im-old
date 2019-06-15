@@ -166,3 +166,12 @@ p{
 	display: inline-block;
     padding: 8px 16px;
 }
+
+.work-elements .element:hover{
+	cursor:pointer
+}
+
+
+.nav-btn:hover{
+	cursor: pointer;
+}
