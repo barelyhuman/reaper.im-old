@@ -62,6 +62,7 @@ ul li a:hover {
 .card-border {
   border: 1px solid #999;
   border-radius: 5px;
+  min-width: 425px !important;
 }
 
 .button {
@@ -172,4 +173,27 @@ ul li a:hover {
 .line-height-20-px {
   line-height: 20px;
   font-size: 14px;
+}
+
+.button.home-button {
+  border: 0;
+  background: white;
+  color: black;
+  min-width: auto;
+  border-radius: 0;
+  padding: 0px;
+  color: #999;
+}
+
+.button.home-button::before {
+  content: '<';
+}
+
+.button.home-button:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.just-space-between {
+  justify-content: space-between;
 }
