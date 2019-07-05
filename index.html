@@ -1,70 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>Siddharth Gelera</title>
-		<link rel="stylesheet" href="./style.css">
-		<link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700,900|Lato:400,700,900" rel="stylesheet">
-		<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-	</head>
-	<body>
-		<header>
-			<div class="name"><span class="accent">S</span>iddharth <span class="accent">G</span>elera</div>
-			<div class="nav-btn active-btn" onClick="activate(this)">Home</div>
-			<div class="nav-btn" onClick="activate(this)">Work</div>
-			<div class="nav-btn" onClick="activate(this)">About</div>
-		</header>
-		<section id="home" class="active display-flex">
-			<div class="content">
-				<div class="header">
-					<h1>Developer / Designer</h1>
-					<p>I <span class="accent">&lt;</span> /Code <span class="accent">&gt;</span>, I <span class="accent">Design</span>, I <strong>Enjoy.</strong></p>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Siddharth Gelera</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+	<section id="home">
+		<div class="container">
+			<div class="margin-md">
+				<a href="/" class="action-link">
+					<span class="dark-gray font-size-50">
+						Siddharth Gelera
+					</span>
+				</a>
+				<div class="tagline">
+					<small class="font-size-15">Minimalist | Designer | Developer</small>
 				</div>
 			</div>
-		</section>
-		<section id="work">
-			<div class="flex flex-col">
-				<h1>Work</h1>
-				<div>
-					<div class="work-elements">
-						<div class="element" onClick="goTo('/orion')">
-							<p>Orion</p>
-						</div>
-						<div class="element" onClick="goTo('/tasks')">
-							<p>Tasks</p>
-						</div>
-						<div class="element" onClick="goTo('https://github.com/aliezsid/desko')">
-							<p>Desko</p>
-						</div>
-						<div class="element" onClick="goTo('/gitsearch')">
-							<p>GitSearch</p>
-						</div>
-						<div class="element" onClick="goTo('/rezez')">
-							<p>Rezez</p>
-						</div>
-					</div>
-				</div>
+			<div class="flex flex-col align-center">
+				<a class="margin-sm button black" id="home-work-button">
+					Work
+				</a>
+				<a class="margin-sm button black" id="home-skills-button">
+					Skills
+				</a>
+				<a class="margin-sm button black" id="home-learning-button">
+					Learning
+				</a>
 			</div>
-		</section>
-		<section id="about">
-			<div class="content" >
-				<h1>About</h1>
-				<p>Known for being a really short tempered monkey. Worked with people I didn't like and hate people that like me. Overall , I'm a pretty weird guy with a general curiosity that powers my learning.</p>
-				<p>I'm Siddharth Gelera ( If you didn't already see it ). A full stack dev and designer who loves learning new technologies and working on projects that hit my nerves at levels that force me to use my brain more than I normally do. I talk a lot, so to all the potential clients, you'll have to bear the continous chatter.</p>
+			<div class="margin-sm">
+				<a href="./siddharth-gelera-resume.pdf" class="margin-sm action-link"
+					download="siddharth-gelera-resume.pdf">Download Resume</a>
+				<a class="margin-sm action-link" id="home-about-button">
+					About
+				</a>
 			</div>
-			<div class="content">
-				<h1>Skills</h1>
-				<div class="icons-skills">
-					<i class="devicon-react-original"></i>
-					<i class="devicon-angularjs-plain"></i>
-					<i class="devicon-express-original"></i>
-					<i class="devicon-mongodb-plain"></i>
-					<i class="devicon-illustrator-plain"></i>
-					<i class="devicon-python-plain"></i>
-					<i class="devicon-webpack-plain"></i>
-				</div>
+		</div>
+	</section>
+
+	<section id="work" class="hidden">
+		<div class="container">
+			<button class="margin-bottom-sm  align-start button home-button">
+				Home
+			</button>
+
+			<ul class="card-border min-width-150-px">
+				<li>
+					<a href="/orion">
+						Orion - Music Player UI
+					</a>
+				</li>
+				<li>
+					<a href="/washed">
+						Washed - Microservice for a filter
+					</a>
+				</li>
+				<li>
+					<a href="/rmnd-r">
+						rmnd-r - Minimal Tasks List
+					</a>
+				</li>
+				<li>
+					<a href="/autocomplete">
+						Autocomplete - Vanilla Web Tech Autocomplete box
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/reap-r/aForEach">
+						aForEach - Asynchronous ForEach Util for JS
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/reap-r/sautocomplete-angularjs">
+						sAutoComplete - AngularJS1.6 Directive for Autocomplete
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/reap-r/archlinux.sh">
+						archlinux.sh - Script for setup for archlinux
+					</a>
+				</li>
+				<li>
+					<a href="/decision-maker">
+						Decision Maker - Learner VUEJS Project
+					</a>
+				</li>
+				<li>
+					<a href="/devathon">
+						Devathon - React UI for photo uploading
+					</a>
+				</li>
+			</ul>
+
+		</div>
+
+
+	</section>
+
+	<section id="skills" class="hidden">
+
+		<div class="container">
+			<button class="button margin-bottom-sm align-start home-button">
+				Home
+			</button>
+
+			<div class="flex min-width-150-px card-border">
+				<ul>
+					<li>
+						React
+					</li>
+					<li>
+						Git
+					</li>
+					<li>
+						Express
+					</li>
+					<li>
+						MongoDB
+					</li>
+					<li>
+						Adobe Illustrator
+					</li>
+					<li>
+						Python
+					</li>
+					<li>
+						Webpack
+					</li>
+				</ul>
+				<ul>
+					<li>
+						VueJS
+					</li>
+					<li>
+						RiotJS
+					</li>
+					<li>
+						React Native
+					</li>
+					<li>
+						AngularJS
+					</li>
+					<li>
+						Angular 2+
+					</li>
+					<li>
+						Loopback - Node
+					</li>
+					<li>
+						HTML/CSS/JS
+					</li>
+				</ul>
 			</div>
-		</section>
-		<script src="./main.js"></script>
-	</body>
+
+
+
+
+			<!-- List of Skills and a short description -->
+
+		</div>
+
+	</section>
+
+	<section id="learning" class="hidden">
+
+		<div class="container">
+			<button class="button margin-bottom-sm align-start home-button">
+				Home
+			</button>
+			<div class="min-width-150-px card-border">
+				<ul>
+					<li>
+						Rust
+					</li>
+					<li>
+						Go
+					</li>
+					<li>
+						Ruby
+					</li>
+				</ul>
+			</div>
+
+
+
+
+			<!-- List of Skills and a short description -->
+
+		</div>
+
+	</section>
+
+	<section id="about" class="hidden">
+
+		<div class="container">
+			<button class="button margin-bottom-sm align-start home-button">
+				Home
+			</button>
+			<div class="min-width-150-px card-border padding-25-px max-width-500-px line-height-20-px">
+				<p>
+					Curious, Self Taught, Learner who prefers to keep things as simple as possible while keeping in mind the
+					importance of quality.
+					<br />
+					<br />
+					Started as a Frontend Developer who has now grown into a Full Stack Developer with over around 2 Years of
+					professional experience and 22 years worth of experience in communicating with people while being a content
+					writer
+				</p>
+			</div>
+
+		</div>
+
+	</section>
+
+
+	<script src="./main.js"></script>
+</body>
+
 </html>

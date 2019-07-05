@@ -1,46 +1,94 @@
-const body = document.querySelector('body');
-body.onload = checkHashAndActivateSection;
+(function () {
 
-function checkHashAndActivateSection(e){
-	const value = window.location.hash.split('/')[1];
-	activate(e,value);
-}
-
-function activate(e,value){
-	if(!value){
-		value = e.innerHTML.toLowerCase();
-	}
-	var section=document.getElementById(value);
-	var sections = document.getElementsByTagName('section');
-	var buttons = document.querySelectorAll('.nav-btn');
-
-	for(var i=0;i<sections.length;i+=1){
-		sections[i].classList.remove('active');
-		sections[i].classList.remove('display-flex');
+	function init() {
+		injectSectionHandler();
+		addHomeSectionButtonHandlers();
+		homeButtonHandler();
 	}
 
-	for(var i=0;i<buttons.length;i+=1){
-		buttons[i].classList.remove('active-btn');
+	function injectSectionHandler() {
+		const defaultSection = getSections().defaultSection;
+		defaultSection.classList.remove('hidden');
 	}
 
-	section.classList.add('display-flex');
-	section.offsetWidth;
-	section.classList.add('active');
-	changeButtonToActive({activeClass:'active-btn',menuText:value});
-	window.location='/#/'+ (value || e.innerHTML.toLowerCase());
-}
+	function getSections() {
+		const sectionKeys = ['home', 'work', 'skills', 'learning', 'about'];
+		const sections = {};
 
-function goTo(url){
-	window.location=url;
-}
+		sectionKeys.forEach(function (sectionKey) {
+			sections[sectionKey + 'Section'] = document.querySelector('#' + sectionKey);
+		});
 
-function changeButtonToActive(opts){
-	var activeClassName = opts.activeClass;
-	var menuText = opts.menuText;
-	var navButtons = document.querySelectorAll('.nav-btn');
-	navButtons.forEach(function(button){
-		if(button.innerHTML && button.innerHTML.toLowerCase() === menuText.toLowerCase()){
-			button.classList.add(activeClassName);
+		const firstSection = Object.keys(sections)[0];
+		const defaultSection = sections[firstSection];
+
+		return {
+			sections,
+			defaultSection
+		};
+
+	}
+
+	function addHomeSectionButtonHandlers() {
+		const buttons = {
+			workButton: document.querySelector('#home-work-button'),
+			skillsButton: document.querySelector('#home-skills-button'),
+			learningButton: document.querySelector('#home-learning-button'),
+			aboutButton: document.querySelector('#home-about-button')
 		}
-	})
-}
+
+		buttons.workButton.addEventListener('click', function () {
+			setActiveSection('work');
+		});
+
+		buttons.skillsButton.addEventListener('click', function () {
+			setActiveSection('skills');
+		});
+
+		buttons.learningButton.addEventListener('click', function () {
+			setActiveSection('learning');
+		});
+
+		buttons.aboutButton.addEventListener('click', function () {
+			setActiveSection('about');
+		});
+
+	}
+
+	function homeButtonHandler() {
+		const buttons = document.querySelectorAll('.home-button');
+
+		buttons.forEach(function (buttonItem) {
+
+			buttonItem.addEventListener('click', function () {
+
+				setActiveSection('home');
+
+			});
+
+		});
+
+
+
+	}
+
+	function setActiveSection(sectionKey) {
+		const sections = getSections().sections;
+		const matchingKey = sectionKey + 'Section';
+
+		Object.keys(sections).forEach(sectionKey => {
+			if (sectionKey === matchingKey) {
+				sections[sectionKey].classList.remove('hidden');
+			} else {
+				sections[sectionKey].classList.add('hidden');
+			}
+		});
+
+	};
+
+
+	init();
+
+
+
+})()
