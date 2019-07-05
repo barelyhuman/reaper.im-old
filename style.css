@@ -5,7 +5,7 @@
 
 html,
 body {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  font-family: 'Exo 2',sans-serif;
 }
 
 section {
@@ -30,6 +30,7 @@ section .container {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  max-width: 90%;
 }
 
 ul {
@@ -62,7 +63,8 @@ ul li a:hover {
 .card-border {
   border: 1px solid #999;
   border-radius: 5px;
-  min-width: 425px !important;
+  min-width: 250px !important;
+  max-width: 100%;
 }
 
 .button {
@@ -196,4 +198,16 @@ ul li a:hover {
 
 .just-space-between {
   justify-content: space-between;
+}
+
+.just-center {
+  justify-content: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.text-center {
+  text-align: center;
 }
