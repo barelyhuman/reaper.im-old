@@ -177,7 +177,7 @@ ul li a:hover {
   font-size: 14px;
 }
 
-.button.home-button {
+.button.back-button {
   border: 0;
   background: white;
   color: black;
@@ -187,11 +187,11 @@ ul li a:hover {
   color: #999;
 }
 
-.button.home-button::before {
+.button.back-button::before {
   content: '<';
 }
 
-.button.home-button:hover {
+.button.back-button:hover {
   color: black;
   cursor: pointer;
 }

@@ -56,7 +56,7 @@
 	}
 
 	function homeButtonHandler() {
-		const buttons = document.querySelectorAll('.home-button');
+		const buttons = document.querySelectorAll('.back-button');
 
 		buttons.forEach(function (buttonItem) {
 
