@@ -135,6 +135,10 @@ ul li a:hover {
   margin-bottom: 8px;
 }
 
+.margin-top-sm {
+  margin-top: 8px;
+}
+
 .margin-md {
   margin: 16px;
 }
