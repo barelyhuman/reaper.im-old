@@ -215,3 +215,13 @@ ul li a:hover {
 .text-center {
   text-align: center;
 }
+
+.button.black.outline-btn{
+  border:1px solid black;
+  background:transparent;
+  color:black;
+}
+
+.button.black.outline-btn:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}

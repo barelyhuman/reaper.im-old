@@ -12,7 +12,7 @@
 	}
 
 	function getSections() {
-		const sectionKeys = ['home', 'work', 'skills', 'learning', 'about'];
+		const sectionKeys = ['home', 'work', 'skills', 'learning', 'about', 'hire'];
 		const sections = {};
 
 		sectionKeys.forEach(function (sectionKey) {
@@ -31,11 +31,16 @@
 
 	function addHomeSectionButtonHandlers() {
 		const buttons = {
+			hireButton: document.querySelector('#home-hire-button'),
 			workButton: document.querySelector('#home-work-button'),
 			skillsButton: document.querySelector('#home-skills-button'),
 			learningButton: document.querySelector('#home-learning-button'),
 			aboutButton: document.querySelector('#home-about-button')
 		}
+
+		buttons.hireButton.addEventListener('click', function () {
+			setActiveSection('hire');
+		});
 
 		buttons.workButton.addEventListener('click', function () {
 			setActiveSection('work');
