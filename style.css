@@ -226,3 +226,7 @@ ul li a:hover {
 .button.black.outline-btn:hover{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
+
+.accent{
+  color:#50a586;
+}
