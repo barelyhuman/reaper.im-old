@@ -1,5 +1,9 @@
 (function () {
 
+	const URLS = {
+		blog: 'https://blog.siddharthgelera.com'
+	}
+
 	function init() {
 		injectSectionHandler();
 		addHomeSectionButtonHandlers();
@@ -35,7 +39,8 @@
 			workButton: document.querySelector('#home-work-button'),
 			skillsButton: document.querySelector('#home-skills-button'),
 			learningButton: document.querySelector('#home-learning-button'),
-			aboutButton: document.querySelector('#home-about-button')
+			aboutButton: document.querySelector('#home-about-button'),
+			blogButton: document.querySelector('#blog-button'),
 		}
 
 		buttons.hireButton.addEventListener('click', function () {
@@ -56,6 +61,10 @@
 
 		buttons.aboutButton.addEventListener('click', function () {
 			setActiveSection('about');
+		});
+
+		buttons.blogButton.addEventListener('click', function () {
+			window.open(URLS.blog);
 		});
 
 	}
