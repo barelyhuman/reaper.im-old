@@ -1,0 +1,22 @@
+import Layout from '../../components/Layout';
+import Router from "next/router"
+
+export default ()=>{
+
+	return <Layout>
+		<div class="container">
+			<div class="min-width-150-px card-border padding-25-px max-width-500-px line-height-20-px">
+				<p>
+					You can drop an email at : <span class="accent">sidgel95@gmail.com</span> to discuss any kind of
+					projects or just have
+					a casual conversation.
+					<br />
+				</p>
+
+			</div>
+			<button class="button margin-top-sm align-start back-button" onClick={()=>Router.back()}>
+				Back
+			</button>
+		</div>
+	</Layout>
+}

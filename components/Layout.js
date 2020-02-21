@@ -1,4 +1,13 @@
-* {
+export default function Layout(props){
+
+
+    return <section>
+
+        {props.children}
+      <style jsx global>
+        {
+          `
+          * {
   margin: 0;
   padding: 0;
 }
@@ -16,14 +25,6 @@ section {
   width: 100%;
   display: flex;
   justify-content: center;
-}
-
-section.hidden {
-  opacity: 0;
-  visibility: hidden;
-  width: 0px;
-  height: 0px;
-  transition: 250ms opacity linear;
 }
 
 section .container {
@@ -229,4 +230,12 @@ ul li a:hover {
 
 .accent{
   color:#50a586;
+}
+          `
+        }
+      </style>
+    </section>
+
+
+
 }
