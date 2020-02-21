@@ -23,11 +23,8 @@ function Index(){
             alt="Siddharth Gelera's GitHub Profile" height="30" width="30" />
         </a>
       </div>
-      <div className="tagline margin-sm">
-        <small className="font-size-15">Full Stack Developer</small>
-      </div>
       <div className="tagline">
-        <small className="font-size-15">Minimalist | Designer | Developer</small>
+        <small className="font-size-15">Minimalist | Designer | Developer </small>
       </div>
     </div>
     <div className="flex flex-wrap just-center align-center">
