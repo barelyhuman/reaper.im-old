@@ -62,6 +62,14 @@ ul li a:hover {
   display: flex;
 }
 
+.flex-col {
+  flex-direction:column;
+}
+
+.align-center{
+  align-items:center;
+}
+
 .card-border {
   border: 1px solid #999;
   border-radius: 5px;

@@ -1,9 +1,17 @@
 import Layout from '../components/Layout';
+import Head from 'next/head';
 
 function Index(){
   return <Layout>
+  <Head>
+    <title>
+      Siddharth Gelera | Full Stack Developer
+    </title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+  </Head>
   <div className="container">
-    <div className="margin-md">
+    <div className="margin-md flex just-center flex-col align-center">
+      <img src="/logo.png" height={100} width={100} alt="logo"/>
       <a href="/" className="action-link">
         <span className="dark-gray font-size-50 text-center flex just-center">
           Siddharth Gelera
