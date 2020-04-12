@@ -4,9 +4,27 @@ import Router from 'next/router'
 function Work(){
   return <Layout>
   <div class="container">
-
-
     <ul class="card-border min-width-150-px">
+    <li>
+        <a target="_blank" href="https://mnmlcss.js.org/">
+          Mnml.css - Minimal CSS Resets
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="https://monotes.barelyhuman.dev/home">
+          Monotes - Markdown Editor
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="https://hireme.barelyhuman.dev/">
+          HireMe - Job Network
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="https://corona.siddharthgelera.com">
+          Covid - 19 Tracker
+        </a>
+      </li>
       <li>
         <a target="_blank" href="https://orion.barelyhuman.dev">
           Orion - Music Player UI
@@ -35,11 +53,6 @@ function Work(){
       <li>
         <a target="_blank" href="https://github.com/barelyhuman/archlinux.sh">
           archlinux.sh - Script for setup for archlinux
-        </a>
-      </li>
-      <li>
-        <a target="_blank" href="https://github.com/barelyhuman/mnml-css">
-          Mnml-CSS - Minimal CSS Boilerplate
         </a>
       </li>
     </ul>
