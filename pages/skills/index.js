@@ -5,10 +5,10 @@ function Skills(){
 
   return <Layout>
 
-  <div class="container">
+  <div className="container">
 
 
-    <div class="flex just-space-between min-width-150-px card-border">
+    <div className="flex just-space-between min-width-150-px card-border">
       <ul>
         <li>
           Linux
@@ -63,7 +63,7 @@ function Skills(){
       </ul>
     </div>
 
-    <button class="button margin-top-sm align-start back-button" onClick={()=>Router.back()}>
+    <button className="button margin-top-sm align-start back-button" onClick={()=>Router.back()}>
       Back
     </button>
 

@@ -4,9 +4,9 @@ import Router from 'next/router';
 export default ()=>{
   return <Layout>
 
-<div class="container">
+<div className="container">
 
-  <div class="min-width-150-px card-border padding-25-px max-width-500-px line-height-20-px">
+  <div className="min-width-150-px card-border padding-25-px max-width-500-px line-height-20-px">
     <p>
       A Confident, Curious and Self Taught developer who prefers to keep things as simple as possible
       while keeping
@@ -26,7 +26,7 @@ export default ()=>{
 
   </div>
 
-  <button class="button margin-top-sm align-start back-button" onClick={()=>Router.back()}>
+  <button className="button margin-top-sm align-start back-button" onClick={()=>Router.back()}>
     Back
   </button>
 

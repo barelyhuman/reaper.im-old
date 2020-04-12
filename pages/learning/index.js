@@ -4,9 +4,9 @@ import Router from 'next/router';
 export default ()=>{
   return <Layout>
 
-  <div class="container">
+  <div className="container">
 
-    <div class="min-width-150-px card-border">
+    <div className="min-width-150-px card-border">
       <ul>
         <li>
           Rust
@@ -17,7 +17,7 @@ export default ()=>{
       </ul>
     </div>
 
-    <button class="button margin-top-sm align-start back-button" onClick={()=>Router.back()}>
+    <button className="button margin-top-sm align-start back-button" onClick={()=>Router.back()}>
       Back
     </button>
 

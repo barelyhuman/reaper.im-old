@@ -3,8 +3,8 @@ import Router from 'next/router'
 
 function Work(){
   return <Layout>
-  <div class="container">
-    <ul class="card-border min-width-150-px">
+  <div className="container">
+    <ul className="card-border min-width-150-px">
     <li>
         <a target="_blank" href="https://mnmlcss.js.org/">
           Mnml.css - Minimal CSS Resets
@@ -57,7 +57,7 @@ function Work(){
       </li>
     </ul>
 
-    <button class="margin-top-sm  align-start button back-button" onClick={()=>Router.back()}>
+    <button className="margin-top-sm  align-start button back-button" onClick={()=>Router.back()}>
       Back
     </button>
   </div>
