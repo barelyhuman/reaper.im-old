@@ -12,7 +12,7 @@ function Work() {
         </li>
         <li>
           <a target="_blank" href="https://tillwhen.barelyhuman.dev/">
-            TillWhen - Just a time tracker
+            TillWhen - Project based Time tracker
         </a>
         </li>
 
