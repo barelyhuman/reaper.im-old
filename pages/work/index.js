@@ -37,8 +37,8 @@ function Work() {
         </a>
         </li>
         <li>
-          <a target="_blank" href="https://orion.barelyhuman.dev">
-            Orion - Music Player UI
+          <a target="_blank" href="https://music.reaper.im">
+            Music - Minimal Music Player
         </a>
         </li>
         <li>
