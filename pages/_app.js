@@ -1,6 +1,4 @@
-import Head from 'lib/components/head'
-import Nprogress from 'lib/components/nprogress'
-import 'toastify-js/src/toastify.css'
+import Head from 'next/head';
 
 function App({ Component, pageProps }) {
   return (
