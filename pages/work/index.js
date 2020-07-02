@@ -12,7 +12,7 @@ function Work() {
         </li>
 	<li>
 		<a target="_blank" href="https://mailer.reaper.im">
-		Nodemailer as a service
+		Mailer - Nodemailer as a service
 		</a>
 	</li>
         <li>
