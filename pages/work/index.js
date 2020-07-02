@@ -7,7 +7,7 @@ function Work() {
       <ul className="card-border min-width-150-px">
         <li>
           <a target="_blank" href="https://github.com/barelyhuman/route/">
-            Route - File Tree based API Routes for NodeJs
+            Routex - File Tree based API Routes for NodeJs
         </a>
         </li>
 	<li>
