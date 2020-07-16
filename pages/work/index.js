@@ -1,84 +1,95 @@
-import Layout from '../../components/Layout';
-import Router from 'next/router'
+import Layout from "../../components/Layout";
+import Router from "next/router";
+import Spacer from "../../components/Spacer";
 
 function Work() {
-  return <Layout>
-    <div className="container">
-      <ul className="card-border min-width-150-px">
-        <li>
-          <a target="_blank" href="https://github.com/barelyhuman/route/">
-            Routex - File Tree based API Routes for NodeJs
-        </a>
-        </li>
-	<li>
-		<a target="_blank" href="https://mailer.reaper.im">
-		Mailer - Nodemailer as a service
-		</a>
-	</li>
-        <li>
-          <a target="_blank" href="https://tillwhen.barelyhuman.dev/">
-            TillWhen - Project based Time tracker
-        </a>
-        </li>
+  return (
+    <Layout>
+      <div className="container">
+        <ul className="card-border min-width-150-px">
+          <li>
+            <a target="_blank" href="https://github.com/barelyhuman/route/">
+              Routex - File Tree based API Routes for NodeJs
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://mailer.reaper.im">
+              Mailer - Nodemailer as a service
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://tillwhen.barelyhuman.dev/">
+              TillWhen - Project based Time tracker
+            </a>
+          </li>
 
-        <li>
-          <a target="_blank" href="https://mnmlcss.js.org/">
-            Mnml.css - Minimal CSS Resets
-        </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://monotes.barelyhuman.dev/home">
-            Monotes - Markdown Editor
-        </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://hireme.barelyhuman.dev/">
-            HireMe - Job Network
-        </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://corona.siddharthgelera.com">
-            Covid - 19 Tracker
-        </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://music.reaper.im">
-            Music - Minimal Music Player
-        </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://washed.siddharthgelera.com">
-            Washed - Microservice for a filter
-        </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://rmnd-r.siddharthgelera.com">
-            rmnd-r - Minimal Tasks List
-        </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://github.com/barelyhuman/aForEach">
-            aForEach - Asynchronous ForEach Util for JS
-        </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://github.com/barelyhuman/sautocomplete-angularjs">
-            sAutoComplete - AngularJS1.6 Directive for Autocomplete
-        </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://github.com/barelyhuman/archlinux.sh">
-            archlinux.sh - Script for setup for archlinux
-        </a>
-        </li>
-      </ul>
-
-      <button className="margin-top-sm  align-start button back-button" onClick={() => Router.back()}>
-        Back
-    </button>
-    </div>
-  </Layout>
+          <li>
+            <a target="_blank" href="https://mnmlcss.js.org/">
+              Mnml.css - Minimal CSS Resets
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://monotes.barelyhuman.dev/home">
+              Monotes - Markdown Editor
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://hireme.barelyhuman.dev/">
+              HireMe - Job Network
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://corona.siddharthgelera.com">
+              Covid - 19 Tracker
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://music.reaper.im">
+              Music - Minimal Music Player
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://washed.siddharthgelera.com">
+              Washed - Microservice for a filter
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://rmnd-r.siddharthgelera.com">
+              rmnd-r - Minimal Tasks List
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://github.com/barelyhuman/aForEach">
+              aForEach - Asynchronous ForEach Util for JS
+            </a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://github.com/barelyhuman/sautocomplete-angularjs"
+            >
+              sAutoComplete - AngularJS1.6 Directive for Autocomplete
+            </a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://github.com/barelyhuman/archlinux.sh"
+            >
+              archlinux.sh - Script for setup for archlinux
+            </a>
+          </li>
+        </ul>
+        <Spacer y={1}></Spacer>
+        <button
+          className="margin-top-sm  align-start button black outline-btn"
+          onClick={() => Router.back()}
+        >
+          Back
+        </button>
+      </div>
+    </Layout>
+  );
 }
-
 
 export default Work;
