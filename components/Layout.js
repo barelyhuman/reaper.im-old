@@ -16,9 +16,9 @@ export default function Layout(props) {
           }
 
           section {
-            overflow: hidden;
-            position: relative;
-            height: 100vh;
+            overflow-y:auto;
+            position:relative;
+            min-height:100vh;
             width: 100%;
             display: flex;
             justify-content: center;
