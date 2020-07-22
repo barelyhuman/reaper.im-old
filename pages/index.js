@@ -6,16 +6,16 @@ function Index() {
   return (
     <Layout>
       <Head>
-        <title>Siddharth Gelera | Full Stack Developer</title>
-        <link rel="shortcut icon" href="/favicon.ico" />
+        <title>Reaper | Full Stack Developer</title>
+        <link rel="shortcut icon" href="/favicon.svg" />
       </Head>
       <div className="container">
         <div className="margin-md flex just-center flex-col align-center">
-          <img src="/logo.png" height={100} alt="logo" />
+          <img src="/logo.svg" height={100} alt="logo" />
           <Spacer y={2} />
           <a href="/" className="action-link">
             <span className="dark-gray font-size-50 text-center flex just-center">
-              Siddharth Gelera
+              Reaper
             </span>
           </a>
           <Spacer y={1} />
