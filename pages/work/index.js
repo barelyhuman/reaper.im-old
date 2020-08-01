@@ -8,6 +8,11 @@ function Work() {
       <div className="container">
         <ul className="card-border min-width-150-px">
           <li>
+            <a target="_blank" href="https://pending.reaper.im">
+              Pending - Kanban Board
+            </a>
+          </li>
+          <li>
             <a target="_blank" href="https://hen.reaper.im">
               Hen - UI Component Playground
             </a>
