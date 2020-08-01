@@ -8,7 +8,7 @@ function Work() {
       <div className="container">
         <ul className="card-border min-width-150-px">
           <li>
-            <a target="_blank" href="https://pending.reaper.im">
+            <a target="_blank" href="https://colors.reaper.im">
               Colors - Random Color Generator
             </a>
           </li>
