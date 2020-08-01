@@ -1,12 +1,17 @@
-import Layout from "../../components/Layout";
-import Router from "next/router";
-import Spacer from "../../components/Spacer";
+import Layout from '../../components/Layout';
+import Router from 'next/router';
+import Spacer from '../../components/Spacer';
 
 function Work() {
   return (
     <Layout>
       <div className="container">
         <ul className="card-border min-width-150-px">
+          <li>
+            <a target="_blank" href="https://pending.reaper.im">
+              Colors - Random Color Generator
+            </a>
+          </li>
           <li>
             <a target="_blank" href="https://pending.reaper.im">
               Pending - Kanban Board
