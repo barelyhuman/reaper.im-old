@@ -18,6 +18,11 @@ function Work() {
             </a>
           </li>
           <li>
+            <a target="_blank" href="http://snips.reaper.im/">
+              Snips - React Component Snippets
+            </a>
+          </li>
+          <li>
             <a target="_blank" href="https://hen.reaper.im">
               Hen - UI Component Playground
             </a>
