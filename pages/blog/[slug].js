@@ -10,17 +10,18 @@ const PostContent = ({ post, previousPost, nextPost }) => {
     <>
       <Layout>
         <div className="container">
+          <Spacer y={2} />
           <p className="align-start time-stamp">
             <small>{formatDate(post.meta.date)}</small>
           </p>
           <Spacer y={1}></Spacer>
-          <div className="card-border min-width-150 padding-25-px max-width-500-px line-height-20-px">
+          <div className="card-border post-container min-width-150 padding-25-px line-height-20-px">
             <h1>{post.meta.title}</h1>
             <Spacer y={1} />
-            <div
+            <article
               className="article"
               dangerouslySetInnerHTML={{ __html: marked(post.content) }}
-            ></div>
+            ></article>
           </div>
           <Spacer y={1}></Spacer>
           <div className="flex just-space-between">
@@ -50,11 +51,17 @@ const PostContent = ({ post, previousPost, nextPost }) => {
         </div>
         <style jsx global>
           {`
+            .post-container {
+              max-width: 700px !important;
+            }
+
             .article {
               font-size: 16px;
               line-height: 24px;
               font-family: 'Exo 2', sans-serif;
+
               max-width: 100%;
+
               white-space: break-spaces;
               overflow-wrap: break-word;
             }
@@ -65,6 +72,10 @@ const PostContent = ({ post, previousPost, nextPost }) => {
 
             .article pre {
               color: #000;
+              border: 1px solid #333;
+              border-radius: 4px;
+              color: #000;
+              padding: 10px;
               overflow: auto;
             }
 
@@ -77,9 +88,16 @@ const PostContent = ({ post, previousPost, nextPost }) => {
 
             .article ul li,
             .article ul li a {
-              text-decoration: underline;
               line-height: 14px;
               font-size: 14px;
+            }
+
+            .article ul li {
+              color: #333;
+            }
+
+            .article ul li a {
+              text-decoration: underline;
               color: #999;
             }
 
