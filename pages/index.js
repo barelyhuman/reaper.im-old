@@ -1,6 +1,6 @@
-import Head from "next/head";
-import Layout from "../components/Layout";
-import Spacer from "../components/Spacer";
+import Head from 'next/head';
+import Layout from '../components/Layout';
+import Spacer from '../components/Spacer';
 
 function Index() {
   return (
@@ -21,7 +21,7 @@ function Index() {
           <Spacer y={1} />
           <div className="tagline">
             <small className="font-size-15">
-              Minimalist | Designer | Developer{" "}
+              Minimalist | Designer | Developer{' '}
             </small>
           </div>
         </div>
@@ -41,10 +41,7 @@ function Index() {
           <a className="margin-sm button black outline-btn" href="/learning">
             Learning
           </a>
-          <a
-            className="margin-sm button black outline-btn"
-            href="https://blog.siddharthgelera.com"
-          >
+          <a className="margin-sm button black outline-btn" href="/blog">
             Blog
           </a>
         </div>

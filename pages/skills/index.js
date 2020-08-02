@@ -1,6 +1,6 @@
-import Layout from "../../components/Layout";
-import Router from "next/router";
-import Spacer from "../../components/Spacer";
+import Layout from '../../components/Layout';
+import Router from 'next/router';
+import Spacer from '../../components/Spacer';
 
 function Skills() {
   return (
@@ -31,7 +31,7 @@ function Skills() {
         <Spacer y={1}></Spacer>
         <button
           className="button margin-top-sm align-start black outline-btn"
-          onClick={() => Router.back()}
+          onClick={() => Router.push('/')}
         >
           Back
         </button>

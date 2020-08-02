@@ -11,14 +11,14 @@ export default function Layout(props) {
 
           html,
           body {
-            font-family: "Exo 2", sans-serif;
+            font-family: 'Exo 2', sans-serif;
             background: #fff;
           }
 
           section {
-            overflow-y:auto;
-            position:relative;
-            min-height:100vh;
+            overflow-y: auto;
+            position: relative;
+            min-height: 100vh;
             width: 100%;
             display: flex;
             justify-content: center;
@@ -34,11 +34,9 @@ export default function Layout(props) {
 
           ul {
             box-sizing: border-box;
-            /* box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12); */
             padding: 25px;
             text-align: left;
             list-style-type: none;
-            /* border-radius: 5px; */
           }
 
           ul li,
@@ -53,6 +51,14 @@ export default function Layout(props) {
           ul li a:hover {
             color: black;
             cursor: pointer;
+          }
+
+          a {
+            color: #999;
+          }
+
+          a:hover {
+            color: #000;
           }
 
           .flex {
@@ -179,6 +185,10 @@ export default function Layout(props) {
             align-self: flex-start;
           }
 
+          .align-end {
+            align-self: flex-end;
+          }
+
           .min-width-150-px {
             min-width: 150px;
           }
@@ -211,7 +221,7 @@ export default function Layout(props) {
           }
 
           .button.back-button::before {
-            content: "<";
+            content: '<';
           }
 
           .button.back-button:hover {

@@ -103,7 +103,7 @@ function Work() {
         <Spacer y={1}></Spacer>
         <button
           className="margin-top-sm  align-start button black outline-btn"
-          onClick={() => Router.back()}
+          onClick={() => Router.push('/')}
         >
           Back
         </button>

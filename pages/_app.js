@@ -1,6 +1,11 @@
-import Head from "next/head";
+import Head from 'next/head';
+import feather from 'feather-icons';
+import { useEffect } from 'react';
 
 function App({ Component, pageProps }) {
+  useEffect(() => {
+    feather.replace();
+  }, []);
   return (
     <>
       <Head>

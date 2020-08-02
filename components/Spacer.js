@@ -1,8 +1,8 @@
-export default function Spacer(props) {
+const Spacer = function Spacer(props) {
   const style = {
     height: 1,
     width: 1,
-    display: props.inline ? "inline-block" : "block",
+    display: props.inline ? 'inline-block' : 'block',
   };
 
   const spacingMultiplier = 8;
@@ -16,4 +16,6 @@ export default function Spacer(props) {
   }
 
   return <div style={style}>{props.children}</div>;
-}
+};
+
+export default Spacer;
