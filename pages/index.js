@@ -1,14 +1,9 @@
-import Head from 'next/head';
 import Layout from '../components/Layout';
 import Spacer from '../components/Spacer';
 
 function Index() {
   return (
     <Layout>
-      <Head>
-        <title>Reaper | Full Stack Developer</title>
-        <link rel="shortcut icon" href="/favicon.svg" />
-      </Head>
       <div className="container">
         <div className="margin-md flex just-center flex-col align-center">
           <img src="/logo.svg" height={100} alt="logo" />

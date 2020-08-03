@@ -3,10 +3,14 @@ import Layout from 'components/Layout';
 import Link from 'next/link';
 import Router from 'next/router';
 import Spacer from 'components/Spacer';
+import Head from 'components/head';
 
 const Blog = ({ posts }) => {
   return (
     <>
+      <Head>
+        <title>Blog | Reaper</title>
+      </Head>
       <Layout>
         <div className="container">
           <ul className="card-border min-width-150-px">
@@ -27,6 +31,7 @@ const Blog = ({ posts }) => {
           >
             Back
           </button>
+          <Spacer y={2}></Spacer>
         </div>
       </Layout>
       <style jsx>{``}</style>

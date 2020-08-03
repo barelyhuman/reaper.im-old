@@ -4,10 +4,15 @@ import Spacer from 'components/Spacer';
 import marked from 'marked';
 import formatDate from 'lib/format-date';
 import Layout from 'components/Layout';
+import Head from 'components/head';
 
 const PostContent = ({ post, previousPost, nextPost }) => {
   return (
     <>
+      <Head>
+        <meta name="robots" content="index, follow" />
+        <title>{post.meta.title} | Reaper</title>
+      </Head>
       <Layout>
         <div className="container">
           <Spacer y={2} />
@@ -31,7 +36,9 @@ const PostContent = ({ post, previousPost, nextPost }) => {
                   Prev Post
                 </a>
               </Link>
-            ) : null}
+            ) : (
+              <div></div>
+            )}
             <Spacer x={5} inline></Spacer>
             <Link href="/blog">
               <a href="" className="action-link">
@@ -45,14 +52,16 @@ const PostContent = ({ post, previousPost, nextPost }) => {
                   Next Post
                 </a>
               </Link>
-            ) : null}
+            ) : (
+              <div></div>
+            )}
           </div>
           <Spacer y={10}></Spacer>
         </div>
         <style jsx global>
           {`
             .post-container {
-              max-width: 700px !important;
+              max-width: calc(100% - 40px) !important;
             }
 
             .article {
