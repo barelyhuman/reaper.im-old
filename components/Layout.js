@@ -11,7 +11,7 @@ export default function Layout(props) {
 
           html,
           body {
-            font-family: 'Exo 2', sans-serif;
+            font-family: 'Nanum Gothic', sans-serif;
             background: #fff;
           }
 

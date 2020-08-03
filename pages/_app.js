@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Head from 'components/head';
 import feather from 'feather-icons';
 import { useEffect } from 'react';
 

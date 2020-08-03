@@ -58,7 +58,7 @@ const PostContent = ({ post, previousPost, nextPost }) => {
             .article {
               font-size: 16px;
               line-height: 24px;
-              font-family: 'Exo 2', sans-serif;
+              font-family: 'Nanum Gothic', sans-serif;
 
               max-width: 100%;
 
@@ -113,6 +113,14 @@ const PostContent = ({ post, previousPost, nextPost }) => {
             h5,
             h6 {
               color: #444;
+              font-weight: 700;
+            }
+
+            h1 {
+              text-align: center;
+              padding: 16px !important;
+              font-size: 50px;
+              line-height: 50px;
             }
 
             .time-stamp {
