@@ -40,7 +40,7 @@ const Blog = ({ walls }) => {
       </Layout>
       <style jsx>{`
         img {
-          height: 100px;
+          height: 350px;
           object-fit: contain;
         }
       `}</style>
