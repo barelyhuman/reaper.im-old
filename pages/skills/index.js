@@ -1,5 +1,5 @@
-import Layout from '../../components/Layout';
 import Router from 'next/router';
+import Layout from '../../components/Layout';
 import Spacer from '../../components/Spacer';
 
 function Skills() {

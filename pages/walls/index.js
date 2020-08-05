@@ -1,8 +1,8 @@
-import getWallpapers from 'lib/get-wallpapers';
-import Layout from 'components/Layout';
-import Router from 'next/router';
-import Spacer from 'components/Spacer';
 import Head from 'components/head';
+import Layout from 'components/Layout';
+import Spacer from 'components/Spacer';
+import getWallpapers from 'lib/get-wallpapers';
+import Router from 'next/router';
 
 const Blog = ({ walls }) => {
   return (

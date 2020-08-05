@@ -1,5 +1,5 @@
-import Layout from '../../components/Layout';
 import Router from 'next/router';
+import Layout from '../../components/Layout';
 import Spacer from '../../components/Spacer';
 
 function Work() {
@@ -7,7 +7,6 @@ function Work() {
     <Layout>
       <div className="container">
         <ul className="card-border min-width-150-px">
-          
           <li>
             <a target="_blank" href="https://mark.reaper.im">
               Mark - Markdown Editor

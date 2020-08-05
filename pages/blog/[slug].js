@@ -1,10 +1,10 @@
-import getPosts from 'lib/get-posts';
-import Link from 'next/link';
-import Spacer from 'components/Spacer';
-import marked from 'marked';
-import formatDate from 'lib/format-date';
-import Layout from 'components/Layout';
 import Head from 'components/head';
+import Layout from 'components/Layout';
+import Spacer from 'components/Spacer';
+import formatDate from 'lib/format-date';
+import getPosts from 'lib/get-posts';
+import marked from 'marked';
+import Link from 'next/link';
 
 const PostContent = ({ post, previousPost, nextPost }) => {
   return (

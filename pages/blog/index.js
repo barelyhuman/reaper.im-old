@@ -1,9 +1,9 @@
-import getPosts from 'lib/get-posts';
+import Head from 'components/head';
 import Layout from 'components/Layout';
+import Spacer from 'components/Spacer';
+import getPosts from 'lib/get-posts';
 import Link from 'next/link';
 import Router from 'next/router';
-import Spacer from 'components/Spacer';
-import Head from 'components/head';
 
 const Blog = ({ posts }) => {
   return (
