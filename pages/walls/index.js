@@ -13,15 +13,15 @@ const Blog = ({ walls }) => {
       <Layout>
         <div className="container">
           <ul className="card-border min-width-150-px">
-            {walls.map(({ name }, index) => {
+            {walls.map(({ name, link }, index) => {
               return (
                 <li key={index}>
                   <a
                     className="flex flex-col just-center align-center"
                     target="_blank"
-                    href={`/wallpapers/${name}`}
+                    href={`/wallpapers/${link}`}
                   >
-                    <img src={`/wallpapers/${name}`} />
+                    <img src={`/wallpapers/${link}`} />
                     {name}
                   </a>
                 </li>
