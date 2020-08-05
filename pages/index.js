@@ -39,6 +39,9 @@ function Index() {
           <a className="margin-sm button black outline-btn" href="/blog">
             Blog
           </a>
+          <a className="margin-sm button black outline-btn" href="/walls">
+            Wallpapers
+          </a>
         </div>
         <Spacer y={1} />
         <div className="margin-sm">
