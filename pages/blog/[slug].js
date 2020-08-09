@@ -20,9 +20,9 @@ const PostContent = ({ post, previousPost, nextPost }) => {
             <small>{formatDate(post.meta.date)}</small>
           </p>
           <Spacer y={1}></Spacer>
-          <div className="card-border post-container min-width-150 padding-25-px line-height-20-px">
-            <h1>{post.meta.title}</h1>
-            <Spacer y={1} />
+          <div className="post-container min-width-150 padding-25-px line-height-20-px">
+            <h1>{post.meta.title.trim()}</h1>
+            <Spacer y={10} />
             <article
               className="article"
               dangerouslySetInnerHTML={{ __html: marked(post.content) }}
@@ -60,13 +60,16 @@ const PostContent = ({ post, previousPost, nextPost }) => {
         </div>
         <style jsx global>
           {`
+            @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
             .post-container {
+              font-family: 'Quicksand', sans-serif;
               max-width: calc(100% - 40px) !important;
             }
 
             .article {
-              font-size: 16px;
-              line-height: 24px;
+              font-size: 1rem;
+              line-height: calc(1rem * 1.5);
               font-family: 'Nanum Gothic', sans-serif;
 
               max-width: 100%;
@@ -76,12 +79,12 @@ const PostContent = ({ post, previousPost, nextPost }) => {
             }
 
             .article > p {
-              color: #333;
+              color: #000;
             }
 
             .article pre {
               color: #000;
-              border: 1px solid #333;
+              border: 1px solid #000;
               border-radius: 4px;
               color: #000;
               padding: 10px;
@@ -102,7 +105,7 @@ const PostContent = ({ post, previousPost, nextPost }) => {
             }
 
             .article ul li {
-              color: #333;
+              color: #000;
             }
 
             .article ul li a {
@@ -127,9 +130,20 @@ const PostContent = ({ post, previousPost, nextPost }) => {
 
             h1 {
               text-align: center;
-              padding: 16px !important;
-              font-size: 50px;
-              line-height: 50px;
+              font-size: 2.8rem;
+              line-height: calc(2.8rem * 1.5);
+            }
+
+            h2 {
+              text-align: left;
+              font-size: 2rem;
+              line-height: calc(2rem * 1.5);
+            }
+
+            h3 {
+              text-align: left;
+              font-size: 1.8rem;
+              line-height: calc(1.8rem * 1.5);
             }
 
             .time-stamp {
