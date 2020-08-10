@@ -8,7 +8,7 @@ date: 2020-08-10T00:59:14.711Z
 
 I've had countless nights where, no matter what I do I just can't fall asleep. I've tried light music, meditation, no music, working out, banging my head on the wall.
 
-Okay, maybe not working out but point being, I've tried a lot of "sleep hacks" out there to know that nothing actually works when my brain isn't tired. Problem is, I don't know how to get it to be tired enough to fall asleep instantly. I don't mind sleeping at random times during the day but then, it hinders my personal projects. Since, I have a dedicated time in the evening after office where I spend time thinking/learning/building.
+Okay, I might not have tried working out but point being, I've tried a lot of "sleep hacks" out there to know that nothing actually works when my brain isn't tired. Problem is, I don't know how to get it to be tired enough to fall asleep instantly. I don't mind sleeping at random times during the day but then, it hinders my personal projects. Since, I have a dedicated time in the evening after office where I spend time thinking/learning/building.
 
 You know there's this "hack" online  which says, the temperature of the room to the  temerature of the body plays a role in you sleeping. I'd believe that but then it didn't work for me so I'm going to discard that.
 
