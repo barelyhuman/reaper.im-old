@@ -33,7 +33,7 @@ const PostContent = ({ post, previousPost, nextPost }) => {
             {previousPost ? (
               <Link href={`/blog/${previousPost.meta.slug}`}>
                 <a href="" className="action-link">
-                  Prev Post
+                  Older Post
                 </a>
               </Link>
             ) : (
@@ -49,7 +49,7 @@ const PostContent = ({ post, previousPost, nextPost }) => {
             {nextPost ? (
               <Link href={`/blog/${nextPost.meta.slug}`}>
                 <a href="" className="action-link">
-                  Next Post
+                  Newer Post
                 </a>
               </Link>
             ) : (
@@ -170,8 +170,8 @@ export async function getStaticProps({ params }) {
   });
 
   if (typeof index !== 'undefined') {
-    records.previousPost = posts[index - 1] || null;
-    records.nextPost = posts[index + 1] || null;
+    records.previousPost = posts[index + 1] || null;
+    records.nextPost = posts[index - 1] || null;
   }
 
   return { props: records };
