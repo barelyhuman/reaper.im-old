@@ -70,10 +70,7 @@ const PostContent = ({ post, previousPost, nextPost }) => {
             .article {
               font-size: 1rem;
               line-height: calc(1rem * 1.5);
-              font-family: 'Nanum Gothic', sans-serif;
-
               max-width: 100%;
-
               white-space: break-spaces;
               overflow-wrap: break-word;
             }
