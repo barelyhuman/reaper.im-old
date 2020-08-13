@@ -1,23 +1,23 @@
-import Head from 'components/head';
-import Layout from 'components/Layout';
-import Spacer from 'components/Spacer';
-import Link from 'next/link';
-import Router from 'next/router';
+import Head from 'components/head'
+import Layout from 'components/Layout'
+import Spacer from 'components/Spacer'
+import Link from 'next/link'
+import Router from 'next/router'
 
 const Collections = ({ collections }) => {
   return (
     <>
       <Head>
         <title>Collections | Reaper</title>
-        <meta property="og:title" content="collections@reaper" />
+        <meta property='og:title' content='collections@reaper' />
         <meta
-          property="og:description"
-          content="List of things I need and/or use"
+          property='og:description'
+          content='List of things I need and/or use'
         />
       </Head>
       <Layout>
-        <div className="container">
-          <ul className="card-border min-width-150-px">
+        <div className='container'>
+          <ul className='card-border min-width-150-px'>
             {collections.map((collItem) => {
               return (
                 <>
@@ -34,12 +34,12 @@ const Collections = ({ collections }) => {
                   </li>
                   <Spacer y={1} />
                 </>
-              );
+              )
             })}
           </ul>
           <Spacer y={1} />
           <button
-            className="margin-top-sm  align-start button black outline-btn"
+            className='margin-top-sm  align-start button black outline-btn'
             onClick={() => Router.push('/')}
           >
             Back
@@ -48,16 +48,16 @@ const Collections = ({ collections }) => {
         </div>
       </Layout>
     </>
-  );
-};
-
-export async function getStaticProps() {
-  const collections = require('static-db/collections.json');
-  return {
-    props: {
-      collections,
-    },
-  };
+  )
 }
 
-export default Collections;
+export async function getStaticProps () {
+  const collections = require('static-db/collections.json')
+  return {
+    props: {
+      collections
+    }
+  }
+}
+
+export default Collections
