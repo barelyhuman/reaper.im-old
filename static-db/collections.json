@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Automation",
+    "description": "Github/Gitlab Runner Examples",
+    "link": "/collections/automation"
+  },
+  {
+    "title": "Code",
+    "description": "Reusable Code Snippets",
+    "link": "/collections/code"
+  }
+]

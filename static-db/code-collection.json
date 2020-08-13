@@ -1,0 +1,27 @@
+[
+  {
+    "title": "React - Input Snippet",
+    "description": "Input Snippet for React/Next",
+    "link": "https://snips.reaper.im/input"
+  },
+  {
+    "title": "React - Button Snippet",
+    "description": "Button Snippet for React/Next",
+    "link": "https://snips.reaper.im/button"
+  },
+  {
+    "title": "React - Spacer Snippet",
+    "description": "Spacer Snippet for React/Next",
+    "link": "https://snips.reaper.im/spacer"
+  },
+  {
+    "title": "React - Card Snippet",
+    "description": "Card Snippet for React/Next",
+    "link": "https://snips.reaper.im/card"
+  },
+  {
+    "title": "React - Padding Snippet",
+    "description": "Padding Snippet for React/Next",
+    "link": "https://snips.reaper.im/padding"
+  }
+]
