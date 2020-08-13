@@ -1,62 +1,62 @@
-import Head from 'components/head';
-import Layout from 'components/Layout';
-import Spacer from 'components/Spacer';
-import formatDate from 'lib/format-date';
-import getPosts from 'lib/get-posts';
-import marked from 'marked';
-import Link from 'next/link';
+import Head from 'components/head'
+import Layout from 'components/Layout'
+import Spacer from 'components/Spacer'
+import formatDate from 'lib/format-date'
+import getPosts from 'lib/get-posts'
+import marked from 'marked'
+import Link from 'next/link'
 
 const PostContent = ({ post, previousPost, nextPost }) => {
   return (
     <>
       <Head>
-        <meta name="robots" content="index, follow" />
+        <meta name='robots' content='index, follow' />
         <title>{post.meta.title} | Reaper</title>
       </Head>
       <Layout>
-        <div className="container">
+        <div className='container'>
           <Spacer y={2} />
-          <p className="align-start time-stamp">
+          <p className='align-start time-stamp'>
             <small>{formatDate(post.meta.date)}</small>
           </p>
-          <Spacer y={1}></Spacer>
-          <div className="post-container min-width-150 padding-25-px line-height-20-px">
+          <Spacer y={1} />
+          <div className='post-container min-width-150 padding-25-px line-height-20-px'>
             <h1>{post.meta.title.trim()}</h1>
             <Spacer y={10} />
             <article
-              className="article"
+              className='article'
               dangerouslySetInnerHTML={{ __html: marked(post.content) }}
-            ></article>
+            />
           </div>
-          <Spacer y={1}></Spacer>
-          <div className="flex just-space-between">
+          <Spacer y={1} />
+          <div className='flex just-space-between'>
             {previousPost ? (
               <Link href={`/blog/${previousPost.meta.slug}`}>
-                <a href="" className="action-link">
+                <a href='' className='action-link'>
                   Older Post
                 </a>
               </Link>
             ) : (
-              <div></div>
+              <div />
             )}
-            <Spacer x={5} inline></Spacer>
-            <Link href="/blog">
-              <a href="" className="action-link">
+            <Spacer x={5} inline />
+            <Link href='/blog'>
+              <a href='' className='action-link'>
                 All Posts
               </a>
             </Link>
-            <Spacer x={5} inline></Spacer>
+            <Spacer x={5} inline />
             {nextPost ? (
               <Link href={`/blog/${nextPost.meta.slug}`}>
-                <a href="" className="action-link">
+                <a href='' className='action-link'>
                   Newer Post
                 </a>
               </Link>
             ) : (
-              <div></div>
+              <div />
             )}
           </div>
-          <Spacer y={10}></Spacer>
+          <Spacer y={10} />
         </div>
         <style jsx global>
           {`
@@ -150,46 +150,46 @@ const PostContent = ({ post, previousPost, nextPost }) => {
         </style>
       </Layout>
     </>
-  );
-};
+  )
+}
 
-export async function getStaticProps({ params }) {
-  const posts = await getPosts();
-  let index;
+export async function getStaticProps ({ params }) {
+  const posts = await getPosts()
+  let index
   const records = {
     post: [],
     previousPost: [],
-    nextPost: [],
-  };
+    nextPost: []
+  }
   records.post = posts.find(({ meta }, _index) => {
     if (meta.slug === params.slug) {
-      index = _index;
-      return true;
+      index = _index
+      return true
     }
-    return false;
-  });
+    return false
+  })
 
   if (typeof index !== 'undefined') {
-    records.previousPost = posts[index + 1] || null;
-    records.nextPost = posts[index - 1] || null;
+    records.previousPost = posts[index + 1] || null
+    records.nextPost = posts[index - 1] || null
   }
 
-  return { props: records };
+  return { props: records }
 }
 
-export async function getStaticPaths() {
-  const posts = await getPosts();
+export async function getStaticPaths () {
+  const posts = await getPosts()
 
   return {
     paths: posts.map(({ meta }) => {
       return {
         params: {
-          slug: meta.slug,
-        },
-      };
+          slug: meta.slug
+        }
+      }
     }),
-    fallback: false,
-  };
+    fallback: false
+  }
 }
 
-export default PostContent;
+export default PostContent

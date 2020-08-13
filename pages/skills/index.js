@@ -1,12 +1,12 @@
-import Router from 'next/router';
-import Layout from '../../components/Layout';
-import Spacer from '../../components/Spacer';
+import Router from 'next/router'
+import Layout from '../../components/Layout'
+import Spacer from '../../components/Spacer'
 
-function Skills() {
+function Skills () {
   return (
     <Layout>
-      <div className="container">
-        <div className="flex just-space-between min-width-150-px card-border">
+      <div className='container'>
+        <div className='flex just-space-between min-width-150-px card-border'>
           <ul>
             <li>Linux</li>
             <li>React</li>
@@ -28,16 +28,16 @@ function Skills() {
             <li>Ruby</li>
           </ul>
         </div>
-        <Spacer y={1}></Spacer>
+        <Spacer y={1} />
         <button
-          className="button margin-top-sm align-start black outline-btn"
+          className='button margin-top-sm align-start black outline-btn'
           onClick={() => Router.push('/')}
         >
           Back
         </button>
       </div>
     </Layout>
-  );
+  )
 }
 
-export default Skills;
+export default Skills

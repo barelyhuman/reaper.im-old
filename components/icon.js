@@ -1,7 +1,7 @@
 const Icon = (props) => {
   return (
     <>
-      <span className="icon-container">{props.children}</span>
+      <span className='icon-container'>{props.children}</span>
       <style jsx>
         {`
           .icon-container {
@@ -14,7 +14,7 @@ const Icon = (props) => {
         `}
       </style>
     </>
-  );
-};
+  )
+}
 
-export default Icon;
+export default Icon
