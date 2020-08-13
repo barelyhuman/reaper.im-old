@@ -17,7 +17,7 @@ jobs:
       - name: Format
         run: |
           npm i
-          npx standard --fix && echo "Fixed as many as I could"
+          npx standard --fix | echo "Will fix everything I can"
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4.1.2
         with:
