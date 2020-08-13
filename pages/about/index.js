@@ -1,12 +1,12 @@
-import Router from 'next/router';
-import Layout from '../../components/Layout';
-import Spacer from '../../components/Spacer';
+import Router from 'next/router'
+import Layout from '../../components/Layout'
+import Spacer from '../../components/Spacer'
 
 export default () => {
   return (
     <Layout>
-      <div className="container">
-        <div className="min-width-150-px card-border padding-25-px max-width-500-px line-height-20-px">
+      <div className='container'>
+        <div className='min-width-150-px card-border padding-25-px max-width-500-px line-height-20-px'>
           <p>
             A Confident, Curious and Self Taught developer who prefers to keep
             things as simple as possible while keeping in mind the importance of
@@ -21,14 +21,14 @@ export default () => {
             <br />
           </p>
         </div>
-        <Spacer y={1}></Spacer>
+        <Spacer y={1} />
         <button
-          className="button margin-top-sm align-start black outline-btn"
+          className='button margin-top-sm align-start black outline-btn'
           onClick={() => Router.push('/')}
         >
           Back
         </button>
       </div>
     </Layout>
-  );
-};
+  )
+}

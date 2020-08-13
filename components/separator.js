@@ -1,7 +1,7 @@
 const Separator = (props) => {
   return (
     <>
-      <div className="separator"></div>
+      <div className='separator' />
       <style jsx>
         {`
           .separator {
@@ -10,9 +10,9 @@ const Separator = (props) => {
             background: #ededed;
           }
         `}
-      </style>{" "}
+      </style>{' '}
     </>
-  );
-};
+  )
+}
 
-export default Separator;
+export default Separator

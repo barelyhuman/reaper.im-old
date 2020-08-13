@@ -22,9 +22,10 @@ const Button = ({ children, ...props }) => {
           color: #000;
           background: #fff;
         }
-      `}</style>
+      `}
+      </style>
     </>
-  );
-};
+  )
+}
 
-export default Button;
+export default Button

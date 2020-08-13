@@ -1,4 +1,4 @@
-export default function Layout(props) {
+export default function Layout (props) {
   return (
     <section>
       {props.children}
@@ -262,5 +262,5 @@ export default function Layout(props) {
         `}
       </style>
     </section>
-  );
+  )
 }
