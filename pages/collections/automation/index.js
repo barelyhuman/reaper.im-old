@@ -1,8 +1,8 @@
-import Head from 'components/head'
-import Layout from 'components/Layout'
-import Spacer from 'components/Spacer'
-import Link from 'next/link'
-import Router from 'next/router'
+import Head from 'components/head';
+import Layout from 'components/Layout';
+import Spacer from 'components/Spacer';
+import Router from 'next/router';
+import HLink from 'components/hlink';
 
 const AutomationCollection = ({ collections }) => {
   return (
@@ -11,13 +11,13 @@ const AutomationCollection = ({ collections }) => {
         <title>Collections | Reaper</title>
       </Head>
       <Layout>
-        <div className='container'>
-          <ul className='card-border min-width-150-px'>
+        <div className="container">
+          <ul className="card-border min-width-150-px">
             {collections.map((collItem) => {
               return (
                 <>
                   <li>
-                    <Link href={collItem.link}>
+                    <HLink link={collItem.link}>
                       <a>
                         <p>
                           {collItem.title}
@@ -25,17 +25,17 @@ const AutomationCollection = ({ collections }) => {
                           <small>{collItem.description}</small>
                         </p>
                       </a>
-                    </Link>
+                    </HLink>
                   </li>
                   <Spacer y={1} />
                 </>
-              )
+              );
             })}
           </ul>
           <Spacer y={1} />
           <button
-            className='margin-top-sm  align-start button black outline-btn'
-            onClick={() => Router.push('/')}
+            className="margin-top-sm  align-start button black outline-btn"
+            onClick={() => Router.push('/collections')}
           >
             Back
           </button>
@@ -43,16 +43,16 @@ const AutomationCollection = ({ collections }) => {
         </div>
       </Layout>
     </>
-  )
-}
+  );
+};
 
-export async function getStaticProps () {
-  const collections = require('static-db/automation-collection.json')
+export async function getStaticProps() {
+  const collections = require('static-db/automation-collection.json');
   return {
     props: {
-      collections
-    }
-  }
+      collections,
+    },
+  };
 }
 
-export default AutomationCollection
+export default AutomationCollection;
