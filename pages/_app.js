@@ -8,6 +8,7 @@ function App({ Component, pageProps }) {
   useEffect(() => {
     feather.replace();
   }, []);
+
   return (
     <>
       <Head>

@@ -34,7 +34,6 @@ const Blog = ({ posts }) => {
           <Spacer y={2}></Spacer>
         </div>
       </Layout>
-      <style jsx>{``}</style>
     </>
   );
 };
