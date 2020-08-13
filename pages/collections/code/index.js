@@ -1,18 +1,20 @@
-import Head from 'components/head'
-import Layout from 'components/Layout'
-import Spacer from 'components/Spacer'
-import Router from 'next/router'
-import HLink from 'components/hlink'
+import Head from 'components/head';
+import Layout from 'components/Layout';
+import Spacer from 'components/Spacer';
+import Router from 'next/router';
+import HLink from 'components/hlink';
 
 const CodeCollection = ({ collections }) => {
   return (
     <>
       <Head>
-        <title>Collections | Reaper</title>
+        <title>Code | Reaper</title>
+        <meta property="og:title" content="code@reaper" />
+        <meta property="og:description" content="Code Snippets I use" />
       </Head>
       <Layout>
-        <div className='container'>
-          <ul className='card-border min-width-150-px'>
+        <div className="container">
+          <ul className="card-border min-width-150-px">
             {collections.map((collItem) => {
               return (
                 <>
@@ -27,12 +29,12 @@ const CodeCollection = ({ collections }) => {
                   </li>
                   <Spacer y={1} />
                 </>
-              )
+              );
             })}
           </ul>
           <Spacer y={1} />
           <button
-            className='margin-top-sm  align-start button black outline-btn'
+            className="margin-top-sm  align-start button black outline-btn"
             onClick={() => Router.push('/collections')}
           >
             Back
@@ -41,16 +43,16 @@ const CodeCollection = ({ collections }) => {
         </div>
       </Layout>
     </>
-  )
-}
+  );
+};
 
-export async function getStaticProps () {
-  const collections = require('static-db/code-collection.json')
+export async function getStaticProps() {
+  const collections = require('static-db/code-collection.json');
   return {
     props: {
-      collections
-    }
-  }
+      collections,
+    },
+  };
 }
 
-export default CodeCollection
+export default CodeCollection;
