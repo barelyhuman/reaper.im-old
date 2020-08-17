@@ -1,6 +1,6 @@
 ---
 title: Is Life really hard ?
-date: 2017-09-30T18:30:00.000Z
+date: 2017-10-01T13:00:00.000Z
 published: true
 ---
 
