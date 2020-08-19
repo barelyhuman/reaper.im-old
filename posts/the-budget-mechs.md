@@ -101,7 +101,7 @@ The tightest bracket but you've got a few options.
 - Zebronics Nitro [Link](https://www.amazon.in/Zebronics-Nitro-Mechanical-Keyboard-Retractable/dp/B07B29BQHH/ref=sr_1_1?dchild=1&keywords=zebronics+nitro&qid=1597815390&sr=8-1)
 - Zebronics Max Pro [Link](https://www.amazon.in/Zebronics-Mechanical-Wired-Keyboard-Black/dp/B078NWJ6VM/ref=sr_1_1_sspa?dchild=1&keywords=zebronics+max&qid=1597815355&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUExNFBBT1JQWlFPOTJTJmVuY3J5cHRlZElkPUEwMzU4MTk4MUlUNFJPSzBLODlQTSZlbmNyeXB0ZWRBZElkPUEwMTc2OTExVFhOMzVKU0ZNVDVMJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==)
 - Reddragon Usas [Link](https://www.amazon.in/Redragon-Mechanical-Gaming-Keyboard-Black/dp/B016MBNR8M/ref=sr_1_3?dchild=1&keywords=red+dragon+vara&qid=1597815578&s=computers&sr=1-3)
-- GK61 && GK64 [Link 1](https://www.meckeys.com/shop/keyboard/60-keyboard/gk61/) [Link 2](https://www.meckeys.com/shop/keyboard/60-keyboard/gk61/)
+- GK61 && GK64 [Link 1](https://www.meckeys.com/shop/keyboard/60-keyboard/gk61/) [Link 2](https://www.meckeys.com/shop/keyboard/60-keyboard/gk61-rgb-white/)
 
 #### 6000 - 10000 INR
 
