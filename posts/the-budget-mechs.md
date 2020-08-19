@@ -8,7 +8,7 @@ published: true
 
 This is going to be a really short writeup on what mechanical keyboards are and then we'll get to the options available to us right now in India, mid 2020.
 
-You can go all the way down the buying options and skip the other info if needed.
+You can go all the way down to the buying options and skip the other info if needed.
 
 - [Overview](#what-are-we-talking-about-again)
 - [Buying Options](#what-can-i-buy)
@@ -82,7 +82,7 @@ Yes, you can buy a cheap mechanical keyboard and replace the keycaps to make it 
 
 These are based on the date of the post and the prices have been fluctuating on amazon for a while now so they may get out of the price brackets but the point of this post is to list out valid buying options.
 
-You can also go through Keychrons which are available at different price ranges and can be found from their website [keychron.in](https://keychron.in) , these keyboards mostly come with Mac support so is preferred by Mac Users but you can use almost any keyboard mentioned below with a back by just switching the modifier keys in the macOS keyboard preferences.
+You can also go through Keychrons which are available at different price ranges and can be found from their website [keychron.in](https://keychron.in) , these keyboards mostly come with Mac support so is preferred by Mac Users but you can use almost any keyboard mentioned below by just switching the modifier keys in the macOS keyboard preferences.
 
 #### 2000 - 4000 INR
 
@@ -101,7 +101,7 @@ The tightest bracket but you've got a few options.
 - Zebronics Nitro [Link](https://www.amazon.in/Zebronics-Nitro-Mechanical-Keyboard-Retractable/dp/B07B29BQHH/ref=sr_1_1?dchild=1&keywords=zebronics+nitro&qid=1597815390&sr=8-1)
 - Zebronics Max Pro [Link](https://www.amazon.in/Zebronics-Mechanical-Wired-Keyboard-Black/dp/B078NWJ6VM/ref=sr_1_1_sspa?dchild=1&keywords=zebronics+max&qid=1597815355&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUExNFBBT1JQWlFPOTJTJmVuY3J5cHRlZElkPUEwMzU4MTk4MUlUNFJPSzBLODlQTSZlbmNyeXB0ZWRBZElkPUEwMTc2OTExVFhOMzVKU0ZNVDVMJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==)
 - Reddragon Usas [Link](https://www.amazon.in/Redragon-Mechanical-Gaming-Keyboard-Black/dp/B016MBNR8M/ref=sr_1_3?dchild=1&keywords=red+dragon+vara&qid=1597815578&s=computers&sr=1-3)
-- GK61 && GK64 [Link 1](https://www.meckeys.com/shop/keyboard/60-keyboard/gk61/) [Link 2](https://www.meckeys.com/shop/keyboard/60-keyboard/gk61/)
+- GK61 && GK64 [Link 1](https://www.meckeys.com/shop/keyboard/60-keyboard/gk61/) [Link 2](https://www.meckeys.com/shop/keyboard/60-keyboard/gk61-rgb-white/)
 
 #### 6000 - 10000 INR
 
