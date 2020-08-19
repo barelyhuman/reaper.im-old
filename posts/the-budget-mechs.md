@@ -8,7 +8,7 @@ published: true
 
 This is going to be a really short writeup on what mechanical keyboards are and then we'll get to the options available to us right now in India, mid 2020.
 
-You can go all the way down the buying options and skip the other info if needed.
+You can go all the way down to the buying options and skip the other info if needed.
 
 - [Overview](#what-are-we-talking-about-again)
 - [Buying Options](#what-can-i-buy)
@@ -82,7 +82,7 @@ Yes, you can buy a cheap mechanical keyboard and replace the keycaps to make it 
 
 These are based on the date of the post and the prices have been fluctuating on amazon for a while now so they may get out of the price brackets but the point of this post is to list out valid buying options.
 
-You can also go through Keychrons which are available at different price ranges and can be found from their website [keychron.in](https://keychron.in) , these keyboards mostly come with Mac support so is preferred by Mac Users but you can use almost any keyboard mentioned below with a back by just switching the modifier keys in the macOS keyboard preferences.
+You can also go through Keychrons which are available at different price ranges and can be found from their website [keychron.in](https://keychron.in) , these keyboards mostly come with Mac support so is preferred by Mac Users but you can use almost any keyboard mentioned below by just switching the modifier keys in the macOS keyboard preferences.
 
 #### 2000 - 4000 INR
 
