@@ -1,38 +1,38 @@
-import Head from 'components/head'
-import Layout from 'components/Layout'
-import Spacer from 'components/Spacer'
-import formatDate from 'lib/format-date'
-import getPosts from 'lib/get-posts'
-import marked from 'marked'
-import Link from 'next/link'
+import Head from 'components/head';
+import Layout from 'components/Layout';
+import Spacer from 'components/Spacer';
+import formatDate from 'lib/format-date';
+import getPosts from 'lib/get-posts';
+import marked from 'marked';
+import Link from 'next/link';
 
 const PostContent = ({ post, previousPost, nextPost }) => {
   return (
     <>
       <Head>
-        <meta name='robots' content='index, follow' />
+        <meta name="robots" content="index, follow" />
         <title>{post.meta.title} | Reaper</title>
       </Head>
       <Layout>
-        <div className='container'>
+        <div className="container">
           <Spacer y={2} />
-          <p className='align-start time-stamp'>
+          <p className="align-start time-stamp">
             <small>{formatDate(post.meta.date)}</small>
           </p>
           <Spacer y={1} />
-          <div className='post-container min-width-150 padding-25-px line-height-20-px'>
+          <div className="post-container min-width-150 padding-25-px line-height-20-px">
             <h1>{post.meta.title.trim()}</h1>
             <Spacer y={10} />
             <article
-              className='article'
+              className="article"
               dangerouslySetInnerHTML={{ __html: marked(post.content) }}
             />
           </div>
           <Spacer y={1} />
-          <div className='flex just-space-between'>
+          <div className="flex just-space-between">
             {previousPost ? (
               <Link href={`/blog/${previousPost.meta.slug}`}>
-                <a href='' className='action-link'>
+                <a href="" className="action-link">
                   Older Post
                 </a>
               </Link>
@@ -40,15 +40,15 @@ const PostContent = ({ post, previousPost, nextPost }) => {
               <div />
             )}
             <Spacer x={5} inline />
-            <Link href='/blog'>
-              <a href='' className='action-link'>
+            <Link href="/blog">
+              <a href="" className="action-link">
                 All Posts
               </a>
             </Link>
             <Spacer x={5} inline />
             {nextPost ? (
               <Link href={`/blog/${nextPost.meta.slug}`}>
-                <a href='' className='action-link'>
+                <a href="" className="action-link">
                   Newer Post
                 </a>
               </Link>
@@ -61,6 +61,16 @@ const PostContent = ({ post, previousPost, nextPost }) => {
         <style jsx global>
           {`
             @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+            :root {
+              --base-font-size: 0.5rem;
+              --h6-size: calc(var(--base-font-size) * 1.5);
+              --h5-size: calc(var(--h6-size) * 1.5);
+              --h4-size: calc(var(--h5-size) * 1.5);
+              --h3-size: calc(var(--h4-size) * 1.5);
+              --h2-size: calc(var(--h3-size) * 1.5);
+              --h1-size: calc(var(--h2-size) * 1.5);
+            }
 
             .post-container {
               font-family: 'Quicksand', sans-serif;
@@ -127,20 +137,38 @@ const PostContent = ({ post, previousPost, nextPost }) => {
 
             h1 {
               text-align: center;
-              font-size: 2.8rem;
-              line-height: calc(2.8rem * 1.5);
+              font-size: var(--h1-size);
+              line-height: calc(var(--h1-size) * 1.5);
             }
 
             h2 {
               text-align: left;
-              font-size: 2rem;
-              line-height: calc(2rem * 1.5);
+              font-size: var(--h2-size);
+              line-height: calc(var(--h2-size) * 1.5);
             }
 
             h3 {
               text-align: left;
-              font-size: 1.8rem;
-              line-height: calc(1.8rem * 1.5);
+              font-size: var(--h3-size);
+              line-height: calc(var(--h3-size) * 1.5);
+            }
+
+            h4 {
+              text-align: left;
+              font-size: var(--h4-size);
+              line-height: calc(var(--h4-size) * 1.5);
+            }
+
+            h5 {
+              text-align: left;
+              font-size: var(--h5-size);
+              line-height: calc(var(--h5-size) * 1.5);
+            }
+
+            h6 {
+              text-align: left;
+              font-size: var(--h6-size);
+              line-height: calc(var(--h6-size) * 1.5);
             }
 
             .time-stamp {
@@ -150,46 +178,46 @@ const PostContent = ({ post, previousPost, nextPost }) => {
         </style>
       </Layout>
     </>
-  )
-}
+  );
+};
 
-export async function getStaticProps ({ params }) {
-  const posts = await getPosts()
-  let index
+export async function getStaticProps({ params }) {
+  const posts = await getPosts();
+  let index;
   const records = {
     post: [],
     previousPost: [],
-    nextPost: []
-  }
+    nextPost: [],
+  };
   records.post = posts.find(({ meta }, _index) => {
     if (meta.slug === params.slug) {
-      index = _index
-      return true
+      index = _index;
+      return true;
     }
-    return false
-  })
+    return false;
+  });
 
   if (typeof index !== 'undefined') {
-    records.previousPost = posts[index + 1] || null
-    records.nextPost = posts[index - 1] || null
+    records.previousPost = posts[index + 1] || null;
+    records.nextPost = posts[index - 1] || null;
   }
 
-  return { props: records }
+  return { props: records };
 }
 
-export async function getStaticPaths () {
-  const posts = await getPosts()
+export async function getStaticPaths() {
+  const posts = await getPosts();
 
   return {
     paths: posts.map(({ meta }) => {
       return {
         params: {
-          slug: meta.slug
-        }
-      }
+          slug: meta.slug,
+        },
+      };
     }),
-    fallback: false
-  }
+    fallback: false,
+  };
 }
 
-export default PostContent
+export default PostContent;
