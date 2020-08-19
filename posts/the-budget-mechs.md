@@ -10,6 +10,9 @@ This is going to be a really short writeup on what mechanical keyboards are and 
 
 You can go all the way down the buying options and skip the other info if needed.
 
+- [Overview](#what-are-we-talking-about-again)
+- [Buying Options](#what-can-i-buy)
+
 ### What are we talking about again?
 
 Mechanical keyboards are the much more robust version of your day to day keyboard. The keyboards you normally see around are membrane keyboards which are cheaper to produce and use digitial contacts to figure out what key was pressed.
@@ -43,24 +46,27 @@ Now part 1 of the fancy stuff, the keyboard tech has improved over time and you'
 
 Short explanation of the switches,
 
+**Clicky** - Keys that make a nice loud click sound, just like a typewriter.
+
 **Tactile** - Need lesser pressure to activate and is normally good for games where the action needs to be instant
 
 **Linear** - You'll have to press the key all the way down like membrane keys to activate it
 
-- Blue - Tactile and Very Clicky (Think Typewriters)
+- Blue - Tactile and Very Clicky
 - Brown - Tactile (mostly found in gaming keyboards)
 - Red - Linear
 - Red Speed - Linear but needs lesser force to activate the key
 
 There's obviously more types of switches, you've got blacks, silvers, jades , but these are the most common ones and most prebuilt keyboards will come with one of these.
 
-Now, the most heard thing in the Mech Keyboard community is the Cherry MX Switches, now while the german engineered switches are a great choice overall, they might be a little harder to obtain in India but as always we've got alternatives.
+Now, the most heard thing in the Mech Keyboard community is the Cherry MX Switches, now while the german engineered switches are a great choice overall,Gaterons are another set which can be your first choice when spending a good amount of money while building a custom mech. They might be a little harder to obtain in India but as always we've got alternatives.
+
+On the contrary, you can find all of these on various international markets online, since it's a little hard to obtain them right now without paying huge amounts of customs, we'll stick to the below options.
 
 Namely
 
 - Outemu
 - Kailhs
-- Gateron
 
 Now each of them have the same colors available and each have their own level of tactility and force to activation but they try to replicate the original color pattern I mentioned above so you should be fine. Now these are available at different rates online and you can obtains most of them form Meckeys and Amazon. These are all good switches anything else is probably a clone (ironically outemu is actually a clone, i'll let you do the research on that).
 
@@ -75,6 +81,8 @@ Yes, you can buy a cheap mechanical keyboard and replace the keycaps to make it 
 ### What Can I Buy?
 
 These are based on the date of the post and the prices have been fluctuating on amazon for a while now so they may get out of the price brackets but the point of this post is to list out valid buying options.
+
+You can also go through Keychrons which are available at different price ranges and can be found from their website [keychron.in](https://keychron.in) , these keyboards mostly come with Mac support so is preferred by Mac Users but you can use almost any keyboard mentioned below with a back by just switching the modifier keys in the macOS keyboard preferences.
 
 #### 2000 - 4000 INR
 
