@@ -59,7 +59,7 @@ dokku ps:rebuild <app-nam>
 
 ## Deploy
 
-```
+```bash
 git remote add dokku dokku@<host>:<app-name>
 
 git push dokku master

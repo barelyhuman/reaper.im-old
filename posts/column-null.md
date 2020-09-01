@@ -10,18 +10,18 @@ Here's a few queries you can execute for this.
 
 #### Integer
 
-```
+```sql
 ALTER TABLE public.<tablename> ADD COLUMN <column_name> integer NOT NULL default 0;
 ```
 
 #### String
 
-```
+```sql
 ALTER TABLE public.<tablename> ADD COLUMN <column_name> VARCHAR NOT NULL default ' ';
 ```
 
 #### Boolean
 
-```
+```sql
 ALTER TABLE public.<tablename> ADD COLUMN <column_name> boolean NOT NULL default false;
 ```
