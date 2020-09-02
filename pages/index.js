@@ -23,7 +23,7 @@ function Index() {
         <br />
         <div className="flex flex-wrap just-center align-center">
           <a className="margin-sm button black" href="/contact">
-            Need Help?
+            Contact
           </a>
         </div>
         <div className="flex flex-wrap just-center align-center">
