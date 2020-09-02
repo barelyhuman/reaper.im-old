@@ -85,7 +85,7 @@ Last but not the least and probably the most important one of the bunch, keep di
 
 If you're using Vim, learn to create macros , get to know how to manipulate larger chunks of text faster, again add plugins to speed up repetetive tasks.
 
-Each famous code editor has a few tricks up its sleeves that can help you in productivity and getting faster at coding. As a programmer the editor is your home and something you spend your precious hours with. 
+Each famous code editor has a few tricks up its sleeves that can help you in productivity and getting faster at coding. As a programmer the editor is your home and something you spend your precious hours with.
 
 Learn It, Practice It, MASTER IT!
 
@@ -99,4 +99,4 @@ Similarly, I've gotten so used to Vim's macro creator that I consider that to be
 
 ### The End
 
-Let me know [here](https://reaper.im/hire) if you'd like me to write about something and/or if you'd like to talk about something I wrote before.
+Adios.
