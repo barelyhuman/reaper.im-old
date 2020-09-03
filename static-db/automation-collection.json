@@ -3,5 +3,11 @@
     "title": "Standard Fomatter",
     "description": "Github Action formatter using Standard.js",
     "link": "https://snips.reaper.im/formatter-github-action"
+  },
+  {
+    "title": "Packager and Release",
+    "description": "Github Action for creating packages and releases on tag Updates",
+    "link": "https://snips.reaper.im/packager-and-releaser"
   }
+
 ]

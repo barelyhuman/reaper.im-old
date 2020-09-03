@@ -8,5 +8,10 @@
     "title": "Code",
     "description": "Reusable Code Snippets",
     "link": "/collections/code"
+  },
+  {
+    "title": "Libraries",
+    "description": "Libraries / Github Repositories I like",
+    "link": "/collections/libs"
   }
 ]
