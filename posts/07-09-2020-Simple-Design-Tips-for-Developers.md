@@ -50,15 +50,17 @@ This is equally helpful in Apps as it's on blogs.
 
 ## Layout and Alignment
 
-This is probably the only tip I'm guessing every frontend developer already knows by now because it comes as a **default visual aesthetic**.
+This is probably the only tip that almost all frontend developers already know. The thing about Layouts is that one layout never works for everyone and everything.
 
-The same rules never apply to all layouts but a general rule of thumb is to make sure everything lines up perfectly.
+But, a general rule of thumb is to make sure everything lines up perfectly. (Thanks, captain obvious.)
 
-But then that doesn't change the fact that almost every design we see today is over designed and have each element follows it's own sense of alignment.
+Though, it doesn't change the fact that almost every design we see today is over designed and have each element follows it's own sense of alignment. (You can preach about minimalism later...)
 
-Forget others, TillWhen's login email is a centered card with text left aligned and justified as needed with a huge center aligned button. These design choices can change based on what pleases you aesthetically but following a grid makes it all easy.
+Forget others, TillWhen's login email is a centered card with text left aligned and justified as needed with a huge center aligned button (Hypocrite much, reaper?).
 
-Using a good grid system for element layouts will help you get prototypes out quicker and probably why css libraries like Bulma, Bootstrap are drop in defaults in most web frontend projects today.
+These design choices can change based on what pleases you aesthetically but following a grid makes it all easy. Using a good grid system always comes in handy **if** used properly. I've seen people nest rows inside rows inside rows with bootstrap. Don't! Just Don't!. Learn to use flexbox instead.
+
+Layouts will help you get prototypes out quicker and probably why css libraries like Bulma, Bootstrap are drop in defaults from the dawn of their existence in most web frontend projects even today.
 
 I'm not sure if theres anything else that I can add to this.
 
