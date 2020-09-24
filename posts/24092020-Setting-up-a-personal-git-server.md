@@ -4,12 +4,9 @@ date: 24/09/2020
 published: true
 
 ---
+This post is not a blog write up and just consists of steps I went through to setup a git server on my home server ( Raspberry Pi, for now).
 
-
-
-This post wont have a blog type write up and is just steps I did to get the Git Server working on my raspberry pi. 
-
-Files mods are mentioned below.
+File content is available below.
 
 1. Setup WIFI - Make sure it auto connects. (Default: Debian CLI Wifi)
 2. Install NGINX,FastCGI and Setup gitweb config in `/etc/gitweb.conf`
