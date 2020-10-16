@@ -130,21 +130,33 @@ Why do I pass in `req.db`?, reason being that if the handler keeps importing the
 `pages/api/user/index.js`
 
 ```js
-import connectionHandler from "connection-handler";
+import connectionHandler from 'connection-handler';
 
 const handler = async (req, res) => {
   try {
-    if (req.method === "GET") {
-      // Handle GET Request
+    if (req.method === 'GET') {
+      const {currentUser} = req;
+      const data = await req
+        .db('users')
+        .leftJoin('profiles as profile', 'users.id', 'profile.user_id')
+        .where('users.id', currentUser.id)
+        .select(
+          'profile.name as profileName',
+          'profile.id as profileId',
+          'users.id ',
+          'users.email',
+        );
+      return Response(200, data[0], res);
     } else {
       return res.status(404).end();
     }
   } catch (err) {
-    return res.status(500).send({ error: "Oops! Something went wrong!" });
+    return res.status(500).send({error: 'Oops! Something went wrong!'});
   }
 };
 
 export default connectionHandler()(handler);
+
 ```
 
 And finally, I'm showing a generic Next.js handler here instead of the full fledged controller like in the example above, since the higher-order function is going to be added in here and not in the controllers. So the only modification you'll have to do to all the route handlers is , instead of exporting the handlers directly, export a version wrapped in a higher-order function.
