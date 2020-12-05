@@ -16,6 +16,8 @@ function Skills () {
             <li>Adobe Illustrator</li>
             <li>Python</li>
             <li>Webpack</li>
+            <li>Flutter</li>
+            <li>Go Lang</li>
           </ul>
           <ul>
             <li>VueJS</li>
@@ -26,6 +28,7 @@ function Skills () {
             <li>Loopback - Node</li>
             <li>HTML/CSS/JS</li>
             <li>Ruby</li>
+            <li>Docker</li>
           </ul>
         </div>
         <Spacer y={1} />
