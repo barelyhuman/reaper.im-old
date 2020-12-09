@@ -1,10 +1,12 @@
 ---
-title: Crypto Nonce and Association Flow - Integrating Slack Bot with External Services
+title: Crypto Nonce and Association Flow - Integrating Slack Bot with Internal Services
 published: true 
 date: 15/11/2020
 ---
 
 This is base note for the slack bot integration that TillWhen is being built on for reference in future (in case I forget, how I did it)
+
+This is just for the internal testing of the app in my workspace, the official published slack bot will have the oauth flow.
 
 **The Base Flow** 
 
