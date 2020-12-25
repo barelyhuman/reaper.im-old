@@ -7,7 +7,7 @@ function Work () {
     <Layout>
       <div className='container'>
         <ul className='card-border min-width-150-px'>
-        <li>
+          <li>
             <a
               target='_blank'
               href='https://github.com/barelyhuman/spotify-lite-go/releases'
