@@ -7,6 +7,14 @@ function Work () {
     <Layout>
       <div className='container'>
         <ul className='card-border min-width-150-px'>
+        <li>
+            <a
+              target='_blank'
+              href='https://github.com/barelyhuman/commitlog'
+            >
+              Commitlog - Generate Changelogs from Commits
+            </a>
+          </li>
           <li>
             <a
               target='_blank'
