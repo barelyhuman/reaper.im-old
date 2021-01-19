@@ -1,7 +1,7 @@
 import Head from 'components/head'
 import Layout from 'components/Layout'
 import Spacer from 'components/Spacer'
-import formatDate from 'lib/format-date'
+import formatDate, { shortFormatDate } from 'lib/format-date'
 import getPosts from 'lib/get-posts'
 import Link from 'next/link'
 import EmailFooter from 'components/email-footer'
@@ -21,7 +21,7 @@ const PostContent = ({ post, previousPost, nextPost }) => {
         <div className='container'>
           <Spacer y={2} />
           <p className='align-start time-stamp'>
-            <small>{formatDate(post.meta.date)}</small>
+            <small>{shortFormatDate(post.meta.date)}</small>
           </p>
           <Spacer y={1} />
           <div className='post-container min-width-150 padding-25-px line-height-20-px'>

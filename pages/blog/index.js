@@ -5,6 +5,7 @@ import getPosts from 'lib/get-posts'
 import Link from 'next/link'
 import Router from 'next/router'
 import Padding from 'components/padding'
+import formatDate, { shortFormatDate } from 'lib/format-date'
 
 const Blog = ({ posts }) => {
   return (
@@ -20,7 +21,7 @@ const Blog = ({ posts }) => {
                 return (
                   <li key={index}>
                     <Link href={`blog/${meta.slug}`}>
-                      <a>{meta.title}</a>
+                      <a>{shortFormatDate(meta.date)} - {meta.title}</a>
                     </Link>
                   </li>
                 )
