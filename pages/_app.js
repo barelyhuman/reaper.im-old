@@ -1,7 +1,9 @@
 import Head from 'components/head'
+import GlobalSearch from 'components/global-search';
 import feather from 'feather-icons'
 import { useEffect } from 'react'
 import 'prismjs/themes/prism.css'
+
 
 function App ({ Component, pageProps }) {
   const { post } = pageProps
@@ -31,6 +33,7 @@ function App ({ Component, pageProps }) {
           content='https://reaper.im/wallpapers/reaper-dark.png'
         />
       </Head>
+      <GlobalSearch />
       <Component {...pageProps} />
     </>
   )
