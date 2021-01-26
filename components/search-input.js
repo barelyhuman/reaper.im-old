@@ -1,78 +1,78 @@
 export default class HoloComplete extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
 
     this.state = {
       value: '',
       holoStartValue: '',
-      holoEndValue: '',
-    };
+      holoEndValue: ''
+    }
 
-    this.escFunction = this.escFunction.bind(this);
-    this.sendCloseEvent = this.sendCloseEvent.bind(this);
+    this.escFunction = this.escFunction.bind(this)
+    this.sendCloseEvent = this.sendCloseEvent.bind(this)
   }
 
-  componentDidMount() {
-    document.addEventListener('keydown', this.escFunction, false);
+  componentDidMount () {
+    document.addEventListener('keydown', this.escFunction, false)
   }
 
-  componentWillUnmount() {
-    document.removeEventListener('keydown', this.escFunction, false);
+  componentWillUnmount () {
+    document.removeEventListener('keydown', this.escFunction, false)
   }
 
-  escFunction(e) {
+  escFunction (e) {
     if (e.keyCode === 27) {
-      this.sendCloseEvent();
+      this.sendCloseEvent()
     }
   }
 
-  sendCloseEvent() {
+  sendCloseEvent () {
     if (this.props.onClose && typeof this.props.onClose === 'function') {
-      this.props.onClose();
+      this.props.onClose()
     }
   }
 
-  handleInputChange(e) {
-    const { value } = e.target;
+  handleInputChange (e) {
+    const { value } = e.target
 
     if (e.keyCode === 13) {
-      this.props.onConfirm(value);
+      this.props.onConfirm(value)
     }
 
     const suggestions = this.props.data.filter((item) =>
       item.toLowerCase().startsWith(value.toLowerCase())
-    );
+    )
 
     if (suggestions.length) {
       const casedSuggestion = suggestions[0]
         .toLowerCase()
-        .replace(value.toLowerCase(), value);
-      const sliceFirst = casedSuggestion.slice(0, value.length);
-      const sliceEnd = casedSuggestion.slice(value.length);
+        .replace(value.toLowerCase(), value)
+      const sliceFirst = casedSuggestion.slice(0, value.length)
+      const sliceEnd = casedSuggestion.slice(value.length)
       this.setState({
         holoStartValue: sliceFirst,
-        holoEndValue: sliceEnd,
-      });
+        holoEndValue: sliceEnd
+      })
     } else {
       this.setState({
         holoStartValue: value,
-        holoEndValue: '',
-      });
+        holoEndValue: ''
+      })
     }
 
     if (!value) {
       this.setState({
         holoStartValue: '',
-        holoEndValue: '',
-      });
+        holoEndValue: ''
+      })
     }
   }
 
-  render() {
-    const { holoStartValue, holoEndValue } = this.state;
-    const { show } = this.props;
+  render () {
+    const { holoStartValue, holoEndValue } = this.state
+    const { show } = this.props
     return (
-      <React.Fragment>
+      <>
         {show ? (
           <div
             className='autocomplete-wrapper'
@@ -86,10 +86,10 @@ export default class HoloComplete extends React.Component {
                 {holoStartValue}
               </div>
               <input
-                type="text"
+                type='text'
                 className='autocomplete-input'
                 autoFocus
-                placeholder="Search"
+                placeholder='Search'
                 onKeyUp={(e) => this.handleInputChange(e)}
               />
             </div>
@@ -201,7 +201,7 @@ export default class HoloComplete extends React.Component {
 
           `}
         </style>
-      </React.Fragment>
-    );
+      </>
+    )
   }
 }
