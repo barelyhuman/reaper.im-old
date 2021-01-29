@@ -10,6 +10,7 @@ function Work () {
           <li>
             <a
               target='_blank'
+              rel='noopener noreferrer'
               href='https://github.com/barelyhuman/commitlog'
             >
               Commitlog - Generate Changelogs from Commits
@@ -17,6 +18,7 @@ function Work () {
           </li>
           <li>
             <a
+              rel='noopener noreferrer'
               target='_blank'
               href='https://github.com/barelyhuman/spotify-lite-go/releases'
             >
@@ -25,6 +27,7 @@ function Work () {
           </li>
           <li>
             <a
+              rel='noopener noreferrer'
               target='_blank'
               href='https://github.com/barelyhuman/background-timer'
             >
@@ -32,83 +35,108 @@ function Work () {
             </a>
           </li>
           <li>
-            <a target='_blank' href='https://mark.reaper.im'>
+            <a
+              rel='noopener noreferrer'
+              target='_blank' href='https://mark.reaper.im'
+            >
               Mark - Markdown Editor
             </a>
           </li>
           <li>
-            <a target='_blank' href='https://colors.reaper.im'>
+            <a
+              rel='noopener noreferrer'
+              target='_blank' href='https://colors.reaper.im'
+            >
               Colors - Random Color Generator
             </a>
           </li>
           <li>
-            <a target='_blank' href='https://pending.reaper.im'>
+            <a
+              rel='noopener noreferrer'
+              target='_blank' href='https://pending.reaper.im'
+            >
               Pending - Kanban Board
             </a>
           </li>
           <li>
-            <a target='_blank' href='http://snips.reaper.im/'>
+            <a
+              rel='noopener noreferrer'
+              target='_blank' href='http://snips.reaper.im/'
+            >
               Snips - React Component Snippets
             </a>
           </li>
           <li>
-            <a target='_blank' href='https://hen.reaper.im'>
+            <a
+              rel='noopener noreferrer'
+              target='_blank' href='https://hen.reaper.im'
+            >
               Hen - UI Component Playground
             </a>
           </li>
           <li>
-            <a target='_blank' href='https://github.com/barelyhuman/ftrouter/'>
+            <a
+              rel='noopener noreferrer'
+              target='_blank' href='https://github.com/barelyhuman/ftrouter/'
+            >
               ftrouter - File Tree based API Routes for NodeJs
             </a>
           </li>
           <li>
-            <a target='_blank' href='https://mailer.reaper.im'>
+            <a
+              rel='noopener noreferrer'
+              target='_blank' href='https://mailer.reaper.im'
+            >
               Mailer - Nodemailer as a service
             </a>
           </li>
           <li>
-            <a target='_blank' href='https://tillwhen.barelyhuman.dev/'>
+            <a
+              rel='noopener noreferrer'
+              target='_blank' href='https://tillwhen.barelyhuman.dev/'
+            >
               TillWhen - Project based Time tracker
             </a>
           </li>
 
           <li>
-            <a target='_blank' href='https://mnmlcss.js.org/'>
+            <a rel='noopener noreferrer' target='_blank' href='https://mnmlcss.js.org/'>
               Mnml.css - Minimal CSS Resets
             </a>
           </li>
           <li>
-            <a target='_blank' href='https://hireme.barelyhuman.dev/'>
+            <a rel='noopener noreferrer' target='_blank' href='https://hireme.barelyhuman.dev/'>
               HireMe - Job Network
             </a>
           </li>
           <li>
-            <a target='_blank' href='https://corona.siddharthgelera.com'>
+            <a rel='noopener noreferrer' target='_blank' href='https://corona.siddharthgelera.com'>
               Covid - 19 Tracker
             </a>
           </li>
           <li>
-            <a target='_blank' href='https://music.reaper.im'>
+            <a rel='noopener noreferrer' target='_blank' href='https://music.reaper.im'>
               Music - Minimal Music Player
             </a>
           </li>
           <li>
-            <a target='_blank' href='https://washed.siddharthgelera.com'>
+            <a rel='noopener noreferrer' target='_blank' href='https://washed.siddharthgelera.com'>
               Washed - Microservice for a filter
             </a>
           </li>
           <li>
-            <a target='_blank' href='https://rmnd-r.siddharthgelera.com'>
+            <a rel='noopener noreferrer' target='_blank' href='https://rmnd-r.siddharthgelera.com'>
               rmnd-r - Minimal Tasks List
             </a>
           </li>
           <li>
-            <a target='_blank' href='https://github.com/barelyhuman/aForEach'>
+            <a rel='noopener noreferrer' target='_blank' href='https://github.com/barelyhuman/aForEach'>
               aForEach - Asynchronous ForEach Util for JS
             </a>
           </li>
           <li>
             <a
+              rel='noopener noreferrer'
               target='_blank'
               href='https://github.com/barelyhuman/sautocomplete-angularjs'
             >
@@ -117,6 +145,7 @@ function Work () {
           </li>
           <li>
             <a
+              rel='noopener noreferrer'
               target='_blank'
               href='https://github.com/barelyhuman/archlinux.sh'
             >

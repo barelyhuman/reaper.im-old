@@ -1,9 +1,9 @@
-import _Head from 'next/head'
+import NextHead from 'next/head'
 
 const Head = ({ children }) => {
   return (
     <>
-      <_Head>
+      <NextHead>
         <link
           href='https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap'
           rel='stylesheet'
@@ -15,7 +15,7 @@ const Head = ({ children }) => {
 
         <link rel='icon' href='https://reaper.im/logo.svg' />
         {children}
-      </_Head>
+      </NextHead>
     </>
   )
 }

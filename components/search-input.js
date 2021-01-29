@@ -1,6 +1,8 @@
+import React from 'react';
+
 export default class HoloComplete extends React.Component {
-  constructor (props) {
-    super(props)
+  constructor(props) {
+    super(props);
 
     this.state = {
       value: '',
@@ -9,47 +11,43 @@ export default class HoloComplete extends React.Component {
       allSuggestions: [],
     };
 
-    this.escFunction = this.escFunction.bind(this)
-    this.sendCloseEvent = this.sendCloseEvent.bind(this)
+    this.escFunction = this.escFunction.bind(this);
+    this.sendCloseEvent = this.handleSendCloseEvent.bind(this);
   }
 
-  componentDidMount () {
-    document.addEventListener('keydown', this.escFunction, false)
+  componentDidMount() {
+    document.addEventListener('keydown', this.escFunction, false);
   }
 
-  componentWillUnmount () {
-    document.removeEventListener('keydown', this.escFunction, false)
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.escFunction, false);
   }
 
-  escFunction (e) {
+  escFunction(e) {
     if (e.keyCode === 27) {
-      this.sendCloseEvent()
+      this.handleSendCloseEvent();
     }
   }
 
-  sendCloseEvent () {
+  handleSendCloseEvent() {
     if (this.props.onClose && typeof this.props.onClose === 'function') {
-      this.props.onClose()
+      this.props.onClose();
     }
   }
 
-  handleInputChange (e) {
-    const { value } = e.target
-
-    if (e.keyCode === 13) {
-      this.props.onConfirm(value)
-    }
+  handleInputChange(e) {
+    const { value } = e.target;
 
     const suggestions = this.props.data.filter((item) =>
       item.toLowerCase().startsWith(value.toLowerCase())
-    )
+    );
 
     if (suggestions.length) {
       const casedSuggestion = suggestions[0]
         .toLowerCase()
-        .replace(value.toLowerCase(), value)
-      const sliceFirst = casedSuggestion.slice(0, value.length)
-      const sliceEnd = casedSuggestion.slice(value.length)
+        .replace(value.toLowerCase(), value);
+      const sliceFirst = casedSuggestion.slice(0, value.length);
+      const sliceEnd = casedSuggestion.slice(value.length);
       this.setState({
         holoStartValue: sliceFirst,
         holoEndValue: sliceEnd,
@@ -58,25 +56,37 @@ export default class HoloComplete extends React.Component {
     } else {
       this.setState({
         holoStartValue: value,
-        holoEndValue: ''
-      })
+        holoEndValue: '',
+      });
+    }
+
+    if (e.keyCode === 13) {
+      const valueExists = suggestions.find((item) => item === value);
+      if (valueExists) {
+        this.props.onConfirm(value);
+      } else {
+        this.props.onConfirm(suggestions[0]);
+      }
     }
 
     if (!value) {
       this.setState({
         holoStartValue: '',
-        holoEndValue: ''
-      })
+        holoEndValue: '',
+      });
     }
   }
 
-  render () {
-    const { holoStartValue, holoEndValue } = this.state
-    const { show } = this.props
+  render() {
+    const { holoStartValue, holoEndValue } = this.state;
+    const { show } = this.props;
     return (
       <>
         {show ? (
-          <div className="autocomplete-wrapper" onClick={this.sendCloseEvent}>
+          <div
+            className="autocomplete-wrapper"
+            onClick={this.handleSendCloseEvent}
+          >
             <div className="autocomplete">
               <div
                 className="autocomplete-background"
@@ -88,7 +98,7 @@ export default class HoloComplete extends React.Component {
                 type="text"
                 className="autocomplete-input"
                 autoFocus
-                placeholder='Search'
+                placeholder="Search"
                 onKeyUp={(e) => this.handleInputChange(e)}
               />
             </div>
@@ -223,6 +233,6 @@ export default class HoloComplete extends React.Component {
           `}
         </style>
       </>
-    )
+    );
   }
 }

@@ -19,6 +19,7 @@ const Blog = ({ walls }) => {
                   <a
                     className='flex flex-col just-center align-center'
                     target='_blank'
+                    rel='noopener noreferrer'
                     href={`/wallpapers/${link}`}
                   >
                     <img src={`/wallpapers/${link}`} />
