@@ -5,8 +5,9 @@ export default class HoloComplete extends React.Component {
     this.state = {
       value: '',
       holoStartValue: '',
-      holoEndValue: ''
-    }
+      holoEndValue: '',
+      allSuggestions: [],
+    };
 
     this.escFunction = this.escFunction.bind(this)
     this.sendCloseEvent = this.sendCloseEvent.bind(this)
@@ -51,8 +52,9 @@ export default class HoloComplete extends React.Component {
       const sliceEnd = casedSuggestion.slice(value.length)
       this.setState({
         holoStartValue: sliceFirst,
-        holoEndValue: sliceEnd
-      })
+        holoEndValue: sliceEnd,
+        allSuggestions: suggestions,
+      });
     } else {
       this.setState({
         holoStartValue: value,
@@ -74,24 +76,30 @@ export default class HoloComplete extends React.Component {
     return (
       <>
         {show ? (
-          <div
-            className='autocomplete-wrapper'
-            onClick={this.sendCloseEvent}
-          >
-            <div className='autocomplete white-theme'>
+          <div className="autocomplete-wrapper" onClick={this.sendCloseEvent}>
+            <div className="autocomplete">
               <div
-                className='autocomplete-background'
+                className="autocomplete-background"
                 data-autocomplete={holoEndValue}
               >
                 {holoStartValue}
               </div>
               <input
-                type='text'
-                className='autocomplete-input'
+                type="text"
+                className="autocomplete-input"
                 autoFocus
                 placeholder='Search'
                 onKeyUp={(e) => this.handleInputChange(e)}
               />
+            </div>
+            <div className="autocomplete-suggestions">
+              {this.state.allSuggestions.map((item, index) => {
+                return (
+                  <React.Fragment key={`suggestion-${item}-${index}`}>
+                    <div className="suggestion-list-item">{item}</div>
+                  </React.Fragment>
+                );
+              })}
             </div>
           </div>
         ) : null}
@@ -105,7 +113,7 @@ export default class HoloComplete extends React.Component {
               left: 0;
               bottom: 0;
               right: 0;
-              background: transparent; 
+              background: white;
             }
 
             .autocomplete {
@@ -155,6 +163,21 @@ export default class HoloComplete extends React.Component {
               outline: none;
             }
 
+            .autocomplete-suggestions {
+              position: absolute;
+              top: 40%;
+              width: 550px;
+              left: 50%;
+              transform: translateX(-50%);
+            }
+
+            .autocomplete-suggestions .suggestion-list-item {
+              font-size: 30px;
+              color: #333;
+              padding: 16px 8px;
+              border-bottom: 1px solid #eee;
+            }
+
             .autocomplete.black-theme {
               background: black;
               border-radius: 6px;
@@ -183,7 +206,6 @@ export default class HoloComplete extends React.Component {
               color: #888;
             }
 
-
             .autocomplete.white-theme {
               background: white;
               border: 1px solid #ddd;
@@ -198,7 +220,6 @@ export default class HoloComplete extends React.Component {
             .autocomplete.white-theme .autocomplete-background::after {
               color: #555;
             }
-
           `}
         </style>
       </>
