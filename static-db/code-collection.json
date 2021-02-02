@@ -23,5 +23,10 @@
     "title": "React - Padding Snippet",
     "description": "Padding Snippet for React/Next",
     "link": "https://snips.reaper.im/padding"
+  },
+  {
+    "title": "JS - Unique Array",
+    "description": "Simple Set based implmentation to create a unique array using object keys",
+    "link": "https://snips.reaper.im/javascript-unique-array"
   }
 ]
