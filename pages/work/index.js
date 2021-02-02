@@ -1,153 +1,211 @@
-import Router from 'next/router'
-import Layout from '../../components/Layout'
-import Spacer from '../../components/Spacer'
+import Router from 'next/router';
+import Layout from '../../components/Layout';
+import Spacer from '../../components/Spacer';
 
-function Work () {
+function Work() {
   return (
     <Layout>
-      <div className='container'>
-        <ul className='card-border min-width-150-px'>
+      <div className="container">
+        <ul className="card-border min-width-150-px">
+          <li class="text-center">
+            <span className="dot success inline"></span> <strong>Active Development</strong>
+            <Spacer x={2} inline></Spacer>
+            <span className="dot warn inline"></span> <strong>Maintenance</strong>
+          </li>
+          <Spacer y={2}></Spacer>
           <li>
             <a
-              target='_blank'
-              rel='noopener noreferrer'
-              href='https://github.com/barelyhuman/commitlog'
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/barelyhuman/commitlog"
             >
+              <span className="dot success inline"></span>
+              <Spacer x={1} inline></Spacer>
               Commitlog - Generate Changelogs from Commits
             </a>
           </li>
           <li>
             <a
-              rel='noopener noreferrer'
-              target='_blank'
-              href='https://github.com/barelyhuman/spotify-lite-go/releases'
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://github.com/barelyhuman/spotify-lite-go/releases"
             >
+              <span className="dot success inline"></span>
+              <Spacer x={1} inline></Spacer>
               Spotify Lite Go - Spotify Desktop Remote App written in Go Lang
             </a>
           </li>
           <li>
             <a
-              rel='noopener noreferrer'
-              target='_blank'
-              href='https://github.com/barelyhuman/background-timer'
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://github.com/barelyhuman/background-timer"
             >
               Background Timer - React Hook for background timers (OTP,etc)
             </a>
           </li>
           <li>
             <a
-              rel='noopener noreferrer'
-              target='_blank' href='https://mark.reaper.im'
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://mark.reaper.im"
             >
+              <span className="dot warn inline"></span>
+              <Spacer x={1} inline></Spacer>
               Mark - Markdown Editor
             </a>
           </li>
           <li>
             <a
-              rel='noopener noreferrer'
-              target='_blank' href='https://colors.reaper.im'
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://colors.reaper.im"
             >
+              <span className="dot warn inline"></span>
+              <Spacer x={1} inline></Spacer>
               Colors - Random Color Generator
             </a>
           </li>
           <li>
             <a
-              rel='noopener noreferrer'
-              target='_blank' href='https://pending.reaper.im'
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://pending.reaper.im"
             >
               Pending - Kanban Board
             </a>
           </li>
           <li>
             <a
-              rel='noopener noreferrer'
-              target='_blank' href='http://snips.reaper.im/'
+              rel="noopener noreferrer"
+              target="_blank"
+              href="http://snips.reaper.im/"
             >
+              <span className="dot warn inline"></span>
+              <Spacer x={1} inline></Spacer>
               Snips - React Component Snippets
             </a>
           </li>
           <li>
             <a
-              rel='noopener noreferrer'
-              target='_blank' href='https://hen.reaper.im'
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://hen.reaper.im"
             >
               Hen - UI Component Playground
             </a>
           </li>
           <li>
             <a
-              rel='noopener noreferrer'
-              target='_blank' href='https://github.com/barelyhuman/ftrouter/'
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://github.com/barelyhuman/ftrouter/"
             >
               ftrouter - File Tree based API Routes for NodeJs
             </a>
           </li>
           <li>
             <a
-              rel='noopener noreferrer'
-              target='_blank' href='https://mailer.reaper.im'
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://mailer.reaper.im"
             >
+              <span className="dot warn inline"></span>
+              <Spacer x={1} inline></Spacer>
               Mailer - Nodemailer as a service
             </a>
           </li>
           <li>
             <a
-              rel='noopener noreferrer'
-              target='_blank' href='https://tillwhen.barelyhuman.dev/'
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://tillwhen.barelyhuman.dev/"
             >
+              <span className="dot success inline"></span>
+              <Spacer x={1} inline></Spacer>
               TillWhen - Project based Time tracker
             </a>
           </li>
 
           <li>
-            <a rel='noopener noreferrer' target='_blank' href='https://mnmlcss.js.org/'>
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://mnmlcss.js.org/"
+            >
               Mnml.css - Minimal CSS Resets
             </a>
           </li>
           <li>
-            <a rel='noopener noreferrer' target='_blank' href='https://hireme.barelyhuman.dev/'>
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://hireme.barelyhuman.dev/"
+            >
               HireMe - Job Network
             </a>
           </li>
           <li>
-            <a rel='noopener noreferrer' target='_blank' href='https://corona.siddharthgelera.com'>
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://corona.siddharthgelera.com"
+            >
               Covid - 19 Tracker
             </a>
           </li>
           <li>
-            <a rel='noopener noreferrer' target='_blank' href='https://music.reaper.im'>
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://music.reaper.im"
+            >
+              <span className="dot warn inline"></span>
+              <Spacer x={1} inline></Spacer>
               Music - Minimal Music Player
             </a>
           </li>
           <li>
-            <a rel='noopener noreferrer' target='_blank' href='https://washed.siddharthgelera.com'>
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://washed.siddharthgelera.com"
+            >
               Washed - Microservice for a filter
             </a>
           </li>
           <li>
-            <a rel='noopener noreferrer' target='_blank' href='https://rmnd-r.siddharthgelera.com'>
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://rmnd-r.siddharthgelera.com"
+            >
               rmnd-r - Minimal Tasks List
             </a>
           </li>
           <li>
-            <a rel='noopener noreferrer' target='_blank' href='https://github.com/barelyhuman/aForEach'>
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://github.com/barelyhuman/aForEach"
+            >
               aForEach - Asynchronous ForEach Util for JS
             </a>
           </li>
           <li>
             <a
-              rel='noopener noreferrer'
-              target='_blank'
-              href='https://github.com/barelyhuman/sautocomplete-angularjs'
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://github.com/barelyhuman/sautocomplete-angularjs"
             >
               sAutoComplete - AngularJS1.6 Directive for Autocomplete
             </a>
           </li>
           <li>
             <a
-              rel='noopener noreferrer'
-              target='_blank'
-              href='https://github.com/barelyhuman/archlinux.sh'
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://github.com/barelyhuman/archlinux.sh"
             >
               archlinux.sh - Script for setup for archlinux
             </a>
@@ -155,7 +213,7 @@ function Work () {
         </ul>
         <Spacer y={1} />
         <button
-          className='margin-top-sm  align-start button black outline-btn'
+          className="margin-top-sm  align-start button black outline-btn"
           onClick={() => Router.push('/')}
         >
           Back
@@ -163,7 +221,7 @@ function Work () {
         <Spacer y={2} />
       </div>
     </Layout>
-  )
+  );
 }
 
-export default Work
+export default Work;

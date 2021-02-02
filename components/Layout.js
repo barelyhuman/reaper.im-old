@@ -65,8 +65,12 @@ export default function Layout (props) {
             display: flex;
           }
 
+          .flex-row {
+            flex-direction: row !important;
+          }
+
           .flex-col {
-            flex-direction: column;
+            flex-direction: column !important;
           }
 
           .align-center {
@@ -258,6 +262,28 @@ export default function Layout (props) {
 
           .accent {
             color: #50a586;
+          }
+
+          .dot{
+            height:10px;
+            width:5px;
+            background:#121212;
+          }
+
+          .dot.success{
+            background:#5B9EF0;
+          }
+
+          .dot.warn{
+            background:#FBC83D;
+          }
+
+          .dot.error{
+            background:#e00;
+          }
+
+          .inline{
+            display:inline-block;
           }
         `}
       </style>
