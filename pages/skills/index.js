@@ -4,7 +4,7 @@ import Spacer from '../../components/Spacer'
 
 function Skills () {
   return (
-    <Layout title="Skills">
+    <Layout title='Skills'>
       <div className='container'>
         <div className='flex just-space-between min-width-150-px card-border'>
           <ul>

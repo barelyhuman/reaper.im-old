@@ -70,7 +70,7 @@ function Index () {
             </a>
           </div>
           <Spacer y={10} />
-          <div className="action-link">
+          <div className='action-link'>
             <p>⌘/ctrl + k - power menu</p>
           </div>
         </div>

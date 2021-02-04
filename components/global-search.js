@@ -1,51 +1,51 @@
-import { useEffect, useState } from 'react';
-import cn from 'classnames';
-import SearchInput from './search-input';
-import { useRouter } from 'next/router';
-import Mousetrap from 'mousetrap';
+import { useEffect, useState } from 'react'
+import cn from 'classnames'
+import SearchInput from './search-input'
+import { useRouter } from 'next/router'
+import Mousetrap from 'mousetrap'
 
-import searchConfig from 'static-db/search-config';
+import searchConfig from 'static-db/search-config'
 
-const OPTIONS = searchConfig.OPTIONS;
+const OPTIONS = searchConfig.OPTIONS
 
-const NAVIGATIONKEYS = searchConfig.NAVIGATIONKEYS;
+const NAVIGATIONKEYS = searchConfig.NAVIGATIONKEYS
 
 const GlobalSearch = ({ ...props }) => {
-  const [visible, setVisibility] = useState(false);
-  const router = useRouter();
+  const [visible, setVisibility] = useState(false)
+  const router = useRouter()
 
-  const searchWrapper = cn('global-search-wrapper', { show: visible });
+  const searchWrapper = cn('global-search-wrapper', { show: visible })
 
   useEffect(() => {
-    installKeyboard();
-    return uninstallKeyboard;
-  }, []);
+    installKeyboard()
+    return uninstallKeyboard
+  }, [])
 
-  function installKeyboard() {
-    console.log('Installing Keyboard Shortcuts');
+  function installKeyboard () {
+    console.log('Installing Keyboard Shortcuts')
     Mousetrap.bind('mod+k', function (e) {
-      console.log('Exec Mod+k');
-      setVisibility(true);
-    });
+      console.log('Exec Mod+k')
+      setVisibility(true)
+    })
   }
 
-  function uninstallKeyboard() {
-    Mousetrap.unbind('mod+k');
+  function uninstallKeyboard () {
+    Mousetrap.unbind('mod+k')
   }
 
   const handleSelection = (e) => {
     if (
       OPTIONS.map((item) => item.toLowerCase()).indexOf(e.toLowerCase()) > -1
     ) {
-      const nextRoute = NAVIGATIONKEYS[e.toLowerCase()];
-      setVisibility(false);
-      router.push(nextRoute);
+      const nextRoute = NAVIGATIONKEYS[e.toLowerCase()]
+      setVisibility(false)
+      router.push(nextRoute)
     }
-  };
+  }
 
   const handleDismiss = () => {
-    setVisibility(false);
-  };
+    setVisibility(false)
+  }
 
   return (
     <>
@@ -76,7 +76,7 @@ const GlobalSearch = ({ ...props }) => {
         `}
       </style>
     </>
-  );
-};
+  )
+}
 
-export default GlobalSearch;
+export default GlobalSearch

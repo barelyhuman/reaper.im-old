@@ -1,10 +1,10 @@
-import Padding from './padding';
+import Padding from './padding'
 
-export default function Layout(props) {
+export default function Layout (props) {
   return (
     <section>
       {props.title ? (
-        <div className="layout-title">
+        <div className='layout-title'>
           <Padding y={8} x={8}>
             <h2>{props.title}</h2>
           </Padding>
@@ -310,5 +310,5 @@ export default function Layout(props) {
         `}
       </style>
     </section>
-  );
+  )
 }

@@ -10,7 +10,7 @@ const Blog = ({ walls }) => {
       <Head>
         <title>Wallpapers | Reaper</title>
       </Head>
-      <Layout title="Wallpapers">
+      <Layout title='Wallpapers'>
         <div className='container'>
           <ul className='card-border min-width-150-px'>
             {walls.map(({ name, link }, index) => {

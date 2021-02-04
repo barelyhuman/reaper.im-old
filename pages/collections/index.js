@@ -15,7 +15,7 @@ const Collections = ({ collections }) => {
           content='List of things I need and/or use'
         />
       </Head>
-      <Layout title="Collections">
+      <Layout title='Collections'>
         <div className='container'>
           <ul className='card-border min-width-150-px'>
             {collections.map((collItem) => {

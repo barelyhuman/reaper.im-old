@@ -4,7 +4,7 @@ import Spacer from '../../components/Spacer'
 
 export default () => {
   return (
-    <Layout title="About">
+    <Layout title='About'>
       <div className='container'>
         <div className='min-width-150-px card-border padding-25-px max-width-500-px line-height-20-px'>
           <p>
