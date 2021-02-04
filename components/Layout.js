@@ -1,7 +1,23 @@
-export default function Layout (props) {
+import Padding from './padding';
+
+export default function Layout(props) {
   return (
     <section>
+      {props.title ? (
+        <div className="layout-title">
+          <Padding y={8} x={8}>
+            <h2>{props.title}</h2>
+          </Padding>
+        </div>
+      ) : null}
       {props.children}
+      <style jsx>
+        {`
+          .layout-title {
+            margin: 0 auto;
+          }
+        `}
+      </style>
       <style jsx global>
         {`
           * {
@@ -21,6 +37,7 @@ export default function Layout (props) {
             min-height: 100vh;
             width: 100%;
             display: flex;
+            flex-direction: column;
             justify-content: center;
           }
 
@@ -30,7 +47,7 @@ export default function Layout (props) {
             align-items: center;
             justify-content: center;
             max-width: 90%;
-            margin: auto;
+            margin: 0 auto;
           }
 
           ul {
@@ -79,7 +96,7 @@ export default function Layout (props) {
           }
 
           .card-border {
-            border: 1px solid #999;
+            //border: 1px solid #999;
             border-radius: 5px;
             min-width: 250px !important;
             max-width: 100%;
@@ -179,6 +196,10 @@ export default function Layout (props) {
 
           .margin-left-auto {
             margin-left: auto;
+          }
+
+          .margin-auto {
+            margin: auto;
           }
 
           .tagline {
@@ -289,5 +310,5 @@ export default function Layout (props) {
         `}
       </style>
     </section>
-  )
+  );
 }

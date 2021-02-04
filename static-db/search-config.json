@@ -1,0 +1,26 @@
+{
+    "OPTIONS": [
+        "Home",
+        "About",
+        "Learning",
+        "Blog",
+        "Collections",
+        "Work",
+        "Contact",
+        "Wallpapers",
+        "Skills",
+        "Github"
+    ],
+    "NAVIGATIONKEYS": {
+        "home": "/",
+        "blog": "/blog",
+        "about": "/about",
+        "learning": "/learning",
+        "collections": "/collections",
+        "work": "/work",
+        "contact": "/contact",
+        "skills": "/skills",
+        "wallpapers": "/walls",
+        "github": "https://github.com/barelyhuman"
+    }
+}

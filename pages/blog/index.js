@@ -1,11 +1,11 @@
-import Head from 'components/head'
-import Layout from 'components/Layout'
-import Spacer from 'components/Spacer'
-import getPosts from 'lib/get-posts'
-import Link from 'next/link'
-import Router from 'next/router'
-import Padding from 'components/padding'
-import { shortFormatDate } from 'lib/format-date'
+import Head from 'components/head';
+import Layout from 'components/Layout';
+import Spacer from 'components/Spacer';
+import getPosts from 'lib/get-posts';
+import Link from 'next/link';
+import Router from 'next/router';
+import Padding from 'components/padding';
+import { shortFormatDate } from 'lib/format-date';
 
 const Blog = ({ posts }) => {
   return (
@@ -13,23 +13,25 @@ const Blog = ({ posts }) => {
       <Head>
         <title>Blog | Reaper</title>
       </Head>
-      <Layout>
+      <Layout title="Blog">
         <Padding y={3}>
-          <div className='container'>
-            <ul className='card-border min-width-150-px'>
+          <div className="container">
+            <ul className="card-border min-width-150-px">
               {posts.map(({ meta }, index) => {
                 return (
                   <li key={index}>
                     <Link href={`blog/${meta.slug}`}>
-                      <a>{shortFormatDate(meta.date)} - {meta.title}</a>
+                      <a>
+                        {shortFormatDate(meta.date)} - {meta.title}
+                      </a>
                     </Link>
                   </li>
-                )
+                );
               })}
             </ul>
             <Spacer y={1} />
             <button
-              className='margin-top-sm  align-start button black outline-btn'
+              className="margin-top-sm  align-start button black outline-btn"
               onClick={() => Router.push('/')}
             >
               Back
@@ -39,16 +41,16 @@ const Blog = ({ posts }) => {
         </Padding>
       </Layout>
     </>
-  )
-}
+  );
+};
 
-export async function getStaticProps () {
-  const posts = await getPosts()
+export async function getStaticProps() {
+  const posts = await getPosts();
   return {
     props: {
-      posts
-    }
-  }
+      posts,
+    },
+  };
 }
 
-export default Blog
+export default Blog;

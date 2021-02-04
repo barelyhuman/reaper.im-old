@@ -1,114 +1,198 @@
-import React from 'react'
+import React, { createRef } from 'react';
+import cn from 'classnames';
 
 export default class HoloComplete extends React.Component {
-  constructor (props) {
-    super(props)
+  constructor(props) {
+    super(props);
 
     this.state = {
       value: '',
       holoStartValue: '',
       holoEndValue: '',
-      allSuggestions: []
-    }
+      selectedIndex: 0,
+      allSuggestions: [],
+    };
 
-    this.escFunction = this.escFunction.bind(this)
-    this.sendCloseEvent = this.handleSendCloseEvent.bind(this)
+    this.selectedElementRef = createRef();
+
+    this.escFunction = this.escFunction.bind(this);
+    this.sendCloseEvent = this.handleSendCloseEvent.bind(this);
   }
 
-  componentDidMount () {
-    document.addEventListener('keydown', this.escFunction, false)
+  componentDidMount() {
+    document.addEventListener('keydown', this.escFunction, false);
   }
 
-  componentWillUnmount () {
-    document.removeEventListener('keydown', this.escFunction, false)
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.escFunction, false);
   }
 
-  escFunction (e) {
+  escFunction(e) {
     if (e.keyCode === 27) {
-      this.handleSendCloseEvent()
+      this.handleSendCloseEvent();
     }
   }
 
-  handleSendCloseEvent () {
-    if (this.props.onClose && typeof this.props.onClose === 'function') {
-      this.props.onClose()
+  handleSendCloseEvent() {
+    if (
+      this.props &&
+      this.props.onClose &&
+      typeof this.props.onClose === 'function'
+    ) {
+      this.props.onClose();
     }
   }
 
-  handleInputChange (e) {
-    const { value } = e.target
+  handleKeyPress(e) {
+    const { selectedIndex, allSuggestions } = this.state;
+
+    // Up Arrow
+    if (e.keyCode === 38 && selectedIndex - 1 >= 0) {
+      this.setState({ selectedIndex: selectedIndex - 1 });
+      setTimeout(() => {
+        this.scrollToSelected(-1);
+      }, 100);
+    }
+
+    // Down Arrow
+    if (e.keyCode === 40 && selectedIndex + 1 < allSuggestions.length) {
+      console.log(selectedIndex);
+      this.setState({ selectedIndex: selectedIndex + 1 });
+      setTimeout(() => {
+        this.scrollToSelected(1);
+      }, 100);
+    }
+  }
+
+  scrollToSelected(dir) {
+    if (this.selectedElementRef && this.selectedElementRef.current) {
+      const el = this.selectedElementRef.current;
+      const parentYPosition = this.selectedElementRef.current.parentElement
+        .scrollTop;
+      const parentTop = this.selectedElementRef.current.parentElement.getBoundingClientRect()
+        .top;
+      const parentBottom = this.selectedElementRef.current.parentElement.getBoundingClientRect()
+        .bottom;
+      const elTop = el.getBoundingClientRect().top;
+      const elBottom = el.getBoundingClientRect().bottom;
+
+      console.log({
+        parentYPosition,
+      });
+
+      if (
+        elTop > parentTop &&
+        elBottom < parentBottom &&
+        elTop < parentBottom &&
+        elBottom > parentTop
+      ) {
+      } else {
+        if (dir > 0) {
+          this.selectedElementRef.current.parentElement.scrollTo({
+            top: parentYPosition + (elBottom - elTop),
+            behaviour: 'smooth',
+          });
+        } else {
+          this.selectedElementRef.current.parentElement.scrollTo({
+            top: parentYPosition - (elBottom - elTop),
+            behaviour: 'smooth',
+          });
+        }
+      }
+      // if (false) {
+      //   console.log('In view');
+      // } else {
+      //   this.selectedElementRef.current.scrollIntoView();
+      // }
+    }
+  }
+
+  handleInputChange(e) {
+    const { value } = e.target;
 
     const suggestions = this.props.data.filter((item) =>
       item.toLowerCase().startsWith(value.toLowerCase())
-    )
+    );
 
     if (suggestions.length) {
       const casedSuggestion = suggestions[0]
         .toLowerCase()
-        .replace(value.toLowerCase(), value)
-      const sliceFirst = casedSuggestion.slice(0, value.length)
-      const sliceEnd = casedSuggestion.slice(value.length)
+        .replace(value.toLowerCase(), value);
+      const sliceFirst = casedSuggestion.slice(0, value.length);
+      const sliceEnd = casedSuggestion.slice(value.length);
       this.setState({
         holoStartValue: sliceFirst,
         holoEndValue: sliceEnd,
-        allSuggestions: suggestions
-      })
+        allSuggestions: suggestions,
+      });
     } else {
       this.setState({
         holoStartValue: value,
-        holoEndValue: ''
-      })
+        holoEndValue: '',
+      });
     }
 
     if (e.keyCode === 13) {
-      const valueExists = suggestions.find((item) => item === value)
+      const valueExists = suggestions.find((item) => item === value);
       if (valueExists) {
-        this.props.onConfirm(value)
+        this.props.onConfirm(value);
       } else {
-        this.props.onConfirm(suggestions[0])
+        this.props.onConfirm(suggestions[this.state.selectedIndex || 0]);
       }
     }
 
     if (!value) {
       this.setState({
         holoStartValue: '',
-        holoEndValue: ''
-      })
+        holoEndValue: '',
+      });
     }
   }
 
-  render () {
-    const { holoStartValue, holoEndValue } = this.state
-    const { show } = this.props
+  render() {
+    const { holoStartValue, holoEndValue, selectedIndex } = this.state;
+    const { show } = this.props;
     return (
       <>
         {show ? (
           <div
-            className='autocomplete-wrapper'
+            className="autocomplete-wrapper"
             onClick={this.handleSendCloseEvent}
           >
-            <div className='autocomplete'>
+            <div className="autocomplete">
               <div
-                className='autocomplete-background'
+                className="autocomplete-background"
                 data-autocomplete={holoEndValue}
               >
                 {holoStartValue}
               </div>
               <input
-                type='text'
-                className='autocomplete-input'
+                type="text"
+                className="autocomplete-input"
                 autoFocus
-                placeholder='Search'
+                placeholder="Search"
+                onKeyDown={(e) => this.handleKeyPress(e)}
                 onKeyUp={(e) => this.handleInputChange(e)}
               />
             </div>
-            <div className='autocomplete-suggestions'>
+            <div className="autocomplete-suggestions">
               {this.state.allSuggestions.map((item, index) => {
+                const active = selectedIndex === index;
+                const classNames = cn('chevron-right', {
+                  active,
+                  hidden: !active,
+                });
                 return (
                   <React.Fragment key={`suggestion-${item}-${index}`}>
-                    <div className='suggestion-list-item'>{item}</div>
+                    <div
+                      className="suggestion-list-item flex align-center"
+                      ref={active ? this.selectedElementRef : null}
+                    >
+                      <i className={classNames}></i>
+                      {item}
+                    </div>
                   </React.Fragment>
-                )
+                );
               })}
             </div>
           </div>
@@ -178,7 +262,9 @@ export default class HoloComplete extends React.Component {
               top: 40%;
               width: 550px;
               left: 50%;
+              max-height: 350px;
               transform: translateX(-50%);
+              overflow: hidden;
             }
 
             .autocomplete-suggestions .suggestion-list-item {
@@ -186,6 +272,37 @@ export default class HoloComplete extends React.Component {
               color: #333;
               padding: 16px 8px;
               border-bottom: 1px solid #eee;
+            }
+
+            .chevron-right {
+              box-sizing: border-box;
+              position: relative;
+              display: block;
+              transform: scale(var(--ggs, 1));
+              width: 20px;
+              height: 20px;
+              border: 2px solid transparent;
+              border-radius: 100px;
+              opacity: 0;
+              transition: 250ms opacity ease-in;
+            }
+
+            .chevron-right.active {
+              opacity: 1;
+            }
+
+            .chevron-right::after {
+              content: '';
+              display: block;
+              box-sizing: border-box;
+              position: absolute;
+              width: 14px;
+              height: 14px;
+              border-bottom: 4px solid;
+              border-right: 4px solid;
+              transform: rotate(-45deg);
+              right: 6px;
+              top: 4px;
             }
 
             .autocomplete.black-theme {
@@ -233,6 +350,6 @@ export default class HoloComplete extends React.Component {
           `}
         </style>
       </>
-    )
+    );
   }
 }

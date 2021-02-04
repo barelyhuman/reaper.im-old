@@ -4,7 +4,7 @@ import Spacer from '../../components/Spacer'
 
 function Skills () {
   return (
-    <Layout>
+    <Layout title="Skills">
       <div className='container'>
         <div className='flex just-space-between min-width-150-px card-border'>
           <ul>
@@ -18,17 +18,19 @@ function Skills () {
             <li>Webpack</li>
             <li>Flutter</li>
             <li>Go Lang</li>
+            <li>Hasura-Graphql</li>
           </ul>
           <ul>
-            <li>VueJS</li>
+            <li>Vue.js</li>
             <li>RiotJS</li>
             <li>React Native</li>
-            <li>AngularJS</li>
+            <li>Angular.js</li>
             <li>Angular 2+</li>
             <li>Loopback - Node</li>
             <li>HTML/CSS/JS</li>
-            <li>Ruby</li>
+            <li>Ruby (Basics)</li>
             <li>Docker</li>
+            <li>Graphql</li>
           </ul>
         </div>
         <Spacer y={1} />
