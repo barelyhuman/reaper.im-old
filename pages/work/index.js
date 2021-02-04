@@ -13,6 +13,17 @@ function Work () {
             <span className='dot warn inline' /> <strong>Maintenance</strong>
           </li>
           <Spacer y={2} />
+    <li>
+            <a
+              target='_blank'
+              rel='noopener noreferrer'
+              href='https://github.com/barelyhuman/rlayouts'
+            >
+              <span className='dot success inline' />
+              <Spacer x={1} inline />
+              rLayouts - Layout Helper Components for React
+            </a>
+          </li>
           <li>
             <a
               target='_blank'
