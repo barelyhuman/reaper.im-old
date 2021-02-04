@@ -13,7 +13,7 @@ function Work () {
             <span className='dot warn inline' /> <strong>Maintenance</strong>
           </li>
           <Spacer y={2} />
-    <li>
+          <li>
             <a
               target='_blank'
               rel='noopener noreferrer'
