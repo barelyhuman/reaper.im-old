@@ -6,6 +6,7 @@ function Work () {
   return (
     <Layout>
       <div className='container'>
+        <Spacer y={4} />
         <ul className='card-border min-width-150-px'>
           <li class='text-center'>
             <span className='dot success inline' /> <strong>Active Development</strong>

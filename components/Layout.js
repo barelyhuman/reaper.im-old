@@ -30,6 +30,7 @@ export default function Layout (props) {
             align-items: center;
             justify-content: center;
             max-width: 90%;
+            margin: auto;
           }
 
           ul {
@@ -42,10 +43,10 @@ export default function Layout (props) {
           ul li,
           ul li a {
             text-decoration: none;
-            line-height: 20px;
-            font-size: 14px;
+            line-height: 24px;
+            font-size: 18px;
             color: #999;
-            padding: 8px 0px;
+            padding: 16px 0px;
           }
 
           ul li a:hover {
@@ -264,26 +265,26 @@ export default function Layout (props) {
             color: #50a586;
           }
 
-          .dot{
-            height:10px;
-            width:5px;
-            background:#121212;
+          .dot {
+            height: 10px;
+            width: 5px;
+            background: #121212;
           }
 
-          .dot.success{
-            background:#5B9EF0;
+          .dot.success {
+            background: #5b9ef0;
           }
 
-          .dot.warn{
-            background:#FBC83D;
+          .dot.warn {
+            background: #fbc83d;
           }
 
-          .dot.error{
-            background:#e00;
+          .dot.error {
+            background: #e00;
           }
 
-          .inline{
-            display:inline-block;
+          .inline {
+            display: inline-block;
           }
         `}
       </style>
