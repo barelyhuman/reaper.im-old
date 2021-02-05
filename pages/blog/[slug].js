@@ -22,7 +22,8 @@ const PostContent = ({ post, previousPost, nextPost }) => {
           <Spacer y={2} />
           <p className='align-start time-stamp'>
             <small>
-              {shortFormatDate(post.meta.date) + `(${diffDuration(post.meta.date) + ' ago'})`}
+              {shortFormatDate(post.meta.date) +
+                `(${diffDuration(post.meta.date) + ' ago'})`}
             </small>
           </p>
           <Spacer y={1} />
@@ -189,6 +190,14 @@ const PostContent = ({ post, previousPost, nextPost }) => {
 
             .time-stamp {
               color: #666;
+            }
+
+            .checkbox-list {
+              list-style-type: none;
+            }
+
+            input[type="checkbox"]{
+              margin-right:4px;
             }
           `}
         </style>
