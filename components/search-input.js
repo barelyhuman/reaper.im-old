@@ -62,6 +62,12 @@ export default class HoloComplete extends React.Component {
         this.scrollToSelected(1)
       }, 100)
     }
+
+    if (!allSuggestions[selectedIndex]) {
+      this.setState({
+        selectedIndex: 0
+      })
+    }
   }
 
   scrollToSelected (dir) {
