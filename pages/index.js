@@ -39,11 +39,14 @@ function Index () {
             <a className='margin-sm button black outline-btn' href='/skills'>
               Skills
             </a>
-            <a className='margin-sm button black outline-btn' href='/learning'>
-              Learning
-            </a>
             <a className='margin-sm button black outline-btn' href='/blog'>
               Blog
+            </a>
+            <a
+              className='margin-sm button black outline-btn'
+              href='/collections'
+            >
+              Collections
             </a>
             <a className='margin-sm button black outline-btn' href='/walls'>
               Wallpapers
@@ -53,9 +56,6 @@ function Index () {
           <div className='margin-sm'>
             <a className='margin-sm action-link' href='/about'>
               About
-            </a>
-            <a className='margin-sm action-link' href='/collections'>
-              Collections
             </a>
           </div>
           <Spacer y={1} />

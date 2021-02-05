@@ -13,5 +13,15 @@
     "title": "Libraries",
     "description": "Libraries / Github Repositories I like",
     "link": "/collections/libs"
+  },
+  {
+    "title": "Learning",
+    "description": "Things I'm still learning",
+    "link": "/learning"
+  },
+  {
+    "title": "Checklists",
+    "description": "Various checklists to go through before certain actions",
+    "link": "/checklists"
   }
 ]

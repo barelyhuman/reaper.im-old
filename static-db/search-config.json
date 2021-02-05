@@ -9,7 +9,8 @@
         "Contact",
         "Wallpapers",
         "Skills",
-        "Github"
+        "Github",
+        "Checklists"
     ],
     "NAVIGATIONKEYS": {
         "home": "/",
@@ -21,6 +22,7 @@
         "contact": "/contact",
         "skills": "/skills",
         "wallpapers": "/walls",
-        "github": "https://github.com/barelyhuman"
+        "github": "https://github.com/barelyhuman",
+        "checklists":"/checklists"
     }
 }
