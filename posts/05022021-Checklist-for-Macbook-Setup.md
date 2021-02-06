@@ -31,7 +31,7 @@ Things before wiping the system.
   brew install git yarn make
   
   # now for the UI tools
-  brew cask install visual-studio-code google-chrome iterm2 docker vlc postgres 
+  brew install visual-studio-code google-chrome iterm2 docker vlc postgres 
   ```
 
 - [ ] Next up! Programming Language Support
