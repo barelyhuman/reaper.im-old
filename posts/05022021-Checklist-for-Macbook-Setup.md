@@ -33,6 +33,15 @@ Things before wiping the system.
   # now for the UI tools
   brew install visual-studio-code google-chrome iterm2 docker vlc postgres 
   ```
+- [ ] Add ZSH Suggestions 
+  ```sh
+    git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+
+    # Add the following line to .zshrc
+    source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+    
+
+  ```
 
 - [ ] Next up! Programming Language Support
 
