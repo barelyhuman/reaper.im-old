@@ -15,7 +15,7 @@
     "classnames": "^2.2.6",
     "feather-icons": "^4.28.0",
     "gray-matter": "^4.0.2",
-    "marked": "^1.1.1",
+    "marked": "^2.0.0",
     "mousetrap": "^1.6.5",
     "next": "^9.5.4",
     "prismjs": "^1.21.0",
