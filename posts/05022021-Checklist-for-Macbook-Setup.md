@@ -28,10 +28,10 @@ Things before wiping the system.
 - [ ] Update Brew and install Git, Wget and other base level tools
 
   ```sh
-  brew install git yarn make
+  brew install git yarn make fastlane
   
   # now for the UI tools
-  brew install visual-studio-code google-chrome iterm2 docker vlc postgres 
+  brew install visual-studio-code google-chrome iterm2 docker vlc postgres adoptopenjdk/openjdk/adoptopenjdk8
   ```
 - [ ] Add ZSH Suggestions 
   ```sh
