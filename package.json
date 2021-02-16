@@ -9,7 +9,7 @@
     "dev": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build && next export",
     "start": "next start",
-    "fix": "npx standard --fix"
+    "fix": "npx standard --fix || true"
   },
   "dependencies": {
     "classnames": "^2.2.6",

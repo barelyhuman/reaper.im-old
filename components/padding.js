@@ -18,7 +18,7 @@ const Padding = ({ children, x, y, all, ...props }) => {
       paddingTop: all * multiplier || y * multiplier || 0,
       paddingRight: all * multiplier || x * multiplier || 0,
       paddingLeft: all * multiplier || x * multiplier || 0,
-      paddingBottom: all * multiplier || x * multiplier || 0
+      paddingBottom: all * multiplier || y * multiplier || 0
     }
   }
   return (

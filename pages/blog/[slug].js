@@ -17,191 +17,243 @@ const PostContent = ({ post, previousPost, nextPost }) => {
           href='https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap'
         />
       </Head>
-      <Layout>
-        <div className='container'>
+
+      <div className='content'>
+        <Spacer y={2} />
+        <p className='align-start time-stamp'>
+          <small>
+            {shortFormatDate(post.meta.date) +
+              ` (${diffDuration(post.meta.date) + ' ago'})`}
+          </small>
+        </p>
+        <Spacer y={1} />
+        <div className='post-container min-width-150 padding-25-px line-height-20-px'>
+          <h1>{post.meta.title.trim()}</h1>
+          <Spacer y={4} />
+          <article dangerouslySetInnerHTML={{ __html: post.content }} />
           <Spacer y={2} />
-          <p className='align-start time-stamp'>
-            <small>
-              {shortFormatDate(post.meta.date) +
-                `(${diffDuration(post.meta.date) + ' ago'})`}
-            </small>
-          </p>
-          <Spacer y={1} />
-          <div className='post-container min-width-150 padding-25-px line-height-20-px'>
-            <h1>{post.meta.title.trim()}</h1>
-            <Spacer y={10} />
-            <article
-              className='article'
-              dangerouslySetInnerHTML={{ __html: post.content }}
-            />
-            <Spacer y={2} />
-            <EmailFooter />
-          </div>
-          <Spacer y={1} />
-          <div className='flex just-space-between'>
-            {previousPost ? (
-              <Link href={`/blog/${previousPost.meta.slug}`}>
-                <a href='' className='action-link'>
-                  Older Post
-                </a>
-              </Link>
-            ) : (
-              <div />
-            )}
-            <Spacer x={5} inline />
-            <Link href='/blog'>
+          <EmailFooter />
+        </div>
+        <Spacer y={1} />
+        <div className='flex just-space-between'>
+          {previousPost ? (
+            <Link href={`/blog/${previousPost.meta.slug}`}>
               <a href='' className='action-link'>
-                All Posts
+                Older Post
               </a>
             </Link>
-            <Spacer x={5} inline />
-            {nextPost ? (
-              <Link href={`/blog/${nextPost.meta.slug}`}>
-                <a href='' className='action-link'>
-                  Newer Post
-                </a>
-              </Link>
-            ) : (
-              <div />
-            )}
-          </div>
-          <Spacer y={10} />
+          ) : (
+            <div />
+          )}
+          <Spacer x={5} inline />
+          <Link href='/blog'>
+            <a href='' className='action-link'>
+              All Posts
+            </a>
+          </Link>
+          <Spacer x={5} inline />
+          {nextPost ? (
+            <Link href={`/blog/${nextPost.meta.slug}`}>
+              <a href='' className='action-link'>
+                Newer Post
+              </a>
+            </Link>
+          ) : (
+            <div />
+          )}
         </div>
-        <style jsx global>
-          {`
-            :root {
-              --base-font-size: 1rem;
-              --h6-size: calc(var(--base-font-size) * 1.25);
-              --h5-size: calc(var(--h6-size) * 1.25);
-              --h4-size: calc(var(--h5-size) * 1.25);
-              --h3-size: calc(var(--h4-size) * 1.25);
-              --h2-size: calc(var(--h3-size) * 1.25);
-              --h1-size: calc(var(--h2-size) * 1.25);
-            }
+        <Spacer y={10} />
+      </div>
+      <style jsx global>
+        {`
+          // CSS Snippets borrowed from https://github.com/pacocoursey/bear-css/
+          // as the repo has no licenses, all rights and credits belong to Paco Coursey and the following will be removed if asked.
+          
+          ::-webkit-scrollbar {
+            display: none;
+          }
 
-            .post-container {
-              font-family: 'Quicksand', sans-serif;
-              width: 100%;
-              max-width: 900px;
-              word-break: break-word;
-            }
+          body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+          }
 
-            .article {
-              font-size: var(--base-font-size);
-              line-height: calc(1rem * 1.5);
-              max-width: 100%;
-              white-space: break-spaces;
-              overflow-wrap: break-word;
-            }
+          .content {
+            width: 900px;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px 60px;
+          }
 
-            .article > p {
-              color: #000;
-            }
+          h1 {
+            font-size: 24px;
+            font-weight: 600;
+          }
 
-            .article pre {
-              color: #000;
-              border: 1px solid #000;
-              border-radius: 4px;
-              color: #000;
-              padding: 10px;
-              overflow: auto;
-            }
+          h2 {
+            font-size: 18px;
+            font-weight: 600;
+          }
 
-            .article img {
-              height: 350px;
-              width: 350px;
-              object-fit: contain;
-              margin: 0 auto;
-              display: block;
-            }
+          h3 {
+            font-size: 16px;
+            font-weight: 600;
+          }
 
-            .article ul {
-              text-align: left;
-              padding: 0;
-              padding-left: 20px;
-              list-style-type: disc;
-            }
+          h4,
+          h5,
+          h6 {
+            font-size: 14px;
+            font-weight: 600;
+          }
 
-            .article ul li,
-            .article ul li a {
-              line-height: calc(var(--base-font-size * 1.5));
-              font-size: var(--base-font-size);
-            }
+          hr {
+            padding: 10px;
+            border: 0;
+            border-top: 1px solid #ced4da;
+          }
 
-            .article ul li {
-              color: #000;
-            }
+          .tag::before {
+            content: '#';
+            color: #dee2e6;
+          }
 
-            .article ul li a {
-              text-decoration: underline;
-              color: #555;
-            }
+          .tag {
+            background-color: #868e96;
+            color: #fbfbfb;
+            border-radius: 50px;
+            padding: 5px 9px;
+            display: inline;
+            font-size: 12px;
+          }
 
-            .article ul li a:hover {
-              color: black;
-              cursor: pointer;
-            }
+          p {
+            line-height: 1.8em;
+          }
 
-            h1,
-            h2,
-            h3,
-            h4,
-            h5,
-            h6 {
-              color: #444;
-              font-weight: 700;
-            }
+          code::before,
+          code::after {
+            content: '\`';
+            color: #ced4da;
+            padding: 1px;
+          }
 
-            h1 {
-              text-align: center;
-              font-size: var(--h1-size);
-              line-height: calc(var(--h1-size) * 1.5);
-            }
+          pre > code::before,
+          pre > code::after {
+            content: '';
+            color: #ced4da;
+            padding: 1px;
+          }
 
-            h2 {
-              text-align: left;
-              font-size: var(--h2-size);
-              line-height: calc(var(--h2-size) * 1.5);
-            }
+          code {
+            background-color: #ffffff;
+            border: 1px solid #dee2e6;
+            padding: 3px;
+            font-family: 'Consolas', monospace;
+          }
 
-            h3 {
-              text-align: left;
-              font-size: var(--h3-size);
-              line-height: calc(var(--h3-size) * 1.5);
-            }
+          pre::before,
+          pre::after {
+            content: '\`\`\`';
+            display: block;
+            color: #ced4da;
+            padding-bottom: 5px;
+          }
 
-            h4 {
-              text-align: left;
-              font-size: var(--h4-size);
-              line-height: calc(var(--h4-size) * 1.5);
-            }
+          pre {
+            color: #495057;
+            background-color: #ffffff;
+            border: 1px solid #dee2e6;
+            padding: 5px 10px;
+            font-family: 'Consolas', monospace;
+            line-height: 1.5em;
+          }
 
-            h5 {
-              text-align: left;
-              font-size: var(--h5-size);
-              line-height: calc(var(--h5-size) * 1.5);
-            }
+          pre > code {
+            background-color: transparent;
+            border: 0;
+            padding: 3px;
+            white-space: pre-wrap !important;
+          }
 
-            h6 {
-              text-align: left;
-              font-size: var(--h6-size);
-              line-height: calc(var(--h6-size) * 1.5);
-            }
+          blockquote {
+            border-left: 2px solid #495057;
+            padding-left: 10px;
+          }
 
-            .time-stamp {
-              color: #666;
-            }
+          u::before,
+          u::after {
+            content: ${'\\00a0\\00a0'};
+            color: #adb5bd;
+          }
 
-            .checkbox-list {
-              list-style-type: none;
-            }
+          u {
+            text-decoration-color: #adb5bd;
+          }
 
-            input[type="checkbox"]{
-              margin-right:4px;
-            }
-          `}
-        </style>
-      </Layout>
+          b::before,
+          b::after {
+            content: '*';
+            color: #ced4da;
+            font-weight: normal;
+          }
+
+          b {
+            font-weight: 600;
+          }
+
+          i::before,
+          i::after {
+            content: '/';
+            color: #ced4da;
+          }
+
+          a::before,
+          a::after {
+            content: ${'\\00a0\\00a0'};
+            color: #adb5bd;
+          }
+
+          a {
+            color: #495057;
+            text-decoration: underline;
+            transition: 0.3s;
+          }
+
+          a:hover {
+            color: #adb5bd;
+            transition: 0.3s;
+          }
+
+          s {
+            color: #868e96;
+            text-decoration-color: #868e96;
+          }
+
+          li {
+            margin: 16px 0px;
+          }
+
+          .flex {
+            display: flex;
+          }
+
+          .just-space-between {
+            justify-content: space-between;
+          }
+
+          ul {
+            padding-inline-start: 35px;
+          }
+
+          .checkbox-list {
+            list-style-type: none;
+          }
+        `}
+      </style>
     </>
   )
 }
