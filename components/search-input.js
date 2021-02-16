@@ -165,7 +165,7 @@ export default class HoloComplete extends React.Component {
             className='autocomplete-wrapper'
             onClick={this.handleSendCloseEvent}
           >
-            <div className='autocomplete'>
+            <div className='autocomplete bordered-theme'>
               <div
                 className='autocomplete-background'
                 data-autocomplete={holoEndValue}
@@ -213,7 +213,7 @@ export default class HoloComplete extends React.Component {
               left: 0;
               bottom: 0;
               right: 0;
-              background: white;
+              background: rgba(0,0,0,0.1);
             }
 
             .autocomplete {
@@ -271,6 +271,7 @@ export default class HoloComplete extends React.Component {
               max-height: 350px;
               transform: translateX(-50%);
               overflow: hidden;
+              background:white;
             }
 
             .autocomplete-suggestions .suggestion-list-item {

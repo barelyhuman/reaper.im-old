@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 import Mousetrap from 'mousetrap'
 
 import searchConfig from 'static-db/search-config'
+import { Autocomplete } from './autocomplete'
 
 const OPTIONS = searchConfig.OPTIONS
 
@@ -52,12 +53,20 @@ const GlobalSearch = ({ ...props }) => {
   return (
     <>
       <div className={searchWrapper}>
-        <SearchInput
-          show={visible}
-          data={OPTIONS}
-          onConfirm={handleSelection}
-          onClose={handleDismiss}
-        />
+        {visible ? (
+          <Autocomplete
+            menuItems={OPTIONS.map((item) => ({
+              label: item,
+              value: item.toLowerCase()
+            }))}
+            onSelect={(item) => {
+              handleSelection(item.value)
+            }}
+            onClose={() => {
+              setVisibility(false)
+            }}
+          />
+        ) : null}
       </div>
       <style jsx>
         {`
@@ -68,12 +77,14 @@ const GlobalSearch = ({ ...props }) => {
             left: 0;
             bottom: 0;
             right: 0;
-            background: #12121200;
             z-index: 1;
           }
 
           .global-search-wrapper.show {
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #12121255;
           }
         `}
       </style>

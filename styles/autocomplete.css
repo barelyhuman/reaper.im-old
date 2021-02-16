@@ -1,0 +1,159 @@
+.autocomplete {
+  --background-color: #fff;
+  --primary-color: #000;
+  --color-text-active: #000;
+  --color-text-hover-active: #fff;
+  --color-text-hover: #000;
+  --color-border: #000;
+  --color-menu-item-hover: rgba(0, 0, 0, 1);
+  --transition-duration: 0.35s;
+}
+
+.autocomplete.outer-wrapper {
+  position: relative;
+  width: 500px;
+  height: 64px;
+}
+
+.autocomplete .wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  background: var(--background-color);
+  box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.025),
+    0 9px 46px 8px rgba(0, 0, 0, 0.025), 0 11px 15px -7px rgba(0, 0, 0, 0.025);
+  border-radius: 0.5rem;
+  border: 2px solid var(--primary-color);
+  max-height: 64px;
+  transition: max-height var(--transition-duration),
+    border-color var(--transition-duration);
+}
+
+.autocomplete .wrapper.open {
+  max-height: 204px;
+}
+
+.autocomplete .wrapper.hover {
+  border-color: darken(var(--color-border), 0.075);
+}
+
+.autocomplete .menu {
+  padding: 0 0.5rem 0.5rem;
+  transition: all var(--transition-duration);
+  max-height: calc(204px - 64px);
+  overflow-y: auto;
+}
+
+.autocomplete .menu-item {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+
+.autocomplete .menu-item:hover {
+  color: var(--color-text-hover-active);
+  background: var(--color-menu-item-hover);
+}
+
+.autocomplete .menu-item.active {
+  color: var(--color-text-hover-active);
+  background: var(--color-menu-item-hover);
+}
+
+.autocomplete .menu-item.danger > .menu-item-icon,
+.autocomplete .menu-item.danger > .menu-item-text {
+  color: #ff8a8a;
+}
+
+.autocomplete .menu-item-icon {
+  margin-right: 0.325rem;
+  font-size: 16px;
+  color: var(--color-text-active);
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.autocomplete .menu-item-text {
+  color: inherit;
+  margin: 0;
+}
+
+.autocomplete .menu-button {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+  padding: 0 0.75rem 0 1rem;
+  font-weight: 500;
+  color: var(--color-text-active);
+  height: 64px;
+  line-height: 64px;
+  width: 100%;
+  cursor: pointer;
+  transition: border-color var(--transition-duration),
+    color var(--transition-duration);
+}
+
+.autocomplete .menu-button:hover {
+  color: var(--color-text-hover);
+}
+
+.autocomplete .menu-button:hover .rectangle {
+  background: var(--color-text-hover);
+}
+
+.autocomplete .menu-input {
+  width: 90%;
+}
+
+.autocomplete .menu-input > input {
+  font-size: 18px;
+  margin: 0;
+  border: 0;
+  width: 100%;
+  outline: black;
+}
+
+.autocomplete .icon-wrapper {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.autocomplete .rectangle {
+  position: absolute;
+  width: 3px;
+  height: 10px;
+  border-radius: 2px;
+  transform-origin: 50% 50%;
+  background: var(--color-text-active);
+  transition: transform var(--transition-duration),
+    background var(--transition-duration);
+}
+
+.autocomplete .rectangle.rectangle1 {
+  transform: rotate(-45deg) scaleY(1) translate(0);
+  top: 8px;
+  left: 8px;
+}
+
+.autocomplete .rectangle.rectangle2 {
+  transform: rotate(45deg) scaleY(1) translate(0);
+  top: 8px;
+  right: 8px;
+}
+
+.autocomplete .wrapper.open .rectangle1 {
+  transform: rotate(-45deg) scaleY(1.75) translate(2px, 1px);
+}
+
+.autocomplete .wrapper.open .rectangle2 {
+  transform: rotate(45deg) scaleY(1.75) translate(-2px, 1px);
+}

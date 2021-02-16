@@ -3,6 +3,7 @@ import GlobalSearch from 'components/global-search'
 import feather from 'feather-icons'
 import { useEffect } from 'react'
 import 'prismjs/themes/prism.css'
+import 'styles/autocomplete.css'
 
 function App ({ Component, pageProps }) {
   const { post } = pageProps

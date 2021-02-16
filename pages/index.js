@@ -78,7 +78,7 @@ function Index () {
       <style jsx>
         {`
           .neon-black {
-            filter: drop-shadow(0px 0px 2px #121212);
+            filter: drop-shadow(0px 0px 1px #121212);
           }
         `}
       </style>
