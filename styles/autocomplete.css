@@ -46,6 +46,10 @@
   overflow-y: auto;
 }
 
+.autocomplete .menu::-webkit-scrollbar{
+  display: none;
+}
+
 .autocomplete .menu-item {
   height: 40px;
   display: flex;

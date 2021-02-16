@@ -121,10 +121,6 @@ export const Autocomplete = ({
                 onChange={handleChange}
               />
             </div>
-            <div className='icon-wrapper'>
-              <div className='rectangle rectangle1' />
-              <div className='rectangle rectangle2' />
-            </div>
           </div>
           <div className='menu'>
             {filtered.map((item, index) => {
