@@ -12,6 +12,7 @@
     "fix": "npx standard --fix"
   },
   "dependencies": {
+    "@barelyreaper/rlayouts": "0.0.3-dev.3",
     "classnames": "^2.2.6",
     "feather-icons": "^4.28.0",
     "gray-matter": "^4.0.2",

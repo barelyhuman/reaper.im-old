@@ -1,41 +1,42 @@
-import Head from 'components/head'
-import GlobalSearch from 'components/global-search'
-import feather from 'feather-icons'
-import { useEffect } from 'react'
-import 'prismjs/themes/prism.css'
+import Head from 'components/head';
+import GlobalSearch from 'components/global-search';
+import feather from 'feather-icons';
+import { useEffect } from 'react';
+import 'prismjs/themes/prism.css';
+import 'styles/global.css';
 
-function App ({ Component, pageProps }) {
-  const { post } = pageProps
+function App({ Component, pageProps }) {
+  const { post } = pageProps;
 
   useEffect(() => {
-    feather.replace()
-  }, [])
+    feather.replace();
+  }, []);
 
   return (
     <>
       <Head>
-        <title>Reaper | Full Stack Developer</title>
-        <meta property='og:site_name' content='Reaper | Full Stack Developer' />
+        <title>Reaper - Full Stack Developer</title>
+        <meta property="og:site_name" content="Reaper | Full Stack Developer" />
 
         <meta
-          property='og:title'
+          property="og:title"
           content={
             post && post.meta
               ? post.meta.title
-              : 'Reaper | Full Stack Developer'
+              : 'Reaper - Full Stack Developer'
           }
         />
-        <meta name='twitter:card' content='summary_large_image' />
-        <meta name='twitter:site' content='@_barelyhuman' />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@_barelyhuman" />
         <meta
-          property='og:image'
-          content='https://reaper.im/wallpapers/reaper-dark.png'
+          property="og:image"
+          content="https://reaper.im/wallpapers/reaper-dark.png"
         />
       </Head>
       <GlobalSearch />
       <Component {...pageProps} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

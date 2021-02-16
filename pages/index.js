@@ -1,89 +1,47 @@
-import Layout from '../components/Layout'
-import Spacer from '../components/Spacer'
+import { Spacer, Padding, Row, Col } from '@barelyreaper/rlayouts';
+import PostCard from 'components/post-card';
+import getPosts from 'lib/get-posts';
+import Link from 'next/link';
 
-function Index () {
-  return (
-    <>
-      <Layout>
-        <div className='container'>
-          <div className='margin-md flex just-center flex-col align-center'>
-            <img
-              src='/logo.svg'
-              className='neon-black'
-              height={100}
-              alt='logo'
-            />
-            <Spacer y={2} />
-            <a href='/' className='action-link'>
-              <span className='dark-gray neon-black font-size-50 text-center flex just-center'>
-                Reaper
-              </span>
-            </a>
-            <Spacer y={1} />
-            <div className='tagline'>
-              <small className='font-size-15'>
-                Minimalist | Designer | Developer{' '}
-              </small>
-            </div>
-          </div>
-          <br />
-          <div className='flex flex-wrap just-center align-center'>
-            <a className='margin-sm button black' href='/contact'>
-              Contact
-            </a>
-          </div>
-          <div className='flex flex-wrap just-center align-center'>
-            <a className='margin-sm button black outline-btn' href='/work'>
-              Work
-            </a>
-            <a className='margin-sm button black outline-btn' href='/skills'>
-              Skills
-            </a>
-            <a className='margin-sm button black outline-btn' href='/blog'>
-              Blog
-            </a>
-            <a
-              className='margin-sm button black outline-btn'
-              href='/collections'
-            >
-              Collections
-            </a>
-            <a className='margin-sm button black outline-btn' href='/walls'>
-              Wallpapers
-            </a>
-          </div>
-          <Spacer y={1} />
-          <div className='margin-sm'>
-            <a className='margin-sm action-link' href='/about'>
-              About
-            </a>
-          </div>
-          <Spacer y={1} />
-          <div className='social-links flex just-center'>
-            <a href='https://github.com/barelyhuman'>
-              <img
-                src='https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'
-                alt='GitHub Profile'
-                height='30'
-                width='30'
-              />
-            </a>
-          </div>
-          <Spacer y={10} />
-          <div className='action-link'>
-            <p>⌘/ctrl + k - power menu</p>
-          </div>
-        </div>
-      </Layout>
-      <style jsx>
-        {`
-          .neon-black {
-            filter: drop-shadow(0px 0px 2px #121212);
-          }
-        `}
-      </style>
-    </>
-  )
+export async function getStaticProps() {
+  const posts = await getPosts();
+  return {
+    props: {
+      posts,
+    },
+  };
 }
 
-export default Index
+function Index({ posts }) {
+  return (
+    <>
+      <Spacer y={2}></Spacer>
+      <Row justify="space-between" align="center">
+        <img src="/logo.svg" height="48" width="48" alt="" />
+        <Row align="center" justify="center">
+          <a href="/work">Work</a>
+          <Spacer x={2} inline></Spacer>
+          <a href="/collections">Collections</a>
+          <Spacer x={2} inline></Spacer>
+          <a href="/contact">Contact</a>
+        </Row>
+      </Row>
+      <Col align="center" justify="center">
+        <Spacer y={2}></Spacer>
+        <h2 align="center">Reaper</h2>
+        <Spacer y={1}></Spacer>
+        <p>Minimalist . Designer . Developer</p>
+      </Col>
+      <Spacer y={4}></Spacer>
+      <Col>
+        <ul>
+          {posts.map(({ meta }, index) => (
+            <PostCard key={`post-${index}-${meta.slug}`} title={meta.title} date={meta.date} slug={meta.slug} />
+          ))}
+        </ul>
+      </Col>
+    </>
+  );
+}
+
+export default Index;
