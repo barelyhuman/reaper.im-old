@@ -42,6 +42,11 @@ dokku config:set --no-restart <app-name> DOKKU_LETSENCRYPT_EMAIL=<email>
 dokku letsencrypt <app-name>
 ```
 
+## Domain
+```bash
+dokku domains:add <app-name> <domain>
+```
+
 ## Process Management
 
 ### Restart
