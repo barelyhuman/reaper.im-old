@@ -1,15 +1,21 @@
-import { useEffect, useState } from 'react'
 import cn from 'classnames'
-import SearchInput from './search-input'
-import { useRouter } from 'next/router'
 import Mousetrap from 'mousetrap'
-
+import { useRouter } from 'next/router'
+import { useEffect, useState } from 'react'
+import checklistsConfigs from 'static-db/checklists-collection.json'
 import searchConfig from 'static-db/search-config'
 import { Autocomplete } from './autocomplete'
 
 const OPTIONS = searchConfig.OPTIONS
 
 const NAVIGATIONKEYS = searchConfig.NAVIGATIONKEYS
+
+checklistsConfigs.forEach((item) => {
+  OPTIONS.push(item.title)
+  NAVIGATIONKEYS[item.title.toLowerCase()] = item.link
+})
+
+console.log({ NAVIGATIONKEYS })
 
 const GlobalSearch = ({ ...props }) => {
   const [visible, setVisibility] = useState(false)
