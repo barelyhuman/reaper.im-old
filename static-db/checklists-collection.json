@@ -2,6 +2,11 @@
     {
         "title": "Macbook Setup",
         "description": "Setup Macbook for developement",
-        "link": "/blog/05022021-Checklist-for-Macbook-Setup"
+        "link": "/blog/macbook-setup-checklist"
+    },
+    {
+        "title": "AWS EC2 Setup",
+        "description": "Setup AWS EC2 for deployments",
+        "link": "/blog/ec2-setup-checklist"
     }
 ]
