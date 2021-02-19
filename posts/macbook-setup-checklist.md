@@ -80,5 +80,6 @@ Things before wiping the system.
 
 - [ ] XCode and Android Studio, download them or check if the SSD has the latest version, if they're already there, let's create symlinks from there to the `$HOME/ExternalApplications` so we can save some space on the SSD.
 - [ ] Open XCode,  change the derived data and archives folder to point to the external disk
+- [ ] Install ngrok - `brew install ngrok`
 
 That's about it reaper, go sleep now, it's 4 in the morning, maybe start doing this a little early the next time.
