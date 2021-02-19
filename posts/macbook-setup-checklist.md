@@ -31,7 +31,7 @@ Things before wiping the system.
   brew install git yarn make fastlane
   
   # now for the UI tools
-  brew install visual-studio-code google-chrome iterm2 docker vlc postgres adoptopenjdk/openjdk/adoptopenjdk8
+  brew install clean-me visual-studio-code google-chrome iterm2 docker vlc postgres adoptopenjdk/openjdk/adoptopenjdk8
   ```
 - [ ] Add ZSH Suggestions 
   ```sh
