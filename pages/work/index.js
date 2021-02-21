@@ -20,6 +20,17 @@ function Work () {
             <a
               target='_blank'
               rel='noopener noreferrer'
+              href='https://github.com/barelyhuman/reaper.im'
+            >
+              <span className='dot success inline' />
+              <Spacer x={1} inline />
+              reaper.im - This website.
+            </a>
+          </li>
+          <li>
+            <a
+              target='_blank'
+              rel='noopener noreferrer'
               href='https://github.com/barelyhuman/rlayouts'
             >
               <span className='dot success inline' />
