@@ -28,5 +28,10 @@
     "title": "JS - Unique Array",
     "description": "Simple Set based implmentation to create a unique array using object keys",
     "link": "https://snips.reaper.im/javascript-unique-array"
+  },
+  {
+    "title": "useHooks - Gabe Ragland",
+    "description": "Easy to understand React Hook recipes by Gabe Ragland",
+    "link": "https://usehooks.com/"
   }
 ]
