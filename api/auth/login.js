@@ -13,17 +13,8 @@ module.exports = async (req, res) => {
     switch (req.method) {
       case 'POST': {
         const otp = await getOTP()
-        if (typeof otp === 'boolean' && otp === false) {
-          console.log("couldn't get it from file")
-          res.statusCode = 400
-          return res.json({
-            stack: 'OTP Invalid',
-            message: 'OTP Invalid'
-          })
-        }
 
-        if (parseInt(req.body.otp, 10) !== otp) {
-          console.log('no payload')
+        if (parseInt(req.body.otp, 10) !== parseInt(otp, 10)) {
           res.statusCode = 400
           return res.json({
             stack: 'OTP Invalid',
@@ -79,10 +70,13 @@ module.exports = async (req, res) => {
 
 async function getOTP () {
   const redis = new Redis(process.env.REDIS_URL)
-  return redis.get('otp')
+  redis.get('otp', function (value) {
+    console.log(value)
+  })
+  return await redis.get('otp')
 }
 
 async function removeOTP () {
   const redis = new Redis(process.env.REDIS_URL)
-  return redis.set('otp', '')
+  return await redis.set('otp', '')
 }

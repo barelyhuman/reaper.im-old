@@ -2,6 +2,10 @@ const axios = require('axios')
 const totp = require('totp-generator')
 const Redis = require('ioredis')
 
+const isDev = () => {
+  return process.env.NODE_ENV !== 'production'
+}
+
 const OTP_EXPIRATION = 60
 
 module.exports = async (req, res) => {
@@ -9,13 +13,17 @@ module.exports = async (req, res) => {
     switch (req.method) {
       case 'POST': {
         const otp = generateOTP()
-        await axios.post(process.env.MAILER_URL, {
-          to: process.env.AUTHENTICATION_EMAIL,
-          subject: `Reaper.im OTP Request - ${String(
-            new Date().getTime()
-          ).slice(-7)}`,
-          html: `Your otp for reaper.im is ${otp}`
-        })
+        if (isDev()) {
+          console.log(otp)
+        } else {
+          await axios.post(process.env.MAILER_URL, {
+            to: process.env.AUTHENTICATION_EMAIL,
+            subject: `Reaper.im OTP Request - ${String(
+              new Date().getTime()
+            ).slice(-7)}`,
+            html: `Your otp for reaper.im is ${otp}`
+          })
+        }
         await saveOTP(otp)
         return res.json({ success: true })
       }
