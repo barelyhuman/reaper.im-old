@@ -258,6 +258,10 @@ const PostContent = ({ post, previousPost, nextPost }) => {
           .checkbox-list {
             list-style-type: none;
           }
+
+          img{
+            max-width: 900px;
+          }
         `}
       </style>
     </>
