@@ -7,11 +7,11 @@ CREATE TABLE IF NOT EXISTS "public"."access_tokens" (
     "is_valid" bool NOT NULL DEFAULT false,
     PRIMARY KEY ("id")
 );
-`;
-};
+`
+}
 
 exports.down = async (db) => {
   await db`
     DROP TABLE IF EXISTS "public"."access_tokens";
-    `;
-};
+    `
+}

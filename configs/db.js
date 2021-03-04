@@ -6,7 +6,7 @@ module.exports = {
     username: 'local_user', // Username of database user
     password: 'password', // Password of database user
     max: 10, // Max number of connections
-    timeout: 0, // Idle connection timeout in seconds
+    timeout: 0 // Idle connection timeout in seconds
   },
-  production: process.env.DATABASE_URL,
-};
+  production: process.env.DATABASE_URL
+}

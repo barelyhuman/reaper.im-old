@@ -21,9 +21,10 @@ const Input = ({ children, ...props }) => {
           border-color: #000;
           outline: #000;
         }
-      `}</style>
+      `}
+      </style>
     </>
-  );
-};
+  )
+}
 
-export default Input;
+export default Input

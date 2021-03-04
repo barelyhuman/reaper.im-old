@@ -1,9 +1,9 @@
-import cn from 'classnames';
+import cn from 'classnames'
 
 const Button = ({ children, secondary, ...props }) => {
   const classList = cn(props.className, {
-    secondary,
-  });
+    secondary
+  })
 
   return (
     <>
@@ -50,7 +50,7 @@ const Button = ({ children, secondary, ...props }) => {
         `}
       </style>
     </>
-  );
-};
+  )
+}
 
-export default Button;
+export default Button

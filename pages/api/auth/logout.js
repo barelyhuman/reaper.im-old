@@ -1,42 +1,42 @@
-import { serialize } from 'cookie';
-import { getDB } from 'lib/get-db';
+import { serialize } from 'cookie'
+import { getDB } from 'lib/get-db'
 
 export default async (req, res) => {
   try {
     switch (req.method) {
       case 'POST': {
-        const { auth } = req.cookies;
+        const { auth } = req.cookies
 
-        const db = getDB();
+        const db = getDB()
 
         await db`
           delete from access_tokens where token=${auth}
-        `;
+        `
 
         res.setHeader(
           'Set-Cookie',
           serialize('auth', 'unauth', {
             expires: new Date(
               new Date().setFullYear(new Date().getFullYear() - 1)
-            ),
+            )
           })
-        );
+        )
 
-        return res.json({ success: true });
+        return res.json({ success: true })
       }
       default:
         {
-          res.statusCode = 404;
-          res.end();
+          res.statusCode = 404
+          res.end()
         }
-        return;
+        return
     }
   } catch (err) {
-    console.error(err);
-    res.statusCode = 500;
+    console.error(err)
+    res.statusCode = 500
     return res.json({
       stack: String(err),
-      message: 'Oops! Something went wrong.',
-    });
+      message: 'Oops! Something went wrong.'
+    })
   }
-};
+}

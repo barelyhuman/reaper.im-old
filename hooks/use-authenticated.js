@@ -1,26 +1,26 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
+import axios from 'axios'
+import { useEffect, useState } from 'react'
 
-export default function useAuthenticated() {
-  const [loggedIn, setLoggedIn] = useState(null);
+export default function useAuthenticated () {
+  const [loggedIn, setLoggedIn] = useState(null)
   useEffect(() => {
-    revalidate();
-  }, []);
+    revalidate()
+  }, [])
 
-  function revalidate() {
+  function revalidate () {
     axios
       .get('/api/auth/me')
       .then((response) => {
         if (response.data.success) {
-          setLoggedIn(true);
+          setLoggedIn(true)
         }
       })
       .catch((err) => {
         if (err.response.status === 401) {
-          setLoggedIn(false);
+          setLoggedIn(false)
         }
-      });
+      })
   }
 
-  return [loggedIn, revalidate];
+  return [loggedIn, revalidate]
 }

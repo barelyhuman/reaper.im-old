@@ -21,9 +21,10 @@ const Textarea = ({ children, ...props }) => {
           border-color: #000;
           outline: #000;
         }
-      `}</style>
+      `}
+      </style>
     </>
-  );
-};
+  )
+}
 
-export default Textarea;
+export default Textarea

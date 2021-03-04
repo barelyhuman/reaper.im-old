@@ -1,3 +1,3 @@
-const path = require('path');
+const path = require('path')
 
-export const OTP_PATH = path.join(process.env.STORAGE, 'otp.txt');
+export const OTP_PATH = path.join(process.env.STORAGE, 'otp.txt')

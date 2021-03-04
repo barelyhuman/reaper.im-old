@@ -1,26 +1,26 @@
-import { isAuthenticated } from 'lib/isAuthenticated';
+import { isAuthenticated } from 'lib/isAuthenticated'
 
 const handler = async (req, res) => {
   try {
     switch (req.method) {
       case 'GET': {
-        return res.send({ success: true });
+        return res.send({ success: true })
       }
       default:
         {
-          res.statusCode = 404;
-          res.end();
+          res.statusCode = 404
+          res.end()
         }
-        return;
+        return
     }
   } catch (err) {
-    console.error(err);
-    res.statusCode = 500;
+    console.error(err)
+    res.statusCode = 500
     return res.json({
       stack: String(err),
-      message: 'Oops! Something went wrong.',
-    });
+      message: 'Oops! Something went wrong.'
+    })
   }
-};
+}
 
-export default isAuthenticated(handler);
+export default isAuthenticated(handler)
