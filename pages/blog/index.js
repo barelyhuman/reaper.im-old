@@ -24,7 +24,7 @@ const Blog = ({ posts }) => {
             {isLoggedIn ? (
               <>
                 <div className='w-100'>
-                  <Row justify='end'>
+                  <Row justify='flex-end'>
                     <Link href='/blog/new'>
                       <Button> Create Post </Button>
                     </Link>

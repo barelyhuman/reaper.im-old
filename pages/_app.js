@@ -53,7 +53,7 @@ function App ({ Component, pageProps }) {
       {isLoggedIn ? (
         <>
           <Spacer y={2} />
-          <Row justify='end'>
+          <Row justify='flex-end'>
             <Button secondary onClick={handleLogout}>
               Logout
             </Button>

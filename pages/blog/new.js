@@ -65,7 +65,7 @@ function NewBlogPost ({ ...props }) {
           />
           <Spacer y={2} />
           <div className='w-100'>
-            <Row justify='end'>
+            <Row justify='flex-end'>
               <Button onClick={handleCreatePost}>Create Post</Button>
             </Row>
           </div>
