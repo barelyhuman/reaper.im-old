@@ -2,7 +2,7 @@ import axios from 'axios'
 import fs from 'fs'
 import totp from 'totp-generator'
 import path from 'path'
-import { OTP_PATH } from 'configs/otp-path'
+import { OTP_PATH } from '../../configs/otp-path'
 
 const OTP_EXPIRATION = 60
 

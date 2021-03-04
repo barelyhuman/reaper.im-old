@@ -1,5 +1,5 @@
 import { serialize } from 'cookie'
-import { getDB } from 'lib/get-db'
+import { getDB } from '../../lib/get-db'
 
 export default async (req, res) => {
   try {

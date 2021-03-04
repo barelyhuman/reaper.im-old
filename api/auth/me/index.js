@@ -1,4 +1,4 @@
-import { isAuthenticated } from 'lib/isAuthenticated'
+import { isAuthenticated } from '../../../lib/isAuthenticated'
 
 const handler = async (req, res) => {
   try {

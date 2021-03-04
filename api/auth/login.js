@@ -1,7 +1,7 @@
-import { OTP_PATH } from 'configs/otp-path'
+import { OTP_PATH } from '../../configs/otp-path'
 import { serialize } from 'cookie'
 import fs from 'fs'
-import { getDB } from 'lib/get-db'
+import { getDB } from '../../lib/get-db'
 import { nanoid } from 'nanoid'
 import path from 'path'
 
