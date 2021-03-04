@@ -20,6 +20,7 @@
     "cookie": "^0.4.1",
     "feather-icons": "^4.28.0",
     "gray-matter": "^4.0.2",
+    "ioredis": "^4.23.0",
     "knex": "^0.95.0",
     "marked": "^2.0.0",
     "mousetrap": "^1.6.5",

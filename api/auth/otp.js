@@ -1,8 +1,6 @@
 import axios from 'axios'
-import fs from 'fs'
 import totp from 'totp-generator'
-import path from 'path'
-import { OTP_PATH } from '../../configs/otp-path'
+import Redis from 'ioredis'
 
 const OTP_EXPIRATION = 60
 
@@ -18,7 +16,7 @@ export default async (req, res) => {
           ).slice(-7)}`,
           html: `Your otp for reaper.im is ${otp}`
         })
-        saveOTP(otp)
+        await saveOTP(otp)
         return res.json({ success: true })
       }
       default:
@@ -38,10 +36,11 @@ export default async (req, res) => {
   }
 }
 
-function saveOTP (otp) {
-  fs.writeFileSync(OTP_PATH, String(otp))
-  setTimeout(() => {
-    fs.unlinkSync(OTP_PATH)
+async function saveOTP (otp) {
+  const redis = new Redis(process.env.REDIS_URL)
+  await redis.set('otp', otp)
+  return setTimeout(async () => {
+    await redis.set('otp', null)
   }, OTP_EXPIRATION * 1000)
 }
 
