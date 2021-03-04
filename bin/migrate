@@ -1,0 +1,33 @@
+#!/usr/bin/env node
+
+const { getDB } = require('../lib/get-db');
+const path = require('path');
+const db = getDB();
+
+const migrationRunner = () => {
+  const cliArgs = process.argv.slice(2);
+  switch (cliArgs[0]) {
+    case 'up': {
+      const { up } = require(path.join(process.cwd(), cliArgs[1]));
+      up(db)
+        .then((_) => process.exit(0))
+        .catch((err) => {
+          console.error(err);
+          process.exit(1);
+        });
+      break;
+    }
+    case 'down': {
+      const { down } = require(path.join(process.cwd(), cliArgs[1]));
+      down(db)
+        .then((_) => process.exit(0))
+        .catch((err) => {
+          console.error(err);
+          process.exit(1);
+        });
+      break;
+    }
+  }
+};
+
+migrationRunner();

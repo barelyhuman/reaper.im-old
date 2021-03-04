@@ -9,17 +9,27 @@
     "dev": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build && next export",
     "start": "next start",
-    "fix": "npx standard --fix || true"
+    "fix": "npx standard --fix || true",
+    "migrate": "./bin/migrate up ./migrations/001-init.js",
+    "rollback": "./bin/migrate down ./migrations/001-init.js"
   },
   "dependencies": {
+    "@barelyreaper/rlayouts": "^0.0.3-dev.3",
+    "axios": "^0.21.1",
     "classnames": "^2.2.6",
+    "cookie": "^0.4.1",
     "feather-icons": "^4.28.0",
     "gray-matter": "^4.0.2",
+    "knex": "^0.95.0",
     "marked": "^2.0.0",
     "mousetrap": "^1.6.5",
+    "nanoid": "^3.1.20",
     "next": "^9.5.4",
+    "pg": "^8.5.1",
+    "postgres": "^1.0.2",
     "prismjs": "^1.23.0",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "totp-generator": "^0.0.8"
   }
 }
