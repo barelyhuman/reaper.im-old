@@ -1,7 +1,7 @@
-import { serialize } from 'cookie'
-import { getDB } from '../../lib/get-db'
+const { serialize } = require('cookie')
+const { getDB } = require('../../lib/get-db')
 
-export default async (req, res) => {
+module.exports = async (req, res) => {
   try {
     switch (req.method) {
       case 'POST': {

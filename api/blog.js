@@ -1,5 +1,5 @@
-import { createFile } from 'lib/github'
-import { isAuthenticated } from 'lib/isAuthenticated'
+const { createFile } = require('../lib/github')
+const { isAuthenticated } = require('../lib/isAuthenticated')
 
 const handler = async (req, res) => {
   try {
@@ -39,7 +39,7 @@ ${req.body.body}
   }
 }
 
-export default isAuthenticated(handler)
+module.exports = isAuthenticated(handler)
 
 function getFileName (date, title) {
   const instance = new Date(date)

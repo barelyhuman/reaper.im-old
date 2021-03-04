@@ -1,10 +1,10 @@
-import axios from 'axios'
-import totp from 'totp-generator'
-import Redis from 'ioredis'
+const axios = require('axios')
+const totp = require('totp-generator')
+const Redis = require('ioredis')
 
 const OTP_EXPIRATION = 60
 
-export default async (req, res) => {
+module.exports = async (req, res) => {
   try {
     switch (req.method) {
       case 'POST': {

@@ -1,4 +1,4 @@
-import { isAuthenticated } from '../../../lib/isAuthenticated'
+const { isAuthenticated } = require('../../../lib/isAuthenticated')
 
 const handler = async (req, res) => {
   try {
@@ -23,4 +23,4 @@ const handler = async (req, res) => {
   }
 }
 
-export default isAuthenticated(handler)
+module.exports = isAuthenticated(handler)
