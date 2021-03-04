@@ -43,6 +43,7 @@ module.exports = async (req, res) => {
           serialize('auth', token, {
             expires: tokenExpiry,
             secure: !isDev(),
+            httpOnly: true,
             path: '/',
             sameSite: 'lax'
           })
