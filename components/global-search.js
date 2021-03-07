@@ -15,8 +15,6 @@ checklistsConfigs.forEach((item) => {
   NAVIGATIONKEYS[item.title.toLowerCase()] = item.link
 })
 
-console.log({ NAVIGATIONKEYS })
-
 const GlobalSearch = ({ ...props }) => {
   const [visible, setVisibility] = useState(false)
   const router = useRouter()
