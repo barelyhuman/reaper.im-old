@@ -1,5 +1,5 @@
 ---  
-title: Themer and how you can handle dark mode a lot more  
+title: Themer and how you can handle dark mode a lot more gracefully
 published: true  
 date: 2021-03-11  
 ---
