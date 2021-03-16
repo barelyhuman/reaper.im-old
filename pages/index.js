@@ -58,6 +58,7 @@ function Index () {
             <a className='margin-sm action-link' href='/about'>
               About
             </a>
+            <a className='margin-sm action-link' rel="me" href="https://fosstodon.org/@reaper">Mastodon</a>
           </div>
           <Spacer y={1} />
           <div className='social-links flex just-center'>
