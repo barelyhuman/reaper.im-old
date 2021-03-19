@@ -16,10 +16,10 @@ export default () => {
           </p>
         </div>
         <Spacer y={1} />
-        <Link href="/">
+        <Link href='/'>
           <a
-            className="button margin-top-sm align-start black outline-btn"
-            href="/"
+            className='button margin-top-sm align-start black outline-btn'
+            href='/'
           >
             Back
           </a>

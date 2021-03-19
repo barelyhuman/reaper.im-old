@@ -40,13 +40,14 @@ const AutomationCollection = ({ collections }) => {
           </ul>
           <Spacer y={1} />
           <Link
-            
-            href="/collections"
+
+            href='/collections'
           >
             <a
-            className="margin-top-sm align-start button black outline-btn"
-             href="/collections">
-            Back
+              className='margin-top-sm align-start button black outline-btn'
+              href='/collections'
+            >
+              Back
             </a>
           </Link>
           <Spacer y={2} />
