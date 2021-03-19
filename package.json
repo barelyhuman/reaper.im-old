@@ -32,5 +32,9 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "totp-generator": "^0.0.8"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/node": "^7.13.10"
   }
 }

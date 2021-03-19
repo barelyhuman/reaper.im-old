@@ -1,4 +1,4 @@
-name: Format
+name: Format and Generate RSS
 on:
   push:
     branches: [master]
@@ -18,8 +18,11 @@ jobs:
         run: |
           npm i
           npx standard --fix | echo "Will fix everything I can"
+      - name: Generate RSS
+        run: |
+          node lib/generate-rss.js
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4.1.2
         with:
-          commit_message: ":robot: Formatted!"
+          commit_message: 'Code formatted, new RSS Generated'
           branch: ${{ github.head_ref }}

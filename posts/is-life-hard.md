@@ -27,7 +27,7 @@ We try to convince others and ourselves that we are better than the person who h
 
 ### Will a Lamborghini make you happy?
 
-Most of you are straight of going to say “YES! IT WILL!” and then there will be people who don’t like the car and will say “Nah, <insert car name here> is better, and that’ll make me happy” and then there might be people who just don’t like cars and prefer bikes and this goes on. The point is, it’s a luxury.
+Most of you are straight of going to say “YES! IT WILL!” and then there will be people who don’t like the car and will say “Nah, `insert car name here` is better, and that’ll make me happy” and then there might be people who just don’t like cars and prefer bikes and this goes on. The point is, it’s a luxury.
 
 These things make us feel good about what we have accomplished. Owning a costly watch, car, bike etc etc Et cetera!. Which isn’t what makes us happy. I mean, maybe for a few days, months but that's about it. The fact that we all crave financial comfort more than mental comfort is what make life harder.
 
