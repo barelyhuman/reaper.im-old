@@ -17,6 +17,29 @@ function Work () {
             <span className='dot warn inline' /> <strong>Maintenance</strong>
           </li>
           <Spacer y={2} />
+
+          <li>
+            <a
+              target='_blank'
+              rel='noopener noreferrer'
+              href='https://barelyhuman.github.io/conch'
+            >
+              <span className='dot warn inline' />
+              <Spacer x={1} inline />
+              Conch - Micro library for batch running promises
+            </a>
+          </li>
+          <li>
+            <a
+              target='_blank'
+              rel='noopener noreferrer'
+              href='https://themer.reaper.im'
+            >
+              <span className='dot warn inline' />
+              <Spacer x={1} inline />
+              Themer - One line dark mode with JS
+            </a>
+          </li>
           <li>
             <a
               target='_blank'
@@ -195,6 +218,8 @@ function Work () {
               target='_blank'
               href='https://rmnd-r.siddharthgelera.com'
             >
+              <span className='dot warn inline' />
+              <Spacer x={1} inline />
               rmnd-r - Minimal Tasks List
             </a>
           </li>
