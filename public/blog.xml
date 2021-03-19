@@ -11,7 +11,8 @@
       <guid>https://reaper.im/blog/20210302--Handling-heavier-tasks-</guid>
       <title>Handling heavy memory tasks asynchronously</title>
       <link>https://reaper.im/blog/20210302--Handling-heavier-tasks-</link>
-      <description><p>This is going to be both a post to point you to a library I made and also point you to a solution for handling heavier tasks. </p>
+      <description>
+        <![CDATA[<p>This is going to be both a post to point you to a library I made and also point you to a solution for handling heavier tasks. </p>
 <p><strong>Disclaimer: This is one of many solutions that you can use, I&#39;m just talking about this one since I end up using this a lot more than other solutions, I will mention other solutions though</strong></p>
 <p>As programmers we are given problems that need to be solved or we discover a problem and then sit down to solve it. Once such problem has always been load management, we&#39;ve got various tools that handle it for us at different levels. </p>
 <p>You&#39;ve got load balancers for network requests, you&#39;ve got the ability to scale vertically and horizontally in terms of parallel containers or k8 nodes but let&#39;s come to the small section of this, handling load in your actual code. </p>
@@ -51,14 +52,16 @@
 </ul>
 <p>Though, <strong>p-map</strong> and <strong>bluebird&#39;s promise.map</strong> will allow you to maintain a queue that always have the mentioned number of promises waiting to be completed so it works like an in memory queue, on the other hand <strong>conch</strong> will maintain batches and will process it one batch after the other instead of a continous queue, both work well in the case , I just prefer the batching.</p>
 <p>Another live example of this being used would be <a href="https://music.reaper.im">music</a>&#39;s import logic, which does something similar but to search youtube with the provided spotify link</p>
-</description>
+]]>
+      </description>
       <pubDate>Tue, 16 Mar 2021 00:00:00 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/20210301-Weekend-Updates----March-6th-and-7th,-2021</guid>
       <title>Weekend Updates -  March 6th and 7th, 2021</title>
       <link>https://reaper.im/blog/20210301-Weekend-Updates----March-6th-and-7th,-2021</link>
-      <description><h2 id="tillwhen">TillWhen</h2>
+      <description>
+        <![CDATA[<h2 id="tillwhen">TillWhen</h2>
 <p>This week, I wasn&#39;t really feeling like developing or working on TillWhen so there are no specific updates there other than a small patch that adds to the authentication check during first render of the app. </p>
 <h2 id="new-additions">New Additions</h2>
 <p>The past week was mostly me working on <a href="http://themer.reaper.im/">themer</a> and making fixes and making the code more cleaner and readable in case someone else wants to fix something that isn&#39;t working as they expected it to. </p>
@@ -73,14 +76,16 @@ ftrouter --init # which is a shorthand for `ftrouter --init -d .`
 <p>For an example on how ftrouter works you can check the <a href="https://github.com/barelyhuman/music-server">music-server</a> or the minimal template&#39;s example which includes both query and param cases as well. </p>
 <p>That&#39;s all that I was able to do this weekend, though I plan on focusing a little more on TillWhen next week, let&#39;s see if I do.
           </p>
-</description>
+]]>
+      </description>
       <pubDate>Mon, 15 Mar 2021 00:00:00 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/20210304-Themer-and-how-you-can-handle-dark-mode-a-lot-more</guid>
       <title>Themer and how you can handle dark mode a lot more gracefully</title>
       <link>https://reaper.im/blog/20210304-Themer-and-how-you-can-handle-dark-mode-a-lot-more</link>
-      <description><p>A few days back I was basically redesigning the long lost <a href="https://todo.reaper.im">todo</a> app from my repositories and
+      <description>
+        <![CDATA[<p>A few days back I was basically redesigning the long lost <a href="https://todo.reaper.im">todo</a> app from my repositories and
 I ended up liking my selected color scheme and the dark variant of it. This lead to a simple dark and light toggle that I wrote in about 20 lines of JS, by simply changing a key in the local storage and handling that change and edge case accordingly.</p>
 <p>10 mins after this, I realised the the <a href="https://commitlog-web.herokuapp.com">commitlog-web</a> could take advantage of the new color scheme and the web version of it is written in golang and html templates so I needed something vanilla so I just ended up using the above code from the todo implementation. At this point, it&#39;s all good, but then a small issue. It&#39;d take the stored theme instead of the system preferred theme only and for someone who&#39;s theme changes automatically over the course of the day , this was a problem. </p>
 <p>Now most people would be fine with just the <code>prefers-color-scheme</code> media query but now I don&#39;t assume what scheme the user would want to use for my particular app so I want him to be able to choose between system, light, dark and now this is where <code>themer</code> got created. </p>
@@ -142,14 +147,16 @@ I ended up liking my selected color scheme and the dark variant of it. This lead
 <p>No use posting the snippet cause that&#39;s the whole <a href="https://github.com/barelyhuman/themer/blob/dev/src/index.js">index.js</a> which you can read.</p>
 <p>Hope you liked the post, </p>
 <p>Adios!</p>
-</description>
+]]>
+      </description>
       <pubDate>Thu, 11 Mar 2021 00:00:00 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/20210301-Git-Workflow</guid>
       <title>Git Workflow</title>
       <link>https://reaper.im/blog/20210301-Git-Workflow</link>
-      <description><p>There&#39;s quite a few ways to work with git but here&#39;s how I go about maintaining the repositories that I work with or maintain as a solo developer while building personal projects. 
+      <description>
+        <![CDATA[<p>There&#39;s quite a few ways to work with git but here&#39;s how I go about maintaining the repositories that I work with or maintain as a solo developer while building personal projects. 
 I specify <strong>personal projects</strong> since the git workflow while working with a team differs.</p>
 <p>Also, I&#39;ve actually talked about this flow, one on one with a lot of people so It&#39;s easier to write it down once for people to refer to. </p>
 <h2 id="commands">Commands</h2>
@@ -207,14 +214,16 @@ Maintaining a good git discipline could help you avoid a lot of problems and if 
 <p>For now, that&#39;s it. 
 BTW, we&#39;ve got comments now, scroll down to add one.</p>
 <p><strong>Adios!</strong></p>
-</description>
+]]>
+      </description>
       <pubDate>Mon, 08 Mar 2021 00:00:00 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/20210300-Why-do-I-end-up-re-designing-everythi</guid>
       <title>Why do I end up re-designing everything ?</title>
       <link>https://reaper.im/blog/20210300-Why-do-I-end-up-re-designing-everythi</link>
-      <description><p>I&#39;ve done this quite a few times when it comes to implementing minimal design across tools and apps that I build.
+      <description>
+        <![CDATA[<p>I&#39;ve done this quite a few times when it comes to implementing minimal design across tools and apps that I build.
 So in <a href="https://reaper.im/blog/20210305-UI-Overhaul">this post</a> I talked about why I re-designed the todo app, when all I wanted to do was a add a filtering functionality but then I redesigned the whole thing.</p>
 <p>And technically, the idea for the colors was taken from the UI i was writing for the <a href="https://mark.reaper.im">markdown editor</a> which then ended up being the inspiration for me to modify the UI of <a href="https://commitlog-web.herokuapp.com">commitlog-web</a> through which I created a small library called <a href="https://themer.reaper.im">themer</a> and now I&#39;m sitting here writing this post indirectly back linking to everything I&#39;ve created in the past 1.5 days just because I liked the input style I made for a markdown editor.</p>
 <p>And this has happened before, I got inspired by <a href="https://lancerlist.co/">lancerlist.co</a> and ended up cloning that color scheme to all the apps I built that week/month. </p>
@@ -227,14 +236,16 @@ So in <a href="https://reaper.im/blog/20210305-UI-Overhaul">this post</a> I talk
 <p>I want to try writing a bundler for once, the existing ones are good but then they all assume the developer workflow a lot. Other than webpack and rollup, which are really extensible and hence people create wrappers around them. Anyway, I need to know what would be a better idea ? An online instant repl environment or a bundler?</p>
 <p>I guess you can mail in the answer, but for now.<br /><strong>Adios!</strong>
           </p>
-</description>
+]]>
+      </description>
       <pubDate>Sun, 07 Mar 2021 00:00:00 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/20210305-UI-Overhaul</guid>
       <title>UI Overhaul</title>
       <link>https://reaper.im/blog/20210305-UI-Overhaul</link>
-      <description><p>I&#39;m not really good at post titles, so going to keep them short from now.</p>
+      <description>
+        <![CDATA[<p>I&#39;m not really good at post titles, so going to keep them short from now.</p>
 <p>A really old project of mine started gaining a bit of attention the past few days and I thought that I&#39;ve been planning on making it look good for quite a while, I should just sit and redesign it once and for all. </p>
 <p>So, when I woke up at 4 , unable to go back to sleep, I decided to make a design change. </p>
 <p><a href="https://old.todo.reaper.im">Old Todo</a> , this is what it looked like and here&#39;s the new one, <a href="https://todo.reaper.im">Todo</a></p>
@@ -252,14 +263,16 @@ So in <a href="https://reaper.im/blog/20210305-UI-Overhaul">this post</a> I talk
 <li>Import tasks from shared URL into your task (<strong>coming soon</strong>)</li>
 </ul>
 <p>And as always, it&#39;s free. Though you should try supporting the DEV!</p>
-</description>
+]]>
+      </description>
       <pubDate>Fri, 05 Mar 2021 00:00:00 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/20210305-reaper.im---Seamless-posts-addition</guid>
       <title>reaper.im - Seamless posts addition</title>
       <link>https://reaper.im/blog/20210305-reaper.im---Seamless-posts-addition</link>
-      <description><p><img src="/assets/new-post-reaper.png" alt=""/></p>
+      <description>
+        <![CDATA[<p><img src="/assets/new-post-reaper.png" alt=""/></p>
 <p>We&#39;ve had this blog for a while now and the typical flow of writing a post is me going to <a href="https://mark.reaper.im">Mark</a>, writing the post markdown, exporting the file, adding the metadata to the file which involves the title,publish status, date, and then pushing the repository after checking if the above were done properly. </p>
 <p>Though Mark exists just because I&#39;ve used other tools and Typora is the only one that comes close to being lightweight and aesthetic and while I do use it while I&#39;m on the Mac, I do write a lot of these posts from an iPad and since Mark is just a web-app it works well, as for pushing the repo and creating the file, all is done using <a href="http://gitpod.io">gitpod</a>. It&#39;s pretty easy to do but yeah, a good amount of window switching.</p>
 <h2 id="adding-integrations-to-mark">Adding Integrations to Mark</h2>
@@ -284,25 +297,29 @@ create a PR for the main branch. </p>
 <p>Thus, the last post you saw was just me testing the whole flow after writing it all. Still got work in terms of security that could increase the friction for an attacker but I&#39;ve got other tools I need to work on so we&#39;ll get to it as soon as I get time. </p>
 <p>Adios!
           </p>
-</description>
+]]>
+      </description>
       <pubDate>Fri, 05 Mar 2021 00:00:00 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/20210304-If-you're-seeing-this,-it-all-worked!</guid>
       <title>If you're seeing this, it all worked!</title>
       <link>https://reaper.im/blog/20210304-If-you're-seeing-this,-it-all-worked!</link>
-      <description><p><a href="https://reaper.im">https://reaper.im</a> now has it&#39;s own inline editor for me to write blog posts with. </p>
+      <description>
+        <![CDATA[<p><a href="https://reaper.im">https://reaper.im</a> now has it&#39;s own inline editor for me to write blog posts with. </p>
 <h3 id="supports-markdown">Supports markdown</h3>
 <p>and obviously since you do see this post up on the blog right now, it all worked out well.
           </p>
-</description>
+]]>
+      </description>
       <pubDate>Thu, 04 Mar 2021 00:00:00 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/2021-02-22-Go-Lang-and-Web-Scraping</guid>
       <title>Go Lang and Web Scraping</title>
       <link>https://reaper.im/blog/2021-02-22-Go-Lang-and-Web-Scraping</link>
-      <description><p>Scraping websites is fun, but then I rarely ever tried doing it since setting up chrome and firefox to run headless on heroku is a daunting task and quite time taking in terms off testing. Which I did do when I made this <a href="games.siddharthgelera.com">Epic Games Online Store Scraper</a> and as you can see it&#39;s quite slow because it takes time to live scrape, and while I could&#39;ve had a database setup to store the prices the problem is I&#39;d have to run a sync every-time anyway because the store changes price and new free games are added at any point so a live scraper was the plan but then epic started changing the view structure every now and then and it became hard to maintain it and so it&#39;s now just there for me as a reference if I ever need to create a scraper using <code>Nodejs</code> and <code>puppeteer</code> again. </p>
+      <description>
+        <![CDATA[<p>Scraping websites is fun, but then I rarely ever tried doing it since setting up chrome and firefox to run headless on heroku is a daunting task and quite time taking in terms off testing. Which I did do when I made this <a href="games.siddharthgelera.com">Epic Games Online Store Scraper</a> and as you can see it&#39;s quite slow because it takes time to live scrape, and while I could&#39;ve had a database setup to store the prices the problem is I&#39;d have to run a sync every-time anyway because the store changes price and new free games are added at any point so a live scraper was the plan but then epic started changing the view structure every now and then and it became hard to maintain it and so it&#39;s now just there for me as a reference if I ever need to create a scraper using <code>Nodejs</code> and <code>puppeteer</code> again. </p>
 <h2 id="why-talk-about-it-now">Why talk about it now?</h2>
 <p>No reason to bring a project that&#39;s about a year old , into the picture now, right?
 Well, If you know how this blog works internally, it&#39;s just a nextjs app that renders the markdown text into react components, I should shift to <code>mdx</code> though. I will be cleaning the code of the site soon, it&#39;s quite repetetive right now and should be refactored. </p>
@@ -325,14 +342,16 @@ Well, If you know how this blog works internally, it&#39;s just a nextjs app tha
 <p>Oh yeah, so now since I have the data from there, I realised that their post engine is kinda limited in terms of markdown recognition and also, directly reading from the API conflicts with my thinking of offline availability, so I plan on running a GitHub action every 3-4 days to go through this worker, get the data, create a markdown from the received html data and save it as a file into the repo if it doesn&#39;t already have the post. This sticks to the offline thinking for someone who&#39;d like to be able to go through them offline and also I get to use the BuyMeACoffee&#39;s editor to make decent posts, won&#39;t use it for the posts that need code snippets etc, cause that won&#39;t work with their current editor.</p>
 <p>That&#39;s it for now. </p>
 <p>Adios!</p>
-</description>
+]]>
+      </description>
       <pubDate>Mon, 22 Feb 2021 04:44:43 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/ec2-setup-checklist</guid>
       <title>Checklist for EC2 Base Setup</title>
       <link>https://reaper.im/blog/ec2-setup-checklist</link>
-      <description><ul>
+      <description>
+        <![CDATA[<ul>
 <li class="checkbox-list"><input type="checkbox" ></input> Create an ec2 instance (obviously,you braindamaged alien) </li>
 <li class="checkbox-list"><input type="checkbox" ></input> Enable SSH (random port) and HTTP 80 on the instance.</li>
 <li class="checkbox-list"><input type="checkbox" ></input> Increase the ssd/EBS size to a min of (20/40) Gigs</li>
@@ -344,14 +363,16 @@ Well, If you know how this blog works internally, it&#39;s just a nextjs app tha
 <li class="checkbox-list"><input type="checkbox" ></input> Get Repo, configure Repo to deploy to dokku </li>
 <li class="checkbox-list"><input type="checkbox" ></input> Refill Cup of Coffee.</li>
 </ul>
-</description>
+]]>
+      </description>
       <pubDate>Thu, 18 Feb 2021 13:46:39 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/20210206-the-most-used-tool-i-ever-wrote</guid>
       <title>The most used tool I ever wrote.</title>
       <link>https://reaper.im/blog/20210206-the-most-used-tool-i-ever-wrote</link>
-      <description><p>I&#39;ve written quite a few mini tools</p>
+      <description>
+        <![CDATA[<p>I&#39;ve written quite a few mini tools</p>
 <ul>
 <li><a href="https://hen.reaper.im">Hen</a> - Interactive React Playground </li>
 <li><a href="https:/format.reaper.im">Format</a> - A simple in browser code formatter</li>
@@ -379,14 +400,16 @@ Well, If you know how this blog works internally, it&#39;s just a nextjs app tha
 <p>On that note, I should probably style the power menu to look a lot better, it&#39;s super flat like the rest of the site which is nice but then there&#39;s no depth even during actions and that&#39;s not nice. Any frontend dev that has any ideas regarding the power menu and the remaining website&#39;s style guide, let me know or send through a pull request.</p>
 <p>That&#39;s about it for now. 
 Adios!</p>
-</description>
+]]>
+      </description>
       <pubDate>Sat, 06 Feb 2021 16:09:46 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/macbook-setup-checklist</guid>
       <title>Checklist for Macbook Setup</title>
       <link>https://reaper.im/blog/macbook-setup-checklist</link>
-      <description><p>I wipe my Macbook quite often as a chore, this is done once every 4-5 months and helps me get rid of stuff on the SSD that I probably don&#39;t use anymore but is there just because I&#39;m not browsing throught the entire SSD.</p>
+      <description>
+        <![CDATA[<p>I wipe my Macbook quite often as a chore, this is done once every 4-5 months and helps me get rid of stuff on the SSD that I probably don&#39;t use anymore but is there just because I&#39;m not browsing throught the entire SSD.</p>
 <p>This isn&#39;t a blog type post but more like a checklist of things that I need to make sure I do before I send everything on the drive to hell.</p>
 <h3 id="pre---wipe">Pre - Wipe</h3>
 <p>Things before wiping the system.</p>
@@ -459,14 +482,16 @@ nvm alias default 12 # most projects depend on this to be the min version for me
 </li>
 </ul>
 <p>That&#39;s about it reaper, go sleep now, it&#39;s 4 in the morning, maybe start doing this a little early the next time.</p>
-</description>
+]]>
+      </description>
       <pubDate>Fri, 05 Feb 2021 12:27:01 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/13012021-Commitlog---an-unneeded-utility</guid>
       <title>commitlog - An unneeded changelog generator utility</title>
       <link>https://reaper.im/blog/13012021-Commitlog---an-unneeded-utility</link>
-      <description><p>Ahoy people!</p>
+      <description>
+        <![CDATA[<p>Ahoy people!</p>
 <p>Another post, another project, another story as to why it was built. </p>
 <p>We&#39;ll be talking about <a href="https://github.com/barelyhuman/commitlog">commitlog</a>, fork or star the project just to let me know you liked / are using the project so I know if I should be dedicating my weekend hours to the project or just focus on experimenting with newer projects.</p>
 <p>I&#39;ve been working with mini tools/projects a lot for the past year, somewhere around the time when I announced TillWhen and a few UI repositories that I wrote to support TillWhen. They all depend on the <em>tags as releases</em> git flow and as any person using it, changelogs are an important part of the flow. </p>
@@ -511,14 +536,16 @@ c13e227 - some commit message for a patch type change
 <p>Don&#39;t have to justify why I made one because I&#39;ve done that with a lot of tools already, but yeah, the go version binary is a lot more portable but still 5MB because 3MB is the go-runtime that&#39;s packaged with the binary.</p>
 <p>Though I should probably make a version in portable C to reduce the binary from 5 MB to like something in KB&#39;s and maybe a lot smaller of a memory footprint. A project for later.</p>
 <p>For now. Adios!</p>
-</description>
+]]>
+      </description>
       <pubDate>Wed, 13 Jan 2021 00:00:00 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/10012021-dev-in-simple-terms</guid>
       <title>Simplifying Dev for the rest of the world</title>
       <link>https://reaper.im/blog/10012021-dev-in-simple-terms</link>
-      <description><p>I&#39;ve had a few instances where people have asked as to what I do and what my role means, and writing a post just for that one thing will short and useless so we&#39;re going to go around a few things that are common among the dev / engineers and I&#39;ll try to explain them for you in the simplest language that I can.</p>
+      <description>
+        <![CDATA[<p>I&#39;ve had a few instances where people have asked as to what I do and what my role means, and writing a post just for that one thing will short and useless so we&#39;re going to go around a few things that are common among the dev / engineers and I&#39;ll try to explain them for you in the simplest language that I can.</p>
 <p>I&#39;ll give you an overview of what I do and I&#39;ll get to the remaining details.</p>
 <p>As of writing this post I&#39;m a Principal Developer at a startup called <a href="https://fountane.com/">Fountane</a>, I take care of deciding architechture, tech stack (No we don&#39;t have the same stack for every project), toolchains and process pipelines, automations, CI/CD that are then used by the devs to write/build apps based on the client requirements.</p>
 <h2 id="software-and-software-engineers">Software and Software Engineers</h2>
@@ -601,14 +628,16 @@ a.k.a , it&#39;s just an App, the platforms might vary from desktop(PC, Mac), em
 <p>You can be a junior working towards becoming a senior, you can be a junior who has moments where you help out a principal developer make decisions, it&#39;s always possible, not everyone knows everything, even if I just said that the CTO is supposed to be the know it all. </p>
 <p>That&#39;s it for now, </p>
 <p>Adios!</p>
-</description>
+]]>
+      </description>
       <pubDate>Sun, 10 Jan 2021 00:00:00 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/06012020-Getting-better-at-development</guid>
       <title>Getting better at development</title>
       <link>https://reaper.im/blog/06012020-Getting-better-at-development</link>
-      <description><p><strong>First</strong>,  as Samuel L Jackson would say, Happy New Year, Mother... !</p>
+      <description>
+        <![CDATA[<p><strong>First</strong>,  as Samuel L Jackson would say, Happy New Year, Mother... !</p>
 <p>Now, there&#39;s like a million posts about this topic and they actually share a lot of good information because they are written by developers far more skilled than I am. </p>
 <p>Also, I won&#39;t be able to add much more value to any of those but I&#39;m still going to give it a try so, bear with me.</p>
 <p>Things that I think are important </p>
@@ -694,14 +723,16 @@ Do I ask random strangers to review it? Yes.</p>
 <p>If you&#39;re trying to explain it to someone and you are stuck at a certain concept that you can&#39;t explain then guess what, you didn&#39;t understand it, so go back and try again! </p>
 <p>That&#39;s about it for now, </p>
 <p>Adios!</p>
-</description>
+]]>
+      </description>
       <pubDate>Wed, 06 Jan 2021 00:00:00 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/25122020-Updates-December-2020</guid>
       <title>Updates December 2020</title>
       <link>https://reaper.im/blog/25122020-Updates-December-2020</link>
-      <description><p>Ahoy Human! </p>
+      <description>
+        <![CDATA[<p>Ahoy Human! </p>
 <p>It&#39;s Chirstmas and I&#39;ve slept for 18 hours now.....</p>
 <p>Anyway, </p>
 <p>Back to what we are here for, Updates (cause I&#39;m some celebrity with a huge following waiting for me to post this), 
@@ -736,14 +767,16 @@ Remember it&#39;s a beta instance, I might clear the database, or i break the go
 <p>As for repositories, I&#39;ve started mirroring repositories on Gitlab and bitbucket for most repos that I have or care about, bitbucket one&#39;s are still on private though I like the overall interface of bitbucket but the runners on Github and Gitlab are more functional in my opinion so it&#39;s a little hard for me to just jump out of them immediately. </p>
 <p>That&#39;s about it for now.</p>
 <p>Adios!</p>
-</description>
+]]>
+      </description>
       <pubDate>Fri, 25 Dec 2020 00:00:00 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/10122020-Moving-away-from-web-apps---Story-of-Another-experiment</guid>
       <title>Moving away from web apps - Story of Another experiment</title>
       <link>https://reaper.im/blog/10122020-Moving-away-from-web-apps---Story-of-Another-experiment</link>
-      <description><p>The world is moving towards making everything available via the browser and I&#39;m moving the other way where I want to build desktop apps. </p>
+      <description>
+        <![CDATA[<p>The world is moving towards making everything available via the browser and I&#39;m moving the other way where I want to build desktop apps. </p>
 <p>I&#39;m not the only one that thinks this way.</p>
 <p>Also, it&#39;s always easier to build apps that don&#39;t need a web-server to exist and can handle data and work in and around the system, makes it easier to keep personal data safe and thus less things to worry about for the developer. Again, just my opinion. </p>
 <h2 id="yeah-okay-what-experiment-are-we-talking-about">Yeah okay, What experiment are we talking about?</h2>
@@ -776,14 +809,16 @@ SWAP Used - 1.5-3Gig (based on which emulator/simulator is running)</p>
 <p>All teasing aside, I&#39;ll link you to the repo.</p>
 <p><a href="https://github.com/barelyhuman/spotify-lite-go">https://github.com/barelyhuman/spotify-lite-go</a></p>
 <p>That&#39;s all for now, Adios!</p>
-</description>
+]]>
+      </description>
       <pubDate>Thu, 10 Dec 2020 00:00:00 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/15112020-Crypto-Nonce-and-Association-Flow---Integrating-Slack-Bot-with-Internal-Services</guid>
       <title>Crypto Nonce and Association Flow - Integrating Slack Bot with Internal Services</title>
       <link>https://reaper.im/blog/15112020-Crypto-Nonce-and-Association-Flow---Integrating-Slack-Bot-with-Internal-Services</link>
-      <description><p>This is base note for the slack bot integration that TillWhen is being built on for reference in future (in case I forget, how I did it)</p>
+      <description>
+        <![CDATA[<p>This is base note for the slack bot integration that TillWhen is being built on for reference in future (in case I forget, how I did it)</p>
 <p>This is just for the internal testing of the app in my workspace, the official published slack bot will have the oauth flow.</p>
 <p><strong>The Base Flow</strong> </p>
 <ol>
@@ -800,14 +835,16 @@ SWAP Used - 1.5-3Gig (based on which emulator/simulator is running)</p>
 <li>Write an auth check middleware for integrations and assign it to each slash command</li>
 <li>Make sure to prioritize expiry token on both API tokens and integration&#39;s crypto nonces.</li>
 </ol>
-</description>
+]]>
+      </description>
       <pubDate>Sun, 15 Nov 2020 00:00:00 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/15112020-Figma---Design-Tokens---Easing-up-handling-themes-between-apps</guid>
       <title>Figma - Design Tokens - Easing up handling themes between apps.</title>
       <link>https://reaper.im/blog/15112020-Figma---Design-Tokens---Easing-up-handling-themes-between-apps</link>
-      <description><p>As a designer there&#39;s often times where I prototype something and then go ahead and handle the colors in a constants file.</p>
+      <description>
+        <![CDATA[<p>As a designer there&#39;s often times where I prototype something and then go ahead and handle the colors in a constants file.</p>
 <p>It&#39;s mostly for colors because that gives me access to be able to handle the changes in theme from a single source of truth.</p>
 <h2 id="manual-process">Manual Process</h2>
 <p>The manual process is pretty common, you create a small block that consists of all the colors and then you just copy the colors out to a simple file which can export the colours. In case of Javascript its a simple JSON file since javascript natively supports handling json. In other languages , like GO I prefer having it written with stricter types and/or enums. </p>
@@ -882,14 +919,16 @@ SWAP Used - 1.5-3Gig (based on which emulator/simulator is running)</p>
 <p>This can point to an existing code repo or a separate design repository that is being used as a submodule and you don&#39;t have to manually check if the theme works since the standard is to be followed.</p>
 <p>I&#39;ll write about more plugins and more design to dev process simplification as I get more and more tools involved in my design process. </p>
 <p>Till then, Adios!</p>
-</description>
+]]>
+      </description>
       <pubDate>Sun, 15 Nov 2020 00:00:00 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/1112020-Update-October---2020</guid>
       <title>Update October - 2020</title>
       <link>https://reaper.im/blog/1112020-Update-October---2020</link>
-      <description><p>Yeah, I haven&#39;t posted in quite sometime and really don&#39;t have anything that I&#39;d like you to know from me at this point but this update is just a chore.</p>
+      <description>
+        <![CDATA[<p>Yeah, I haven&#39;t posted in quite sometime and really don&#39;t have anything that I&#39;d like you to know from me at this point but this update is just a chore.</p>
 <p>We&#39;ll be going over things regarding </p>
 <ul>
 <li>TillWhen - Time Tracker</li>
@@ -925,14 +964,16 @@ It now has a beta version of Tasks added to it, so you don&#39;t have to use ano
 <p>The search for good cross platform GUI has ended, Gio as I mentioned above but since I&#39;m still learning, it&#39;ll take time to get used too. Another good option is <a href="https://vlang.io/">V Lang</a> that comes with a ui package that is still in alpha phase but is decent for GUI apps. The language itself is pretty easy to learn but I&#39;m going to wait for the package to mature a bit more. For people who don&#39;t want to learn a new language then your options include <code>libui</code> bindings for your specific language, it&#39;s pretty limited in terms of usable widgets but can get the job done.</p>
 <p>That&#39;s about it from me</p>
 <p>Adios! </p>
-</description>
+]]>
+      </description>
       <pubDate>Sun, 01 Nov 2020 00:00:00 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/12102020-The-Fight-with-Ones-brain---My-Sleep-Solution</guid>
       <title>The Fight with One's brain - My Solution to Sleep</title>
       <link>https://reaper.im/blog/12102020-The-Fight-with-Ones-brain---My-Sleep-Solution</link>
-      <description><p>I&#39;ve had problems sleeping for as long as I can remember and this has made it hard for me to keep my brain functioning properly and getting me addicted to solutions like Hot Chocolate with Caffeine and/or Coffee to keep me up for as long as needed for work. </p>
+      <description>
+        <![CDATA[<p>I&#39;ve had problems sleeping for as long as I can remember and this has made it hard for me to keep my brain functioning properly and getting me addicted to solutions like Hot Chocolate with Caffeine and/or Coffee to keep me up for as long as needed for work. </p>
 <p>While this was getting me through the day with enough productivity, there&#39;s always times where I wish I could just fall asleep but then I have a startup job that needs me to be there for a decent number of hours before I can give myself the permission to fall on the bed.</p>
 <p>That said, the past few months during the lockdown made it worse. You see, when I had to go to the office there was a perfect schedule that I had to follow and I&#39;d be tired by the travelling so I&#39;d normally fall asleep somehow by 2 - 3 AM but since there&#39;s no such physical effort required and I literally just roll over my bed to reach my workstation it&#39;s hardly any tiring even after 8-10 hours of continuous work. </p>
 <h3 id="internet-solutions">Internet Solutions</h3>
@@ -967,24 +1008,28 @@ It now has a beta version of Tasks added to it, so you don&#39;t have to use ano
 <p>My brain is notorious enough to take me back to something else, like how I fell off the stairs while trying to impress a girl or how I botched a deployment and almost broke the entire code flow, it&#39;s all there in my memory and it keeps coming back and I guess it happens to the most of us considering the amount of memes this topic has. All I have to do is repeat the process, go back to blank. </p>
 <p>The amount of time you have to stay in the blank depends on how the day went, too much on your mind? Will take a little longer than 10-15 mins. Tiring day? You might just fall asleep on the first transition. It really differs, even for me but it&#39;s better than not sleeping at all, or sleeping at 6 and waking up at 9 to start working again.</p>
 <p>Adios.</p>
-</description>
+]]>
+      </description>
       <pubDate>Mon, 12 Oct 2020 00:00:00 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/30092020-Postgres-ECONNREFUSED-on-127.0.0.1</guid>
       <title>Postgres ECONNREFUSED on 127.0.0.1</title>
       <link>https://reaper.im/blog/30092020-Postgres-ECONNREFUSED-on-127.0.0.1</link>
-      <description><p>Postgres fails to start properly if there&#39;s an obsolete postmaster running and services fail to connect to it so just remove the pid <strong>if it exists</strong> to make the service create a new process.</p>
+      <description>
+        <![CDATA[<p>Postgres fails to start properly if there&#39;s an obsolete postmaster running and services fail to connect to it so just remove the pid <strong>if it exists</strong> to make the service create a new process.</p>
 <pre><code class="language-sh">rm -f /usr/local/var/postgres/postmaster.pid
 </code></pre>
-</description>
+]]>
+      </description>
       <pubDate>Wed, 30 Sep 2020 00:00:00 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/27092020-Updates-27th-September</guid>
       <title>Updates - 27th September</title>
       <link>https://reaper.im/blog/27092020-Updates-27th-September</link>
-      <description><p>Let&#39;s look at things I&#39;ve done in the past few weeks.</p>
+      <description>
+        <![CDATA[<p>Let&#39;s look at things I&#39;ve done in the past few weeks.</p>
 <h3 id="tillwhen">TillWhen</h3>
 <ul>
 <li>To-dos now in beta </li>
@@ -999,14 +1044,16 @@ It now has a beta version of Tasks added to it, so you don&#39;t have to use ano
 <p>I&#39;ve been working on the text editor research still and have been practicing Go Lang and C a little more and plan to get better at both before I start using them in production grade stuff. The Minimal Code Editor that I&#39;ve been planning to build all along is the motivation for me to go to these languages. C for it&#39;s cross-platform availability and Go for it&#39;s easy interop with Swift and GTK. While the Linux edition of the editor might come off easy with just one language, the mac version takes precendence since I&#39;ll be testing the editor while using it myself.</p>
 <p>Also plan on building a transaction tracker and payment system for people to host , something like Drew&#39;s <a href="https://github.com/ddevault/fosspay">fosspay</a> but my take on it. Not sure when I&#39;ll be starting this but you can follow my Github to see if I do it.</p>
 <p>Setup a personal git server for TillWhen&#39;s source code, not that I worry it&#39;s source code will be out because I will be making it open source once the app is stable with all the features I want and once I&#39;ve removed all the heavy UI libraries it has as dependencies for smaller components. Don&#39;t want the community to start patching torn  elements of a codebase that&#39;s not elegant to deal with so stay tuned for that.  </p>
-</description>
+]]>
+      </description>
       <pubDate>Sun, 27 Sep 2020 00:00:00 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/24092020-Setting-up-a-personal-git-server</guid>
       <title>Setting up a personal git server</title>
       <link>https://reaper.im/blog/24092020-Setting-up-a-personal-git-server</link>
-      <description><p>This post is not a blog write up and just consists of steps I went through to setup a git server on my home server ( Raspberry Pi, for now).</p>
+      <description>
+        <![CDATA[<p>This post is not a blog write up and just consists of steps I went through to setup a git server on my home server ( Raspberry Pi, for now).</p>
 <p>File content is available below.</p>
 <ol>
 <li>Setup WIFI - Make sure it auto connects. (Default: Debian CLI Wifi)</li>
@@ -1043,14 +1090,16 @@ chomod a+x hooks/post-update
 echo &quot;Project Description&quot; &gt; description
 </code></pre>
 <p>Adios!</p>
-</description>
+]]>
+      </description>
       <pubDate>Thu, 24 Sep 2020 00:00:00 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/20-09-2020-Building-stuff-you-dont-like</guid>
       <title>Building stuff you don't like</title>
       <link>https://reaper.im/blog/20-09-2020-Building-stuff-you-dont-like</link>
-      <description><p>I&#39;ve advocated working on projects that you&#39;d like to learn to build and also projects that you think you&#39;ll use, in the past but then there&#39;s another category of projects that exist. The ones we don&#39;t like. Now, it should pretty obvious that this category is pretty dense. </p>
+      <description>
+        <![CDATA[<p>I&#39;ve advocated working on projects that you&#39;d like to learn to build and also projects that you think you&#39;ll use, in the past but then there&#39;s another category of projects that exist. The ones we don&#39;t like. Now, it should pretty obvious that this category is pretty dense. </p>
 <p>This can have projects that you don&#39;t like at all and also projects that you think you&#39;ll like to do but then end up deciding otherwise because you either lost confidence in the project or to be precise hit with the realisation that there&#39;s a similar project that&#39;s built a lot better than you ever can.</p>
 <p>This is quite common with me and let&#39;s see the solutions I&#39;ve discovered.</p>
 <p>Let&#39;s start with projects you don&#39;t like at all. I&#39;d say just put them in a project bucket list and don&#39;t touch them for now, we might approach these when we think we are out of ideas to build something. </p>
@@ -1097,14 +1146,16 @@ echo &quot;Project Description&quot; &gt; description
 <p>I needed to figure out ways to handle ACLs better and I created a whole project for it when I could&#39;ve just tested it on an older project on a dummy branch and this stupid decision to build the whole base arch contributes to this post just as much as the project management app that I talked about in the first few paragraphs.</p>
 <p>That&#39;s it for this one</p>
 <p>Adios.</p>
-</description>
+]]>
+      </description>
       <pubDate>Sun, 20 Sep 2020 00:00:00 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/09092020-Deciding-on-Web-Technologies</guid>
       <title>Deciding on Technologies</title>
       <link>https://reaper.im/blog/09092020-Deciding-on-Web-Technologies</link>
-      <description><p><strong>NOTE: This post won&#39;t give you options to choose from but instead teaches you how to</strong></p>
+      <description>
+        <![CDATA[<p><strong>NOTE: This post won&#39;t give you options to choose from but instead teaches you how to</strong></p>
 <p>In an ideal world, there&#39;d be one set standard that we could follow for building apps but then there&#39;s no such thing as an ideal world in the first place. In an era where a new frontend framework arises every few days and if you monitor github like I do, you can see one pop up every few hours. </p>
 <p>So then, how do you decide on what to use and what not to use?</p>
 <h3 id="the-comfortable-one">The Comfortable one</h3>
@@ -1141,14 +1192,16 @@ echo &quot;Project Description&quot; &gt; description
 <p>In such cases, take in consideration how much of a shift it&#39;s for everyone. You can adapt to the new structure and go with it no issues, but can everyone? Take that into consideration and then make the decision to move. If the learning curve is just too high then maybe change the deadlines or you&#39;ll end up with some frustrated devs.</p>
 <p>To all developer reading this, there&#39;s no harm in learning more languages, programming languages are a skillset and you shouldn&#39;t be scared to learn a new language. It opens a lot of doors. Have one primary language that you try to master but have others on the side for cases where that knowledge can come in handy. Knowledge of haskell and elm have helped me make app a little more bulletproof and code better abstracted while being composable.</p>
 <p>Adios!</p>
-</description>
+]]>
+      </description>
       <pubDate>Wed, 09 Sep 2020 00:00:00 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/07-09-2020-Simple-Design-Tips-for-Developers</guid>
       <title>Simple Design Tips for Developers</title>
       <link>https://reaper.im/blog/07-09-2020-Simple-Design-Tips-for-Developers</link>
-      <description><p>I&#39;ve got a very small list of hobbies, namely reading, writing, coding, gaming and designing. Coding being my <em>ikigai</em> (Japanese concept that means &quot;a reason for being&quot;). Designing on the other hand was something I did to make cool monograms for myself but during the learning phase of designing I did learn a few things, I think as a developer you can accommodate these tips pretty easily without having a lot of design knowledge.</p>
+      <description>
+        <![CDATA[<p>I&#39;ve got a very small list of hobbies, namely reading, writing, coding, gaming and designing. Coding being my <em>ikigai</em> (Japanese concept that means &quot;a reason for being&quot;). Designing on the other hand was something I did to make cool monograms for myself but during the learning phase of designing I did learn a few things, I think as a developer you can accommodate these tips pretty easily without having a lot of design knowledge.</p>
 <p>There&#39;s been numerous posts about this already and probably better ones but let&#39;s give it a try, shall we?</p>
 <p><em>The post uses <a href="https://reaper.im">https://reaper.im</a> and <a href="https://tillwhen.barelyhuman.dev">https://tillwhen.barelyhuman.dev</a> as references for a lot of things and that&#39;s because the points I mention are implemented on both. Even though TillWhen still has some UI inconsistencies, considering it has other UI Kit&#39;s involved and I can&#39;t just throw them out without actually getting the functionalities done first.</em></p>
 <p>There&#39;s basically 3 concepts I want to cover here</p>
@@ -1182,14 +1235,16 @@ echo &quot;Project Description&quot; &gt; description
 <p>Layouts will help you get prototypes out quicker and probably why css libraries like Bulma, Bootstrap are drop in defaults from the dawn of their existence in most web frontend projects even today.</p>
 <p>I&#39;m not sure if theres anything else that I can add to this.</p>
 <p><strong>Adios!</strong></p>
-</description>
+]]>
+      </description>
       <pubDate>Mon, 07 Sep 2020 00:00:00 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/sleep-gave-up</guid>
       <title>Sleep Update: I gave up</title>
       <link>https://reaper.im/blog/sleep-gave-up</link>
-      <description><p>A few weeks back I made a <a href="https://reaper.im/blog/why-cant-i-sleep">post</a> about me not being able to sleep at all and guess what? </p>
+      <description>
+        <![CDATA[<p>A few weeks back I made a <a href="https://reaper.im/blog/why-cant-i-sleep">post</a> about me not being able to sleep at all and guess what? </p>
 <p>It&#39;s gotten worse.</p>
 <p>I now sleep at around 8PM-10PM and my body kicks me back up by 12AM-2AM. Post that, I can&#39;t do anything that&#39;ll shut me down. </p>
 <p>Based on research, a normal human is sleepy around 2AM and 2PM, my body on the other hand starts getting drowsy at 6AM (Can&#39;t sleep cause I will never wake up for work on time) and 6PM.  I somehow pull myself up to 8 or 10 using coffee to complete work and stuff.</p>
@@ -1203,14 +1258,16 @@ echo &quot;Project Description&quot; &gt; description
 <p>Till then, I&#39;m a proper reaper (at least in terms of not sleeping) </p>
 <p>Also, if you&#39;ve got suggestions on how to deal with this without using any kind of medication / drugs. Let me know.</p>
 <p>Adios.</p>
-</description>
+]]>
+      </description>
       <pubDate>Mon, 07 Sep 2020 00:00:00 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/2020-09-02-Things-I-wish-I-did-sooner</guid>
       <title>Things I wish I did sooner</title>
       <link>https://reaper.im/blog/2020-09-02-Things-I-wish-I-did-sooner</link>
-      <description><p>Being a self taught developer, a lot of times the path you follow is arbitrary and there&#39;s a very rare chance that 2 developers follow the same learning train.</p>
+      <description>
+        <![CDATA[<p>Being a self taught developer, a lot of times the path you follow is arbitrary and there&#39;s a very rare chance that 2 developers follow the same learning train.</p>
 <p>One might start Frontend development, stick to it and excel only at that, one might be a curious one and jump from language to language and try to learn everything he/she possibly can.</p>
 <p>Neither one is a bad developer.</p>
 <p>I wished I had a mentor, might have changed the way I look at code altogether and maybe even be a better coder but then I was always the guy who could teach himself instead of the one who&#39;d learn better from teachers.</p>
@@ -1273,14 +1330,16 @@ It is still mandatory for you to learn how to write tests and learn at-least one
 <p>Similarly, I&#39;ve gotten so used to Vim&#39;s macro creator that I consider that to be the first thing that I think off when looking for repetetive tasks on the text.</p>
 <h3 id="the-end">The End</h3>
 <p>Adios.</p>
-</description>
+]]>
+      </description>
       <pubDate>Wed, 02 Sep 2020 00:00:00 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/callbacks-promises-generators-js</guid>
       <title>Callbacks, Promises, Generators and Why a JS Developer needs to understand them.</title>
       <link>https://reaper.im/blog/callbacks-promises-generators-js</link>
-      <description><p>I&#39;ve had my fair share of up and downs with Javascript and it always is frustrating when the language you&#39;ve been using for a while doesn&#39;t behave the way you assumed it would but I continued using JS for almost everything I built over the past 2-3 years.</p>
+      <description>
+        <![CDATA[<p>I&#39;ve had my fair share of up and downs with Javascript and it always is frustrating when the language you&#39;ve been using for a while doesn&#39;t behave the way you assumed it would but I continued using JS for almost everything I built over the past 2-3 years.</p>
 <h2 id="why-javascript">Why Javascript?</h2>
 <p>I&#39;m not biased towards the language, I would like to get back to being a C developer or maybe be a little modern and be a Go/Rust Developer but as I mentioned in my previous post, I&#39;ve been a little bitch about it and keep running back to JS for moral support.</p>
 <p>But, I still think that learning JS is a valuable skill. Learning any programming language at this point is.</p>
@@ -1466,14 +1525,16 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>Make sure you don&#39;t create a callback hell inside a thenable though.</p>
 <h2 id="that-was-long">That was long....</h2>
 <p>Adios!</p>
-</description>
+]]>
+      </description>
       <pubDate>Tue, 01 Sep 2020 00:00:00 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/2020-08-28-Projects-Delays-and-Go-Lang</guid>
       <title>Projects Delays and Go Lang</title>
       <link>https://reaper.im/blog/2020-08-28-Projects-Delays-and-Go-Lang</link>
-      <description><p>I&#39;ve been slacking off on personal projects for a while now and it&#39;s not because I want to throw these projects out of the window but because I&#39;ve been learning Go Lang for the past few weeks and I&#39;m not able to dedicate time to actual coding just yet. </p>
+      <description>
+        <![CDATA[<p>I&#39;ve been slacking off on personal projects for a while now and it&#39;s not because I want to throw these projects out of the window but because I&#39;ve been learning Go Lang for the past few weeks and I&#39;m not able to dedicate time to actual coding just yet. </p>
 <h3 id="sorry-what">Sorry, What?</h3>
 <p>Umm, I&#39;m trying to say that I&#39;ve been reading books and blogs about Go  for the past few weeks and that is pulling away time from me to spend on building new projects and/or optimise and improve TillWhen.</p>
 <p>While I myself say that doing actual projects help you learn faster it doesn&#39;t apply when you directly want to build a huge project in a new language.  </p>
@@ -1490,14 +1551,16 @@ The things they wish they considered, the things that blocked them or took them 
 <h3 id="the-point-of-the-post">The Point of the Post?</h3>
 <p>There&#39;s never one.</p>
 <p>Adios!</p>
-</description>
+]]>
+      </description>
       <pubDate>Fri, 28 Aug 2020 00:00:00 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/browsers-code-editors</guid>
       <title>Browsers and Code Editors</title>
       <link>https://reaper.im/blog/browsers-code-editors</link>
-      <description><p>There was a hint in the previous <a href="https://reaper.im/blog/off-grid-digitally">post</a> where I mentioned I&#39;d be building a lot of the tools that I use from the ground up and since I normally build stuff with my requirements in mind they turn out to be very minimal.</p>
+      <description>
+        <![CDATA[<p>There was a hint in the previous <a href="https://reaper.im/blog/off-grid-digitally">post</a> where I mentioned I&#39;d be building a lot of the tools that I use from the ground up and since I normally build stuff with my requirements in mind they turn out to be very minimal.</p>
 <p>A lot of stuff that I&#39;ve built is either tied to this website or you can find it on the <a href="https://reaper.im/work">work</a> page and I was told that in my idea of reinventing the wheel for almost all tools was stupid but also interesting but mostly stupid .</p>
 <p>While I agree to that, and you shouldn&#39;t be reinventing the wheel when working on production apps for clients , it&#39;s okay if you are doing it to learn. I consider myself really lucky that I&#39;ve got all these resources out there that I can learn from and it actually makes it easier to find better explanation to stuff if the man page or documentation of a certain library or tool isn&#39;t well documented.</p>
 <h2 id="hows-you-learning-going-to-be-helpful-to-us">How&#39;s you learning going to be helpful to us?</h2>
@@ -1554,14 +1617,16 @@ You&#39;ll still see a lot of <code>typo</code> messages in my commits because I
 <p>Anyway, building an editor with just the above 2 functionalities should be simple right? Well that&#39;s the thing, I tried doing it with Nova with 0 knowledge of how large amounts of text buffers are to be handled and what data structures i was supposed to use and that botched the project before I even started and that&#39;s when I went the route of building every module slowly and understanding things I need to learn and think about before going ahead and jumping into building it.</p>
 <p>Don&#39;t worry, you&#39;ll get updates of my progress with it after I&#39;m done with <code>dark</code> which is the current project I&#39;m working on. Haven&#39;t really told anyone on what&#39;s it&#39;s going to be but I will once I have an mvp ready for it.</p>
 <p>Adios.</p>
-</description>
+]]>
+      </description>
       <pubDate>Sun, 23 Aug 2020 11:09:52 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/off-grid-digitally</guid>
       <title>Off-Grid Digitally</title>
       <link>https://reaper.im/blog/off-grid-digitally</link>
-      <description><p>People who know me, have a brief idea of how opinionated I am as a person and how I&#39;d normally stand for something that I think is illogical on the broader picture no matter how emotional the other person might be with the decision and this leads to a lot of arguments or discussions with certain people.</p>
+      <description>
+        <![CDATA[<p>People who know me, have a brief idea of how opinionated I am as a person and how I&#39;d normally stand for something that I think is illogical on the broader picture no matter how emotional the other person might be with the decision and this leads to a lot of arguments or discussions with certain people.</p>
 <p>Now, why do you need to know that about me and how does it relate to this post?</p>
 <p>Because that is one of the reasons why I avoid social media and talking to people in general, having a blog with no comments section gives me the power to not have to worry about what the response is going to be and that freedom let&#39;s me talk out cleary.
 While I can do that in person too, because the whole internet won&#39;t jump on me for something I think is right.</p>
@@ -1598,14 +1663,16 @@ Most of what I build is already open source and doesn&#39;t really take in any u
 <p>Also, my IP/VPN is tracked by my ISP, google... everything that&#39;s there online so it makes no sense to try to hide it anyway. Can&#39;t go to 0 digital signature when I&#39;m a coder anyway.</p>
 <p>Plus, after this movement I plan on making everything I ever built to be easily self hosted on various online providers like heroku and vercel for people who&#39;d like to use them, so then the security of using them becomes your concern and not mine anymore.</p>
 <p>Adios.</p>
-</description>
+]]>
+      </description>
       <pubDate>Wed, 19 Aug 2020 08:22:20 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/the-budget-mechs</guid>
       <title>Mechanical Keyboards - India - Mid 2020</title>
       <link>https://reaper.im/blog/the-budget-mechs</link>
-      <description><h2 id="mechanical-keyboards">Mechanical Keyboards</h2>
+      <description>
+        <![CDATA[<h2 id="mechanical-keyboards">Mechanical Keyboards</h2>
 <p>This is going to be a really short writeup on what mechanical keyboards are and then we&#39;ll get to the options available to us right now in India, mid 2020.</p>
 <p>You can go all the way down to the buying options and skip the other info if needed.</p>
 <ul>
@@ -1710,14 +1777,16 @@ Comes in packs of 10 so you&#39;ll need 90 keys , round it to 100 for extra swit
 <p>ABS BACKLIT DOUBLE SHOT KEYCAP – WHITE - <a href="https://www.meckeys.com/shop/accessories/keyboard-accessories/keycaps/tai-hao-abs-backlit-white/">Link</a></p>
 <p>I like the off white tone of these, so I chose these, you can find a lot of options over at meckeys and amazon.</p>
 <p>Now this should cost you anywhere around 10k to 14k based on what you choose and that sums up our post.</p>
-</description>
+]]>
+      </description>
       <pubDate>Wed, 19 Aug 2020 04:58:49 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/why-cant-i-sleep</guid>
       <title>Why can't I sleep ?</title>
       <link>https://reaper.im/blog/why-cant-i-sleep</link>
-      <description><p><code>This post has no informational content and is just me sharing my thoughts and opinions.</code></p>
+      <description>
+        <![CDATA[<p><code>This post has no informational content and is just me sharing my thoughts and opinions.</code></p>
 <p>I&#39;ve had countless nights where, no matter what I do I just can&#39;t fall asleep. I&#39;ve tried light music, meditation, no music, working out, banging my head on the wall.</p>
 <p>Okay, I might not have tried working out but point being, I&#39;ve tried a lot of &quot;sleep hacks&quot; out there to know that nothing actually works when my brain isn&#39;t tired. Problem is, I don&#39;t know how to get it to be tired enough to fall asleep instantly. I don&#39;t mind sleeping at random times during the day but then, it hinders my personal projects. Since, I have a dedicated time in the evening after office where I spend time thinking/learning/building.</p>
 <p>You know there&#39;s this &quot;hack&quot; online  which says, the temperature of the room to the  temerature of the body plays a role in you sleeping. I&#39;d believe that but then it didn&#39;t work for me so I&#39;m going to discard that.</p>
@@ -1730,14 +1799,16 @@ I mean, I&#39;ve had days I&#39;ve slept for more than 12 hours and days where e
 <p>I did manage to learn underwater swimming quite quickly though...
 Anyway. I don&#39;t understand why it&#39;s hard for me to sleep when there&#39;s days when I can literally drop on the bed and instantly fall asleep.</p>
 <p>I guess I&#39;ll have to observe a lot more to figure that out. As for now, I&#39;m writing this at 5 in the morning with 0 sleep last night and I should probably just lay down for a few hours so I can at least stay up during the office hours.</p>
-</description>
+]]>
+      </description>
       <pubDate>Mon, 10 Aug 2020 00:59:14 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/i-owe-the-oss-community</guid>
       <title>I owe the OSS Community</title>
       <link>https://reaper.im/blog/i-owe-the-oss-community</link>
-      <description><p>I&#39;ve been asked a few times as to how I learn things and Why I support open source so much that I&#39;d like to work for a company that has a dedicated OSS team. I could answer this in one line , or I could write a whole essay.</p>
+      <description>
+        <![CDATA[<p>I&#39;ve been asked a few times as to how I learn things and Why I support open source so much that I&#39;d like to work for a company that has a dedicated OSS team. I could answer this in one line , or I could write a whole essay.</p>
 <h3 id="one-line-answer">One Line Answer</h3>
 <p>I learn from open source repositories and study them to figure out stuff and things that exist out there.</p>
 <h3 id="the-essay">The Essay</h3>
@@ -1749,27 +1820,31 @@ Anyway. I don&#39;t understand why it&#39;s hard for me to sleep when there&#39;
 <p>Overall, I study codebases to understand approaches and since I end up going through a variety of repositories I find various ways to implement similar things and then go with the approach that&#39;s both easy to read and performant, the other approach might be more performant and I&#39;d use it when building something for production but for initial learning and understanding I&#39;ll pick the readable version.</p>
 <p>Now, since I do this a lot more with JS libraries and frameworks right now, I get to go through the <code>package.json</code> files which contain dependencies that the projects use, I normally have numerous tabs open for each npm package that I don&#39;t know about and this opens up even more repositories for me to study and obviously, I now know of more packages that can help with a certain task if needed in the near future.</p>
 <p>And even though the knowledge I&#39;ve gained in years is not even close to 1% of what&#39;s out there, I still owe a debt to the open source community and hence most of what I build is open source.</p>
-</description>
+]]>
+      </description>
       <pubDate>Sun, 02 Aug 2020 23:23:38 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/love-faded-wallpapers</guid>
       <title>My Love for Faded Wallpapers</title>
       <link>https://reaper.im/blog/love-faded-wallpapers</link>
-      <description><p>I&#39;m the kind of guy who changes his wallpapers a lot. Like... A LOT!</p>
+      <description>
+        <![CDATA[<p>I&#39;m the kind of guy who changes his wallpapers a lot. Like... A LOT!</p>
 <p>But, there&#39;s this thing that I fancy. Almost all wallpapers that I download, I modify them to have a slightly washed out or faded look, if they weren&#39;t already that way.</p>
 <p>A few examples of what I&#39;m talking about can be found on <a href="https://imgur.com/a/XgYEs">here</a> (note: these are not mine, just examples).</p>
 <p>And since it&#39;s normally the same amount of settings from GIMP for almost all images, I thought I&#39;d write a service. Which I did somewhere around <code>3rd Jul 2019</code> , exactly a year ago and I&#39;ve been using it since.</p>
 <p>Never really gave it away since I didn&#39;t think many people would want to use it but that&#39;s not something I should be deciding so I&#39;m going to post the link to it here.</p>
 <p><a href="https://washed.siddharthgelera.com">Washed</a></p>
-</description>
+]]>
+      </description>
       <pubDate>Thu, 02 Jul 2020 20:22:01 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/thinking-straight</guid>
       <title>What I do when I can't think straight.</title>
       <link>https://reaper.im/blog/thinking-straight</link>
-      <description><p>I assume that I&#39;m not the only one who has moments like these where it&#39;s hard to come to a concrete decision.</p>
+      <description>
+        <![CDATA[<p>I assume that I&#39;m not the only one who has moments like these where it&#39;s hard to come to a concrete decision.</p>
 <p>I can only talk as a developer and I have these moments where I&#39;d like to build something but I start overplanning to avoid all short comings so much so, that I end up with a dilemma. Should I start the project or is a waste of time?</p>
 <p>I rember posting a contradicting article , titled <a href="https://blog.siddharthgelera.com/2020/04/21/get-it-out-of-your-head/">&quot;Make it, just to get it out of your head&quot;</a>. But this scenario is a little different, because I did start making what I wanted too but the decisions I had to go through to make sure it doesn&#39;t fall were too much to handle.</p>
 <h3 id="how-do-i-handle-it-">How do I handle it ?</h3>
@@ -1803,14 +1878,16 @@ Anyway. I don&#39;t understand why it&#39;s hard for me to sleep when there&#39;
 <li><p>Try taking a decision at this point if you get back in to the overthinking loop, start again from step 1.</p>
 </li>
 </ol>
-</description>
+]]>
+      </description>
       <pubDate>Mon, 22 Jun 2020 13:32:20 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/why-a-look-into-my-brain</guid>
       <title>Why are you providing it for free?</title>
       <link>https://reaper.im/blog/why-a-look-into-my-brain</link>
-      <description><h2 id="intro">Intro</h2>
+      <description>
+        <![CDATA[<h2 id="intro">Intro</h2>
 <p>Every time someone get&#39;s to know about what I&#39;m building, a few questions arise.</p>
 <ul>
 <li>Why?</li>
@@ -1870,14 +1947,16 @@ Treat everything as a package. Everything that can be reused should be it&#39;s 
 <p>But, providing it for free helps me sleep better. Less money to worry about!</p>
 <p>The other projects I have are all hosted for free with platforms like Heroku, Netlify and it&#39;s shared resources, and since I&#39;m the only one using these apps, the usage doesn&#39;t break the free usage limits on either of the platforms.</p>
 <p>The only pricing I pay yearly is the domain charges. Everything else I&#39;ve managed to obtain for free. Thus, I don&#39;t mind giving it away for free.</p>
-</description>
+]]>
+      </description>
       <pubDate>Wed, 10 Jun 2020 16:46:46 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/nextjs-pg-knexjs</guid>
       <title>Solution to multiple connections with knex while using Next.js</title>
       <link>https://reaper.im/blog/nextjs-pg-knexjs</link>
-      <description><h3 id="the-issue">The Issue</h3>
+      <description>
+        <![CDATA[<h3 id="the-issue">The Issue</h3>
 <p>Using next.js has it&#39;s own advantages and not going to go through them in this post but one major blockage while building <a href="https://tillwhen.barelyhuman.dev">TillWhen</a> was the number of Database connection each api request was creating. Initially I thought it was just because of the constant restarts of the server I was making that lead to the 30+ connections but I remember setting PG to disregard idle connections after a minute.</p>
 <p>Anyway, soon It was obvious that the knex connections I created weren&#39;t getting destroyed and there was a new connection every time I made a request.</p>
 <p>Now even though thins could be easily solved for <code>mysql</code> using <code>serverless-mysql</code> which manages the connections based of serverless environments, and I could even use the <code>pg</code> version of the above, <code>serverless-pg</code> but, we already had the whole apps built with knex.js and I didn&#39;t wanna rewrite every query again so had to find a better way.</p>
@@ -2002,14 +2081,16 @@ controller<span class="token punctuation">.</span><span class="token function-va
 <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">connectionHandler</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span>handler<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>And finally, I&#39;m showing a generic Next.js handler here instead of the full fledged controller like in the example above, since the higher-order function is going to be added in here and not in the controllers. So the only modification you&#39;ll have to do to all the route handlers is , instead of exporting the handlers directly, export a version wrapped in a higher-order function.</p>
-</description>
+]]>
+      </description>
       <pubDate>Fri, 29 May 2020 22:14:18 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/useful-dokku-commands</guid>
       <title>Useful Dokku Commands</title>
       <link>https://reaper.im/blog/useful-dokku-commands</link>
-      <description><p>A micro post for commands that I usually look for, while using dokku.</p>
+      <description>
+        <![CDATA[<p>A micro post for commands that I usually look for, while using dokku.</p>
 <h2 id="create-app">Create App</h2>
 <pre><code class="language-bash">dokku apps:create <span class="token operator">&lt;</span>app-name<span class="token operator">></span>
 </code></pre>
@@ -2053,14 +2134,16 @@ or
 
 <span class="token function">git</span> push dokku <span class="token operator">&lt;</span>local-branch<span class="token operator">></span>:master
 </code></pre>
-</description>
+]]>
+      </description>
       <pubDate>Thu, 28 May 2020 15:24:46 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/efficient-software-instead-of-software-that-works</guid>
       <title>Efficient Software vs Software that just works</title>
       <link>https://reaper.im/blog/efficient-software-instead-of-software-that-works</link>
-      <description><p>I landed on this post today.</p>
+      <description>
+        <![CDATA[<p>I landed on this post today.</p>
 <p><a href="https://dev.to/tux0r/does-your-website-really-need-to-be-larger-than-windows-95-16mm">Link</a></p>
 <p>This is a post from 2018 and I landed on this looking for a good way to build multi platform apps while maintaining a really small footprint. The arguments and discussions in its comments were hilarious and kinda pleasing it lead me to a rust based webview for pure web apps but on a desktop.</p>
 <p>Anyway, was close to locking on programming the whole thing in C/C++ and use some abstractions to support all 3 platforms, and all this headache because, I realized that a lot of tools that I have installed are built with the chromium engine as a window layer with Electron on the top. A few to name would be VS Code, Postman, Spotify , WebTorrent which ended up taking a lot of space on my disk vs softwares like Sublime and Transmission that hardly take up any space and the only reason I don&#39;t use Sublime is because the packages I need are obsolete and need a little tweaking to get them to work. So I, just end up letting vscode eat my ram and battery.</p>
@@ -2071,14 +2154,16 @@ or
 but in the comments he ends up supporting desktop apps for heavier tasks and most of the people end up supporting electron and JS as a language.</p>
 <p>Now I know its not going to be ideal for business as they want everything quick and not always <em>done right</em> but a lot of us do build projects for fun and we should actually try to build something that is a lot faster to use while not being a ram hogger. Cause , a lot of people don&#39;t upgrade for a long time and they can&#39;t really enjoy the software you built.</p>
 <p>On a different note, I&#39;m still unable to decide what I should be doing for that multi platform desktop app I wanted to build...</p>
-</description>
+]]>
+      </description>
       <pubDate>Wed, 22 Apr 2020 00:26:34 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/get-it-out-of-your-head</guid>
       <title>Make it, just to get it out of your head.</title>
       <link>https://reaper.im/blog/get-it-out-of-your-head</link>
-      <description><p>Now I&#39;ve been the guy who just throws out repositories right left and center, hasn&#39;t completed projects and mostly have them on pending for a really long time unless something really motivates me to work on that project again.</p>
+      <description>
+        <![CDATA[<p>Now I&#39;ve been the guy who just throws out repositories right left and center, hasn&#39;t completed projects and mostly have them on pending for a really long time unless something really motivates me to work on that project again.</p>
 <p>I still end up making these things again and again just because I think that it&#39;s good to get that thought out of your head and out into code because you get to the point where you realize whether that project is actually going to be something you yourself would use.</p>
 <p>I ended up building a lot of stuff that I do personally use and maybe no one else does because I haven&#39;t published anything about those projects anywhere and I&#39;m the only one who knows about their existence. On the contrary there&#39;s double the number of repos that even I don&#39;t care about anymore.</p>
 <p>The whole process of thinking and getting it out into the world of code gets you through scenarios that get you to realize and also sometimes learn about things that you might be doing wrong.</p>
@@ -2088,14 +2173,16 @@ but in the comments he ends up supporting desktop apps for heavier tasks and mos
 so did the todo list(which everyone has built at some point in their coding life)
 and so did the other 100 repos that I have on my github</p>
 <p>and after all of this reading, the moral was basically the title of this post.</p>
-</description>
+]]>
+      </description>
       <pubDate>Wed, 22 Apr 2020 00:25:28 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/css-resets-mnmlcss</guid>
       <title>Consistent UI's with CSS Resets and announcing Mnml.css</title>
       <link>https://reaper.im/blog/css-resets-mnmlcss</link>
-      <description><p>Another post, another day.
+      <description>
+        <![CDATA[<p>Another post, another day.
 or was it supposed to be the other way....</p>
 <p>Anyway, CSS Resets.
 Everyone&#39;s heard of <a href="https://necolas.github.io/normalize.css/">Normalize.css</a>? No? Are you serious!</p>
@@ -2118,14 +2205,16 @@ and since all are available on my github, you can check the code to see the impl
 <li><a href="https://hireme.barelyhuman.dev/">Hiring Network</a></li>
 </ul>
 <p>you can check the git repo for the available classes and the resets that are modified <a href="https://github.com/barelyhuman/mnml.css">git repo</a> later today</p>
-</description>
+]]>
+      </description>
       <pubDate>Wed, 22 Apr 2020 00:23:34 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/opensource-hiring-platform</guid>
       <title>My take on an open source job listing platform ?</title>
       <link>https://reaper.im/blog/opensource-hiring-platform</link>
-      <description><p>Yeah yeah, another hiring platform , we&#39;ve got so many , why would you build another? and it looks so crappy, why would anyone use it?</p>
+      <description>
+        <![CDATA[<p>Yeah yeah, another hiring platform , we&#39;ve got so many , why would you build another? and it looks so crappy, why would anyone use it?</p>
 <p>Will answer all of that, give me a sec!</p>
 <p>Now, Let&#39;s see. Click on the link below to get to it.</p>
 <p><a href="https://hireme.barelyhuman.dev/">HireMe</a></p>
@@ -2147,14 +2236,16 @@ The point of its existence is to help people out, now whether people use it for 
 <p>Update: The App now has Magic Link based login and signup, but sendgrid seems to have a heavy loaded queue due to the twilio hackathon etc, etc so I don&#39;t think the emails are getting delivered at the speeds that they should.
 Will shift to nodemailer later. The UI has been beautified a little bit too. If that mattered</p>
 <p>Update: Sendgrid servers seem to be back to normal and the app&#39;s login is now functional.</p>
-</description>
+]]>
+      </description>
       <pubDate>Wed, 22 Apr 2020 00:21:41 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/my-vscode</guid>
       <title>My VSCode, Visual Settings (Theme, tab layouts,etc)</title>
       <link>https://reaper.im/blog/my-vscode</link>
-      <description><p>Now this doesn&#39;t really need a huge write up but I&#39;ll just link you to a <a href="https://gist.github.com/barelyhuman/cab9d7598b3251d3aee04201cb1c137a">Gist</a> that&#39;ll give you the whole <code>settings.json</code>.</p>
+      <description>
+        <![CDATA[<p>Now this doesn&#39;t really need a huge write up but I&#39;ll just link you to a <a href="https://gist.github.com/barelyhuman/cab9d7598b3251d3aee04201cb1c137a">Gist</a> that&#39;ll give you the whole <code>settings.json</code>.</p>
 <p>Changed my mind,
 I&#39;m gonna link a few things that I&#39;m using anyways.</p>
 <h3 id="theme">Theme</h3>
@@ -2169,25 +2260,29 @@ I&#39;m gonna link a few things that I&#39;m using anyways.</p>
 <p><a href="https://www.software.com/music-time">Music Time - Control Spotify with your code editor</a></p>
 <p><a href="https://marketplace.visualstudio.com/items?itemName=pnp.polacode">PolaCode - For Epic Code screenshots</a></p>
 <p>And that&#39;s about it, I do have other language specific plugins but I don&#39;t think I need them posted here.</p>
-</description>
+]]>
+      </description>
       <pubDate>Wed, 22 Apr 2020 00:20:28 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/gitscaff-git-repos-boilerplate</guid>
       <title>Using existing GitHub repositories as boilerplate</title>
       <link>https://reaper.im/blog/gitscaff-git-repos-boilerplate</link>
-      <description><p>A tool that I made is called <a href="https://github.com/barelyhuman/gitscaff">GitScaff</a>, it&#39;s a simple wrapper around the <code>git clone</code> command but makes it a little simpler to clone repositories as templates from existing GitHub/Gitlab repositories and supports private repositories and Gitlab repository grouping so if you have boilerplate that is a private repository, you can still use this utility, because at the end of the day it is still a simple <code>git clone</code></p>
+      <description>
+        <![CDATA[<p>A tool that I made is called <a href="https://github.com/barelyhuman/gitscaff">GitScaff</a>, it&#39;s a simple wrapper around the <code>git clone</code> command but makes it a little simpler to clone repositories as templates from existing GitHub/Gitlab repositories and supports private repositories and Gitlab repository grouping so if you have boilerplate that is a private repository, you can still use this utility, because at the end of the day it is still a simple <code>git clone</code></p>
 <h2 id="why-though">Why though?</h2>
 <p>No real reason, I was using <code>degit</code> for a while and then it created an issue because I couldn&#39;t use it for cloning private template repositories and it didn&#39;t support gitlab&#39;s repository grouping either so it kinda bummed me out to have to clone and then get rid of the .git folder and all which i could do with a single command using an alias (which i should have...) in Linux.</p>
 <p>Anyways, I had time to kill so I built this to do that for me.</p>
-</description>
+]]>
+      </description>
       <pubDate>Wed, 22 Apr 2020 00:19:17 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/public-temporary-file-storage-api</guid>
       <title>Why I built a temporary file storage and left the API Public?</title>
       <link>https://reaper.im/blog/public-temporary-file-storage-api</link>
-      <description><p>Now, this isn&#39;t a very complex project and anyone who&#39;s worked on basic web servers can build this.</p>
+      <description>
+        <![CDATA[<p>Now, this isn&#39;t a very complex project and anyone who&#39;s worked on basic web servers can build this.</p>
 <h2 id="but-why-did-i-build-it">But Why did I build it?</h2>
 <p>I had this project where I needed to upload images and Firebase&#39;s storage was my first alternative, I kept using it but then the storage quota just asked me to go find a better solution, because the moment you upload over 15-20 images you&#39;ve completed your storage quota and now I&#39;m stuck with a upload code that won&#39;t work and I can no longer upload images to Firebase.</p>
 <p>My next alternative was Imgur&#39;s API to upload private images but then that limits me to a certain amount of uploads per minute.</p>
@@ -2197,24 +2292,28 @@ I&#39;m gonna link a few things that I&#39;m using anyways.</p>
 <p>I understand that but as of now I&#39;m the only person who knows about it&#39;s existence so that&#39;s that and if people do start using it, let me know in the comments so I can add up a full fledged API Key based access system for the API and also move it to a Digital Ocean server to increase the storage and also increase each file&#39;s time to deletion.</p>
 <p>Files uploaded from the demo site have a 30 second life and will be deleted after that.</p>
 <p>Here&#39;s a link to the <a href="https://tempx.barelyhuman.dev/">demo</a></p>
-</description>
+]]>
+      </description>
       <pubDate>Wed, 22 Apr 2020 00:17:10 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/covid-tracker</guid>
       <title>Covid Tracker Attempt</title>
       <link>https://reaper.im/blog/covid-tracker</link>
-      <description><p>I created this because I was bored and didn&#39;t have anything creative to make and since everyone seems to be posting theirs.
+      <description>
+        <![CDATA[<p>I created this because I was bored and didn&#39;t have anything creative to make and since everyone seems to be posting theirs.
 Here&#39;s a minimal version that gets you the counts of various incidents</p>
 <p><a href="https://corona.siddharthgelera.com/">Link</a></p>
-</description>
+]]>
+      </description>
       <pubDate>Wed, 22 Apr 2020 00:16:05 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/importance-of-development-tools</guid>
       <title>Importance of Development Tools</title>
       <link>https://reaper.im/blog/importance-of-development-tools</link>
-      <description><p>It&#39;s hard to not talk about this topic, I&#39;ve always been the kind of person who&#39;d prioritize learning over everything and have no regrets. I&#39;ve done that while building most of my projects. Better project structures, easier ways to implement a certain functionality while maintaining a clean code, all of these have come after a lot of trial and error and there&#39;s still times where I&#39;d give up on clean code just to get a hacky version of my idea up and working.</p>
+      <description>
+        <![CDATA[<p>It&#39;s hard to not talk about this topic, I&#39;ve always been the kind of person who&#39;d prioritize learning over everything and have no regrets. I&#39;ve done that while building most of my projects. Better project structures, easier ways to implement a certain functionality while maintaining a clean code, all of these have come after a lot of trial and error and there&#39;s still times where I&#39;d give up on clean code just to get a hacky version of my idea up and working.</p>
 <p>But this post isn&#39;t supposed to be about learning, this post is about why <em>Development tools</em> are an important part of a developer&#39;s life and why he should focus on growing up to be a power user of every tool that exists in his dev toolchain. People who think that this is supposed to be obvious, you&#39;ll find out why I&#39;m writing this.</p>
 <p>I&#39;ve seen people use VSCode like they were using notepad++. No hard feelings towards notepad++ but the whole point of having something feature rich like VSCode is to make it easier and faster for you to work with. People seem to be surprised when I use <code>multi-cursors</code> in the editor to edit multiple lines of code.</p>
 <p>The code editor is not the only tool that I&#39;d like to focus on. Database GUI Clients, Various Browser debugging environments, Platform specific IDE&#39;s (Android Studio / XCode),Deployment Tools, CI/CD all of these have a ton of features that can help you automate and if not automate , maybe just make it easier and sometimes also faster for you.</p>
@@ -2232,14 +2331,16 @@ Here&#39;s a minimal version that gets you the counts of various incidents</p>
 <li>Grow to be a power user of each tool you use, learn the keyboard shortcuts, if the tool can be configured, figure out various ways to configure it. If the tool has a plugin system, maybe even build a plugin to know about it inside out.</li>
 <li>Don&#39;t skip the 2nd point!</li>
 </ul>
-</description>
+]]>
+      </description>
       <pubDate>Tue, 03 Mar 2020 13:18:25 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/column-null</guid>
       <title>COLUMN “” CONTAINS NULL VALUES | Postgres</title>
       <link>https://reaper.im/blog/column-null</link>
-      <description><p>I don&#39;t maintain migrations so I end having this error almost everytime I add a new column that&#39;s not nullable.</p>
+      <description>
+        <![CDATA[<p>I don&#39;t maintain migrations so I end having this error almost everytime I add a new column that&#39;s not nullable.</p>
 <p>Here&#39;s a few queries you can execute for this.</p>
 <h4 id="integer">Integer</h4>
 <pre><code class="language-sql"><span class="token keyword">ALTER</span> <span class="token keyword">TABLE</span> <span class="token keyword">public</span><span class="token punctuation">.</span><span class="token operator">&lt;</span>tablename<span class="token operator">></span> <span class="token keyword">ADD</span> <span class="token keyword">COLUMN</span> <span class="token operator">&lt;</span>column_name<span class="token operator">></span> <span class="token keyword">integer</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">default</span> <span class="token number">0</span><span class="token punctuation">;</span>
@@ -2250,14 +2351,16 @@ Here&#39;s a minimal version that gets you the counts of various incidents</p>
 <h4 id="boolean">Boolean</h4>
 <pre><code class="language-sql"><span class="token keyword">ALTER</span> <span class="token keyword">TABLE</span> <span class="token keyword">public</span><span class="token punctuation">.</span><span class="token operator">&lt;</span>tablename<span class="token operator">></span> <span class="token keyword">ADD</span> <span class="token keyword">COLUMN</span> <span class="token operator">&lt;</span>column_name<span class="token operator">></span> <span class="token keyword">boolean</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">default</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
 </code></pre>
-</description>
+]]>
+      </description>
       <pubDate>Tue, 18 Feb 2020 19:24:41 GMT</pubDate>
     </item>
       <item>
       <guid>https://reaper.im/blog/is-life-hard</guid>
       <title>Is Life really hard ?</title>
       <link>https://reaper.im/blog/is-life-hard</link>
-      <description><p>This might be just another life lesson post on the internet, but it also might be worth a read. </p>
+      <description>
+        <![CDATA[<p>This might be just another life lesson post on the internet, but it also might be worth a read. </p>
 <p>Let’s GO!</p>
 <p>Life is easier than you think and harder than you imagine. Your everyday decisions are responsible for what happens with you and also with people connected to you.</p>
 <p>Every decision that you take, leads you to an experience. This experience might not be a good one but if you do accept the fact that you were wrong then this will help you learn a lot.</p>
@@ -2278,7 +2381,8 @@ There is no difference as to what you think of success to be , because there is 
 We make it hard by overthinking about stuff, we jump to conclusions without a proper thought. We blame others to convince ourselves that what we decided to do was right.</p>
 <p>The day we stop worrying so much about what will happen and what has happened. It’ll make life a lot easier. Just know that, it doesn’t matter what you choose to be or achieve. You’ll achieve it sooner or later and that’ll motivate you enough to aim for something a little more bigger.</p>
 <p>Anyway, have a great one.</p>
-</description>
+]]>
+      </description>
       <pubDate>Sun, 01 Oct 2017 13:00:00 GMT</pubDate>
     </item>
 </channel>
