@@ -13,7 +13,7 @@ const Head = ({ children }) => {
           rel='stylesheet'
         />
 
-        <link rel='icon' href='https://reaper.im/favicon.ico' />
+        <link rel="icon" type="image/png" href="https://reaper.im/avatar.png" />
         {children}
       </NextHead>
     </>

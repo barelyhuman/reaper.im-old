@@ -9,7 +9,7 @@ function Index () {
         <div className='container'>
           <div className='margin-md flex just-center flex-col align-center'>
             <img
-              src='/logo.svg'
+              src='/avatar.png'
               className='neon-black'
               height={100}
               alt='logo'
