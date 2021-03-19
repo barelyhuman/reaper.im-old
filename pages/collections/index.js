@@ -38,12 +38,14 @@ const Collections = ({ collections }) => {
             })}
           </ul>
           <Spacer y={1} />
-          <button
-            className='margin-top-sm  align-start button black outline-btn'
-            onClick={() => Router.push('/')}
+          <Link href="/">
+          <a
+            className="button margin-top-sm align-start black outline-btn"
+            href="/"
           >
             Back
-          </button>
+          </a>
+        </Link>
           <Spacer y={2} />
         </div>
       </Layout>

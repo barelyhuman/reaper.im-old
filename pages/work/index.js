@@ -1,4 +1,5 @@
 import Padding from 'components/padding'
+import Link from 'next/link'
 import Router from 'next/router'
 import Layout from '../../components/Layout'
 import Spacer from '../../components/Spacer'
@@ -226,12 +227,14 @@ function Work () {
           </li>
         </ul>
         <Spacer y={1} />
-        <button
-          className='margin-top-sm  align-start button black outline-btn'
-          onClick={() => Router.push('/')}
-        >
-          Back
-        </button>
+        <Link href="/">
+          <a
+            className="button margin-top-sm align-start black outline-btn"
+            href="/"
+          >
+            Back
+          </a>
+        </Link>
         <Spacer y={2} />
       </div>
     </Layout>

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Router from 'next/router'
 import Layout from '../../components/Layout'
 import Spacer from '../../components/Spacer'
@@ -15,12 +16,14 @@ export default () => {
           </p>
         </div>
         <Spacer y={1} />
-        <button
-          className='button margin-top-sm align-start black outline-btn'
-          onClick={() => Router.push('/')}
-        >
-          Back
-        </button>
+        <Link href="/">
+          <a
+            className="button margin-top-sm align-start black outline-btn"
+            href="/"
+          >
+            Back
+          </a>
+        </Link>
       </div>
     </Layout>
   )

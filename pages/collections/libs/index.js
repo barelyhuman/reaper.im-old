@@ -3,6 +3,7 @@ import Layout from 'components/Layout'
 import Spacer from 'components/Spacer'
 import Router from 'next/router'
 import HLink from 'components/hlink'
+import Link from 'next/link'
 
 const AutomationCollection = ({ collections }) => {
   return (
@@ -38,12 +39,16 @@ const AutomationCollection = ({ collections }) => {
             })}
           </ul>
           <Spacer y={1} />
-          <button
-            className='margin-top-sm  align-start button black outline-btn'
-            onClick={() => Router.push('/collections')}
+          <Link
+            
+            href="/collections"
           >
+            <a
+            className="margin-top-sm align-start button black outline-btn"
+             href="/collections">
             Back
-          </button>
+            </a>
+          </Link>
           <Spacer y={2} />
         </div>
       </Layout>

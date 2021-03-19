@@ -2,6 +2,7 @@ import Head from 'components/head'
 import Layout from 'components/Layout'
 import Spacer from 'components/Spacer'
 import getWallpapers from 'lib/get-wallpapers'
+import Link from 'next/link'
 import Router from 'next/router'
 
 const Blog = ({ walls }) => {
@@ -30,12 +31,14 @@ const Blog = ({ walls }) => {
             })}
           </ul>
           <Spacer y={1} />
-          <button
-            className='margin-top-sm  align-start button black outline-btn'
-            onClick={() => Router.push('/')}
+          <Link href="/">
+          <a
+            className="button margin-top-sm align-start black outline-btn"
+            href="/"
           >
             Back
-          </button>
+          </a>
+        </Link>
           <Spacer y={2} />
         </div>
       </Layout>

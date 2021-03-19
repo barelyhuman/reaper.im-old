@@ -38,7 +38,7 @@ const PostContent = ({ post, previousPost, nextPost }) => {
         <div className='flex just-space-between'>
           {previousPost ? (
             <Link href={`/blog/${previousPost.meta.slug}`}>
-              <a href='' className='action-link'>
+              <a href={`/blog/${previousPost.meta.slug}`} className='action-link'>
                 Older Post
               </a>
             </Link>
@@ -47,14 +47,14 @@ const PostContent = ({ post, previousPost, nextPost }) => {
           )}
           <Spacer x={5} inline />
           <Link href='/blog'>
-            <a href='' className='action-link'>
+            <a href='/blog' className='action-link'>
               All Posts
             </a>
           </Link>
           <Spacer x={5} inline />
           {nextPost ? (
             <Link href={`/blog/${nextPost.meta.slug}`}>
-              <a href='' className='action-link'>
+              <a href={`/blog/${nextPost.meta.slug}`} className='action-link'>
                 Newer Post
               </a>
             </Link>
