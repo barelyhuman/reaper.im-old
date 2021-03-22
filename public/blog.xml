@@ -8,6 +8,36 @@
   <atom:link href="https://reaper.im/blog.xml" rel="self" type="application/rss+xml" />
   
       <item>
+      <guid>https://reaper.im/blog/20210301-This-Weekend-in-the-BarelyHuman-Dev-Labs---March,-20th-and-21st</guid>
+      <title>This Weekend in the BarelyHuman Dev Labs - March, 20th and 21st</title>
+      <link>https://reaper.im/blog/20210301-This-Weekend-in-the-BarelyHuman-Dev-Labs---March,-20th-and-21st</link>
+      <description>
+        <![CDATA[<p>This weekend was rather lazy , I had a few projects I wanted to complete, though I slept through most of the day on both days and spent about 4 hours watching the Snyder Cut JL and 1 hour thinking about what on earth was WB thinking with the initial release.</p>
+<p>Back to the update.</p>
+<h1 id="spotsync">SpotSync</h1>
+<p>This is a very niche project that I picked up that serves the purpose of keeping my Spotify library and a playlist that I share with people in sync. The concept is simple, it syncs the library to a playlist that&#39;s it, nothing else. It&#39;s basically done but not tested and nope, you won&#39;t find it on my Github because I won&#39;t be making it public unless I&#39;m done testing it, which will be sometime this week so that&#39;s one and it isn&#39;t deployed yet so no links right now. Told you, lazy weekend. </p>
+<h1 id="mytag">MyTag</h1>
+<p>I don&#39;t normally contribute to other open source projects I just use them to learn stuff but I thought I&#39;d help a fellow developer out this time so I spent a few hours on a few issues of this project. 
+<a href="https://github.com/cryptoboid/mytag">MyTag</a></p>
+<p>Pretty great concept, though the app needs a little more polishing and tweaking to be feature complete, which the original developer is working on, hoping I can find more time to help such projects instead of just re-creating my own versions of various existing tools.
+(talking about TillWhen)</p>
+<h1 id="tillwhen">TillWhen</h1>
+<p>Minor security patches and version upgrades for a lot of things, I do have to make the UI a lot more consistent so I&#39;m kinda stuck as to whether I should work on the Multi Slack workspace support or Work on the teams concepts , also kinda understand why almost all free services online have ads on them, cause people won&#39;t support it with donations when being provided for free. </p>
+<p>Anyway, guess I&#39;ll be working a day job forever if I want to keep the projects free to use. </p>
+<h2 id="making-tillwhen-opensource">Making TillWhen Opensource?</h2>
+<p>I did announce and also mentioned it on the <a href="https://tillwhen.barelyhuman.dev/about">about page</a> that tillwhen will be getting a self hosted version and I do plan on making it open source but I wanna make sure I get rid of any security vulnerability that I can find myself before I do hand it over to the community to see. I trust the community with my other projects because they are tools and store data mostly on the browser, this one has people&#39;s daily logs , while an attacker could do a lot of damage it&#39;s still something I need to worry about and not something I can just let loose. </p>
+<p>Overall point, yes, TillWhen will be opensource and come with a self hosting alternative after I&#39;m sure that any edge case (hopefully all) security concerns are out of the picture. While there&#39;s barely any personal information tracked by the app, for someone who routinely logs onto tillwhen, the data can be used maliciously.</p>
+<h1 id="the-blog">The Blog</h1>
+<p>RSS feeds were added to blog on request by a friend from <a href="https://fosstodon.org/@TheCam/105916599587324953">here</a> , also re-built <a href="http://barelyhuman.dev/">barelyhuman.dev</a> to follow the new design style I have on all apps and go rid of any deps on Javascript other than the themer (dark and light mode toggle)</p>
+<h1 id="rest-of-the-life">Rest of the life</h1>
+<p>Overall just played CS:GO all night and worked on the above mentioned things in the morning, pretty fun weekend.</p>
+<p>Adios!
+          </p>
+]]>
+      </description>
+      <pubDate>Mon, 22 Mar 2021 00:00:00 GMT</pubDate>
+    </item>
+      <item>
       <guid>https://reaper.im/blog/20210302--Handling-heavier-tasks-</guid>
       <title>Handling heavy memory tasks asynchronously</title>
       <link>https://reaper.im/blog/20210302--Handling-heavier-tasks-</link>
