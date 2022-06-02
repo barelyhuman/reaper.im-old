@@ -57,20 +57,22 @@ const GlobalSearch = ({ ...props }) => {
   return (
     <>
       <div className={searchWrapper}>
-        {visible ? (
-          <Autocomplete
-            menuItems={OPTIONS.map((item) => ({
-              label: item,
-              value: item.toLowerCase()
-            }))}
-            onSelect={(item) => {
-              handleSelection(item.value)
-            }}
-            onClose={() => {
-              setVisibility(false)
-            }}
-          />
-        ) : null}
+        {visible
+          ? (
+            <Autocomplete
+              menuItems={OPTIONS.map((item) => ({
+                label: item,
+                value: item.toLowerCase()
+              }))}
+              onSelect={(item) => {
+                handleSelection(item.value)
+              }}
+              onClose={() => {
+                setVisibility(false)
+              }}
+            />
+            )
+          : null}
       </div>
       <style jsx>
         {`

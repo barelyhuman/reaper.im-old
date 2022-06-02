@@ -36,15 +36,17 @@ const PostContent = ({ post, previousPost, nextPost }) => {
         </div>
         <Spacer y={1} />
         <div className='flex just-space-between'>
-          {previousPost ? (
-            <Link href={`/blog/${previousPost.meta.slug}`}>
-              <a href={`/blog/${previousPost.meta.slug}`} className='action-link'>
-                Older Post
-              </a>
-            </Link>
-          ) : (
-            <div />
-          )}
+          {previousPost
+            ? (
+              <Link href={`/blog/${previousPost.meta.slug}`}>
+                <a href={`/blog/${previousPost.meta.slug}`} className='action-link'>
+                  Older Post
+                </a>
+              </Link>
+              )
+            : (
+              <div />
+              )}
           <Spacer x={5} inline />
           <Link href='/blog'>
             <a href='/blog' className='action-link'>
@@ -52,15 +54,17 @@ const PostContent = ({ post, previousPost, nextPost }) => {
             </a>
           </Link>
           <Spacer x={5} inline />
-          {nextPost ? (
-            <Link href={`/blog/${nextPost.meta.slug}`}>
-              <a href={`/blog/${nextPost.meta.slug}`} className='action-link'>
-                Newer Post
-              </a>
-            </Link>
-          ) : (
-            <div />
-          )}
+          {nextPost
+            ? (
+              <Link href={`/blog/${nextPost.meta.slug}`}>
+                <a href={`/blog/${nextPost.meta.slug}`} className='action-link'>
+                  Newer Post
+                </a>
+              </Link>
+              )
+            : (
+              <div />
+              )}
         </div>
         <Spacer y={10} />
         <UtterancesComments />
