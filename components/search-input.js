@@ -160,49 +160,51 @@ export default class HoloComplete extends React.Component {
     const { show } = this.props
     return (
       <>
-        {show ? (
-          <div
-            className='autocomplete-wrapper'
-            onClick={this.handleSendCloseEvent}
-          >
-            <div className='autocomplete bordered-theme'>
-              <div
-                className='autocomplete-background'
-                data-autocomplete={holoEndValue}
-              >
-                {holoStartValue}
+        {show
+          ? (
+            <div
+              className='autocomplete-wrapper'
+              onClick={this.handleSendCloseEvent}
+            >
+              <div className='autocomplete bordered-theme'>
+                <div
+                  className='autocomplete-background'
+                  data-autocomplete={holoEndValue}
+                >
+                  {holoStartValue}
+                </div>
+                <input
+                  type='text'
+                  className='autocomplete-input'
+                  autoFocus
+                  placeholder='Search'
+                  onKeyDown={(e) => this.handleKeyPress(e)}
+                  onKeyUp={(e) => this.handleInputChange(e)}
+                />
               </div>
-              <input
-                type='text'
-                className='autocomplete-input'
-                autoFocus
-                placeholder='Search'
-                onKeyDown={(e) => this.handleKeyPress(e)}
-                onKeyUp={(e) => this.handleInputChange(e)}
-              />
+              <div className='autocomplete-suggestions'>
+                {this.state.allSuggestions.map((item, index) => {
+                  const active = selectedIndex === index
+                  const classNames = cn('chevron-right', {
+                    active,
+                    hidden: !active
+                  })
+                  return (
+                    <React.Fragment key={`suggestion-${item}-${index}`}>
+                      <div
+                        className='suggestion-list-item flex align-center'
+                        ref={active ? this.selectedElementRef : null}
+                      >
+                        <i className={classNames} />
+                        {item}
+                      </div>
+                    </React.Fragment>
+                  )
+                })}
+              </div>
             </div>
-            <div className='autocomplete-suggestions'>
-              {this.state.allSuggestions.map((item, index) => {
-                const active = selectedIndex === index
-                const classNames = cn('chevron-right', {
-                  active,
-                  hidden: !active
-                })
-                return (
-                  <React.Fragment key={`suggestion-${item}-${index}`}>
-                    <div
-                      className='suggestion-list-item flex align-center'
-                      ref={active ? this.selectedElementRef : null}
-                    >
-                      <i className={classNames} />
-                      {item}
-                    </div>
-                  </React.Fragment>
-                )
-              })}
-            </div>
-          </div>
-        ) : null}
+            )
+          : null}
         <style jsx>
           {`
             .autocomplete-wrapper {

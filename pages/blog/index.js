@@ -21,17 +21,19 @@ const Blog = ({ posts }) => {
       <Layout title='Blog'>
         <Padding y={3}>
           <div className='container'>
-            {isLoggedIn ? (
-              <>
-                <div className='w-100'>
-                  <Row justify='flex-end'>
-                    <Link href='/blog/new'>
-                      <Button> Create Post </Button>
-                    </Link>
-                  </Row>
-                </div>
-              </>
-            ) : null}
+            {isLoggedIn
+              ? (
+                <>
+                  <div className='w-100'>
+                    <Row justify='flex-end'>
+                      <Link href='/blog/new'>
+                        <Button> Create Post </Button>
+                      </Link>
+                    </Row>
+                  </div>
+                </>
+                )
+              : null}
             <ul className='card-border min-width-150-px'>
               {posts.map(({ meta }, index) => {
                 return (

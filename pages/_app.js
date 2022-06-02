@@ -50,17 +50,19 @@ function App ({ Component, pageProps }) {
         />
       </Head>
       <GlobalSearch />
-      {isLoggedIn ? (
-        <>
-          <Spacer y={2} />
-          <Row justify='flex-end'>
-            <Button secondary onClick={handleLogout}>
-              Logout
-            </Button>
-            <Spacer x={1} inline />
-          </Row>
-        </>
-      ) : null}
+      {isLoggedIn
+        ? (
+          <>
+            <Spacer y={2} />
+            <Row justify='flex-end'>
+              <Button secondary onClick={handleLogout}>
+                Logout
+              </Button>
+              <Spacer x={1} inline />
+            </Row>
+          </>
+          )
+        : null}
       <Component {...pageProps} />
     </>
   )

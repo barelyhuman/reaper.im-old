@@ -3,13 +3,15 @@ import Padding from './padding'
 export default function Layout (props) {
   return (
     <section>
-      {props.title ? (
-        <div className='layout-title'>
-          <Padding y={8} x={8}>
-            <h2>{props.title}</h2>
-          </Padding>
-        </div>
-      ) : null}
+      {props.title
+        ? (
+          <div className='layout-title'>
+            <Padding y={8} x={8}>
+              <h2>{props.title}</h2>
+            </Padding>
+          </div>
+          )
+        : null}
       {props.children}
       <style jsx>
         {`
